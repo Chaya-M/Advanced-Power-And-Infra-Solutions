@@ -7,11 +7,11 @@ import Link from "next/link";
 
 export default function Sales() {
     return (
-        <div className="pt-24 min-h-screen">
-            <section className="bg-slate-900 py-24 text-white relative overflow-hidden">
+        <div className="pt-24 min-h-screen bg-industrial-dark">
+            <section className="industrial-mesh py-24 text-white relative overflow-hidden border-b border-white/5">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <h1 className="text-4xl md:text-6xl font-black mb-8">Generator Sales</h1>
-                    <p className="text-xl text-slate-400 max-w-3xl">
+                    <h1 className="text-4xl md:text-6xl font-black mb-8 text-glow">Generator Sales</h1>
+                    <p className="text-xl text-white/50 max-w-3xl leading-relaxed">
                         Authorized Mahindra Powerol Dealer providing high-efficiency diesel generator sets from 5 KVA to 1010 KVA.
                     </p>
                 </div>
@@ -21,8 +21,8 @@ export default function Sales() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div>
-                            <h2 className="text-3xl font-bold mb-8 text-industrial-blue">Mahindra Powerol Authorized Dealer</h2>
-                            <p className="text-lg text-slate-600 mb-10 leading-relaxed">
+                            <h2 className="text-3xl font-bold mb-8 text-white">Mahindra Powerol Authorized Dealer</h2>
+                            <p className="text-lg text-white/50 mb-10 leading-relaxed">
                                 We offer a wide range of diesel generators designed for maximum efficiency and durability. As authorized dealers, we ensure you get genuine products with full manufacturer warranty and service support.
                             </p>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -34,16 +34,16 @@ export default function Sales() {
                                     "AMC Support",
                                     "Free Site Survey"
                                 ].map(feature => (
-                                    <div key={feature} className="flex gap-3 items-center text-slate-700 font-bold">
+                                    <div key={feature} className="flex gap-3 items-center text-white/70 font-bold">
                                         <ShieldCheck className="w-5 h-5 text-energy-yellow" />
                                         {feature}
                                     </div>
                                 ))}
                             </div>
                         </div>
-                        <div className="bg-industrial-blue p-12 rounded-[3rem] text-white">
+                        <div className="bg-industrial-blue/20 border border-white/5 p-12 rounded-[3rem] text-white backdrop-blur-xl">
                             <h3 className="text-2xl font-bold mb-8 border-b border-white/10 pb-4">Speak to a Sales Specialist</h3>
-                            <p className="text-slate-300 mb-10">
+                            <p className="text-white/40 mb-10 italic">
                                 Get help choosing the right generator for your specific load requirements.
                             </p>
                             <div className="space-y-6">
@@ -62,9 +62,9 @@ export default function Sales() {
             </section>
 
             {/* Product Grid Placeholder */}
-            <section className="py-24 bg-slate-50">
+            <section className="py-24 bg-industrial-blue/5 border-y border-white/5">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-center text-3xl font-extrabold text-industrial-blue mb-16">Available Capacity Ranges</h2>
+                    <h2 className="text-center text-3xl font-extrabold text-white mb-16 tracking-tight">Available Capacity Ranges</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {[
                             { range: "5-20 KVA", application: "Homes & Small Shops" },
@@ -73,11 +73,11 @@ export default function Sales() {
                             { range: "400-625 KVA", application: "Industrial Units" },
                             { range: "750-1010 KVA", application: "Infrastructure Projects" }
                         ].map((range, idx) => (
-                            <div key={idx} className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 group hover:shadow-xl transition-all">
+                            <div key={idx} className="bg-industrial-dark p-8 rounded-2xl shadow-sm border border-white/5 group hover:border-energy-yellow/30 hover:shadow-2xl transition-all">
                                 <Zap className="w-10 h-10 text-energy-yellow mb-6" />
-                                <h4 className="text-2xl font-black text-industrial-blue mb-2">{range.range}</h4>
-                                <p className="text-slate-500 mb-6">Ideal for: {range.application}</p>
-                                <Link href="/contact" className="text-industrial-blue font-bold flex items-center gap-2 group-hover:text-energy-yellow">
+                                <h4 className="text-2xl font-black text-white mb-2">{range.range}</h4>
+                                <p className="text-white/40 mb-6">Ideal for: {range.application}</p>
+                                <Link href="/contact" className="text-energy-yellow/70 font-bold flex items-center gap-2 group-hover:text-energy-yellow">
                                     Get Pricing <ArrowRight className="w-4 h-4" />
                                 </Link>
                             </div>

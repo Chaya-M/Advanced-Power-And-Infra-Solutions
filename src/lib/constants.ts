@@ -67,3 +67,24 @@ export const CLIENTS = [
     "Sigma Concretes",
     "Indus Sports Resorts Pvt Ltd"
 ];
+
+export const TESTIMONIALS = [
+    {
+        name: "Rajesh Kumar",
+        role: "Facility Manager, Arvind Mills",
+        content: "AIP Solutions has been our go-to partner for generator maintenance. Their response time during emergencies is unparalleled.",
+        rating: 5
+    },
+    {
+        name: "Dr. Sunita Sharma",
+        role: "Administrator, Vegus Hospital",
+        content: "In a hospital, power backup isn't optional. AIP ensures our systems are always ready. Their professionalism is top-notch.",
+        rating: 5
+    },
+    {
+        name: "Amit Patel",
+        role: "Project Lead, Sigma Concretes",
+        content: "We've been using their rental services for our construction sites. Reliable equipment and transparent billing every time.",
+        rating: 4
+    }
+];

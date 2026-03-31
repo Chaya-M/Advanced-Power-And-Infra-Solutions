@@ -11,21 +11,21 @@ const Footer = () => {
                     {/* Company Bio */}
                     <div className="space-y-6">
                         <Link href="/" className="flex items-center gap-2">
-                            <div className="bg-industrial-blue p-2 rounded-lg">
+                            <div className="bg-white/5 p-2 rounded-lg border border-white/10">
                                 <Zap className="h-6 w-6 text-energy-yellow fill-energy-yellow" />
                             </div>
                             <span className="text-xl font-bold text-white tracking-tight">
                                 AIP SOLUTIONS
                             </span>
                         </Link>
-                        <p className="text-slate-400 text-sm leading-relaxed">
+                        <p className="text-white/50 text-sm leading-relaxed">
                             Excellence in Diesel Generator solutions since 2009. Authorized dealer for Mahindra Powerol, providing reliable backup power for construction, industry, and residential needs.
                         </p>
                         <div className="flex gap-4">
-                            <a href={`https://wa.me/${COMPANY_INFO.whatsapp.replace('+', '')}`} className="bg-slate-800 p-2 rounded-full hover:bg-energy-yellow hover:text-industrial-blue transition-colors">
+                            <a href={`https://wa.me/${COMPANY_INFO.whatsapp.replace('+', '')}`} className="bg-white/5 p-2 rounded-full hover:bg-energy-yellow hover:text-industrial-blue transition-colors border border-white/5">
                                 <MessageCircle className="h-5 w-5" />
                             </a>
-                            <a href={`tel:${COMPANY_INFO.phone[0]}`} className="bg-slate-800 p-2 rounded-full hover:bg-energy-yellow hover:text-industrial-blue transition-colors">
+                            <a href={`tel:${COMPANY_INFO.phone[0]}`} className="bg-white/5 p-2 rounded-full hover:bg-energy-yellow hover:text-industrial-blue transition-colors border border-white/5">
                                 <Phone className="h-5 w-5" />
                             </a>
                         </div>
@@ -101,11 +101,11 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-                    <p>© {new Date().getFullYear()} {COMPANY_INFO.name}. All rights reserved.</p>
+                <div className="border-t border-white/5 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                    <p className="text-white/30">© {new Date().getFullYear()} {COMPANY_INFO.name}. All rights reserved.</p>
                     <div className="flex gap-6">
-                        <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>
-                        <Link href="/terms" className="hover:text-white">Terms of Service</Link>
+                        <Link href="/privacy" className="text-white/30 hover:text-white transition-colors">Privacy Policy</Link>
+                        <Link href="/terms" className="text-white/30 hover:text-white transition-colors">Terms of Service</Link>
                     </div>
                 </div>
             </div>

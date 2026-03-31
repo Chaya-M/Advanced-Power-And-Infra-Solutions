@@ -33,7 +33,7 @@ const Navbar = () => {
             className={cn(
                 "fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 transition-all duration-500 rounded-2xl border",
                 scrolled
-                    ? "bg-white/95 backdrop-blur-2xl shadow-2xl border-industrial-blue/10 py-2"
+                    ? "bg-industrial-dark/95 backdrop-blur-2xl shadow-2xl border-white/5 py-2"
                     : "bg-industrial-blue/20 backdrop-blur-lg border-white/10 py-4"
             )}
         >
@@ -48,16 +48,10 @@ const Navbar = () => {
                                 </div>
                             </div>
                             <div className="flex flex-col">
-                                <span className={cn(
-                                    "text-lg font-black tracking-tight leading-none transition-colors",
-                                    scrolled ? "text-industrial-blue" : "text-white"
-                                )}>
+                                <span className="text-lg font-black tracking-tight leading-none transition-colors text-white">
                                     ADVANCED POWER
                                 </span>
-                                <span className={cn(
-                                    "text-[10px] font-bold tracking-[0.2em] transition-colors",
-                                    scrolled ? "text-slate-500" : "text-energy-yellow"
-                                )}>
+                                <span className="text-[10px] font-bold tracking-[0.2em] transition-colors text-energy-yellow">
                                     & INFRA SOLUTIONS
                                 </span>
                             </div>
@@ -73,7 +67,7 @@ const Navbar = () => {
                                     href={link.href}
                                     className={cn(
                                         "px-4 py-2 rounded-xl text-sm font-bold transition-all hover:scale-105",
-                                        scrolled ? "text-slate-700 hover:bg-industrial-blue/5" : "text-white hover:bg-white/10"
+                                        scrolled ? "text-white/80 hover:bg-white/5 hover:text-energy-yellow" : "text-white hover:bg-white/10"
                                     )}
                                 >
                                     {link.name}

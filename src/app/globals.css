@@ -11,14 +11,14 @@
 :root {
   --industrial-blue: #0B3C5D;
   --energy-yellow: #F9A825;
+  --industrial-dark: #061621;
   --glow-yellow: 0 0 20px rgba(249, 168, 37, 0.4);
 }
 
 body {
   font-family: var(--font-sans);
   scroll-behavior: smooth;
-  background-color: #061621;
-  /* Dark industrial base */
+  background-color: var(--industrial-dark);
   color: #ffffff;
 }
 
@@ -59,4 +59,19 @@ body {
 
 .animate-float {
   animation: float 8s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  animation: marquee 50s linear infinite;
 }
