@@ -18,7 +18,7 @@ const Footer = () => {
                                 AIP SOLUTIONS
                             </span>
                         </Link>
-                        <p className="text-white/50 text-sm leading-relaxed">
+                        <p className="text-slate-400 text-xs leading-relaxed">
                             Excellence in Diesel Generator solutions since 2009. Authorized dealer for Mahindra Powerol, providing reliable backup power for construction, industry, and residential needs.
                         </p>
                         <div className="flex gap-4">
@@ -33,16 +33,16 @@ const Footer = () => {
 
                     {/* Quick Links */}
                     <div>
-                        <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2">
+                        <h3 className="text-white font-bold text-base mb-6 flex items-center gap-2 uppercase tracking-widest opacity-80">
                             Quick Links
-                            <span className="w-8 h-1 bg-energy-yellow rounded-full"></span>
+                            <span className="w-8 h-0.5 bg-energy-yellow rounded-full"></span>
                         </h3>
                         <ul className="space-y-4">
                             {["Home", "About Us", "Generator Rental", "Generator Sales", "Projects", "Contact"].map((link) => (
                                 <li key={link}>
                                     <Link
                                         href={link === "Home" ? "/" : `/${link.toLowerCase().replace(" ", "-")}`}
-                                        className="hover:text-energy-yellow transition-colors flex items-center gap-2 group"
+                                        className="hover:text-energy-yellow transition-colors flex items-center gap-2 group text-xs font-medium"
                                     >
                                         <div className="w-1.5 h-1.5 rounded-full bg-energy-yellow opacity-0 group-hover:opacity-100 transition-opacity"></div>
                                         {link}
@@ -54,16 +54,16 @@ const Footer = () => {
 
                     {/* Services */}
                     <div>
-                        <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2">
+                        <h3 className="text-white font-bold text-base mb-6 flex items-center gap-2 uppercase tracking-widest opacity-80">
                             Our Services
-                            <span className="w-8 h-1 bg-energy-yellow rounded-full"></span>
+                            <span className="w-8 h-0.5 bg-energy-yellow rounded-full"></span>
                         </h3>
                         <ul className="space-y-4">
                             {SERVICES.slice(0, 6).map((service) => (
                                 <li key={service.title}>
                                     <Link
                                         href={`/services#${service.slug}`}
-                                        className="hover:text-energy-yellow transition-colors text-sm"
+                                        className="hover:text-energy-yellow transition-colors text-xs font-medium"
                                     >
                                         {service.title}
                                     </Link>
@@ -74,26 +74,26 @@ const Footer = () => {
 
                     {/* Contact Info */}
                     <div>
-                        <h3 className="text-white font-bold text-lg mb-6 flex items-center gap-2">
+                        <h3 className="text-white font-bold text-base mb-6 flex items-center gap-2 uppercase tracking-widest opacity-80">
                             Contact Us
-                            <span className="w-8 h-1 bg-energy-yellow rounded-full"></span>
+                            <span className="w-8 h-0.5 bg-energy-yellow rounded-full"></span>
                         </h3>
                         <div className="space-y-6">
                             <div className="flex gap-3">
-                                <MapPin className="h-5 w-5 text-energy-yellow shrink-0 mt-1" />
-                                <span className="text-sm leading-relaxed">{COMPANY_INFO.address}</span>
+                                <MapPin className="h-4 w-4 text-energy-yellow shrink-0 mt-0.5" />
+                                <span className="text-xs leading-relaxed">{COMPANY_INFO.address}</span>
                             </div>
                             <div className="flex gap-3">
-                                <Phone className="h-5 w-5 text-energy-yellow shrink-0" />
-                                <div className="flex flex-col text-sm">
+                                <Phone className="h-4 w-4 text-energy-yellow shrink-0" />
+                                <div className="flex flex-col text-xs">
                                     {COMPANY_INFO.phone.map(p => (
                                         <a key={p} href={`tel:${p}`} className="hover:text-white transition-colors">{p}</a>
                                     ))}
                                 </div>
                             </div>
                             <div className="flex gap-3">
-                                <Mail className="h-5 w-5 text-energy-yellow shrink-0" />
-                                <a href={`mailto:${COMPANY_INFO.email}`} className="text-sm truncate hover:text-white transition-colors">
+                                <Mail className="h-4 w-4 text-energy-yellow shrink-0" />
+                                <a href={`mailto:${COMPANY_INFO.email}`} className="text-xs truncate hover:text-white transition-colors">
                                     {COMPANY_INFO.email}
                                 </a>
                             </div>
@@ -101,11 +101,11 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="border-t border-white/5 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-                    <p className="text-white/30">© {new Date().getFullYear()} {COMPANY_INFO.name}. All rights reserved.</p>
+                <div className="border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                    <p>© {new Date().getFullYear()} {COMPANY_INFO.name}. All rights reserved.</p>
                     <div className="flex gap-6">
-                        <Link href="/privacy" className="text-white/30 hover:text-white transition-colors">Privacy Policy</Link>
-                        <Link href="/terms" className="text-white/30 hover:text-white transition-colors">Terms of Service</Link>
+                        <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>
+                        <Link href="/terms" className="hover:text-white">Terms of Service</Link>
                     </div>
                 </div>
             </div>

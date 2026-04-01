@@ -60,12 +60,36 @@ export const SERVICES = [
 ];
 
 export const CLIENTS = [
-    "Arvind Mills Ltd",
-    "Vegus Hospital",
-    "Alkem Laboratories",
-    "Baldwin School",
-    "Sigma Concretes",
-    "Indus Sports Resorts Pvt Ltd"
+    "ARVIND MILLS LTD",
+    "SJBIT COLLEGE",
+    "BGS GROUP",
+    "VIRAJ PROJECTS",
+    "BHARATH CEMENTS GROUP",
+    "VEGUS HOSPITAL",
+    "ALKEM LABORATORIES",
+    "STARWORTH INFRASTRUCTURE",
+    "MSK PROPERTIES",
+    "SN APARTMENTS",
+    "INDUS SPORTS RESORTS PVT LTD",
+    "RAJASHREE FOODS PRIVATE LIMITED",
+    "CONFIDENT BUILDERS",
+    "POWER BUILD BATTERIES PVT LTD",
+    "ADITHYA APARTMENT",
+    "CHAITANYA PROJECTS",
+    "KANAKA APARTMENT",
+    "ORCHID SCHOOL",
+    "BALAJI COMPLEX",
+    "MIND SELECT CONSULTANT PRIVATE LIMITED",
+    "BALDWIN SCHOOL",
+    "CHORD ROAD HOSPITAL",
+    "APOORVA HOSPITAL",
+    "HYDERABADI BIRAYANI",
+    "LAKSHMI STONE CRUSHERS",
+    "SIGMA CONCRETES",
+    "BILL FORGE",
+    "HDFC Bank",
+    "Bharathi AXA Bank",
+    "LIC"
 ];
 
 export const TESTIMONIALS = [

@@ -48,10 +48,23 @@ const Navbar = () => {
                                 </div>
                             </div>
                             <div className="flex flex-col">
+<<<<<<< HEAD
                                 <span className="text-lg font-black tracking-tight leading-none transition-colors text-white">
                                     ADVANCED POWER
                                 </span>
                                 <span className="text-[10px] font-bold tracking-[0.2em] transition-colors text-energy-yellow">
+=======
+                                <span className={cn(
+                                    "text-base font-black tracking-tight leading-none transition-colors",
+                                    scrolled ? "text-industrial-blue" : "text-white"
+                                )}>
+                                    ADVANCED POWER
+                                </span>
+                                <span className={cn(
+                                    "text-[8px] font-bold tracking-[0.2em] transition-colors",
+                                    scrolled ? "text-slate-500" : "text-energy-yellow"
+                                )}>
+>>>>>>> 799de29 (updates)
                                     & INFRA SOLUTIONS
                                 </span>
                             </div>
@@ -66,8 +79,13 @@ const Navbar = () => {
                                     key={link.name}
                                     href={link.href}
                                     className={cn(
+<<<<<<< HEAD
                                         "px-4 py-2 rounded-xl text-sm font-bold transition-all hover:scale-105",
                                         scrolled ? "text-white/80 hover:bg-white/5 hover:text-energy-yellow" : "text-white hover:bg-white/10"
+=======
+                                        "px-3 py-2 rounded-xl text-xs font-bold transition-all hover:scale-105",
+                                        scrolled ? "text-slate-700 hover:bg-industrial-blue/5" : "text-white hover:bg-white/10"
+>>>>>>> 799de29 (updates)
                                     )}
                                 >
                                     {link.name}
@@ -76,9 +94,9 @@ const Navbar = () => {
                             <div className="ml-4 pl-4 border-l border-white/10">
                                 <a
                                     href={`tel:${COMPANY_INFO.phone[0]}`}
-                                    className="inline-flex items-center justify-center px-6 py-2.5 rounded-xl shadow-[0_0_25px_rgba(249,168,37,0.5)] text-sm font-black text-industrial-blue bg-energy-yellow hover:bg-yellow-400 hover:scale-105 transition-all active:scale-95"
+                                    className="inline-flex items-center justify-center px-5 py-2 rounded-xl shadow-[0_0_20px_rgba(249,168,37,0.3)] text-xs font-black text-industrial-blue bg-energy-yellow hover:bg-yellow-400 hover:scale-105 transition-all active:scale-95"
                                 >
-                                    <Phone className="mr-2 h-4 w-4 fill-industrial-blue" />
+                                    <Phone className="mr-2 h-3.5 w-3.5 fill-industrial-blue" />
                                     ENQUIRE
                                 </a>
                             </div>

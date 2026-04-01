@@ -11,11 +11,22 @@ import {
   Phone,
   Award,
   ChevronRight,
+<<<<<<< HEAD
   Star,
   Quote
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { COMPANY_INFO, SERVICES, CLIENTS, TESTIMONIALS } from "@/lib/constants";
+=======
+  Truck,
+  Clock,
+  FileText,
+  MapPin,
+  Shield
+} from "lucide-react";
+import { cn } from "@/lib/utils";
+import { COMPANY_INFO, SERVICES, CLIENTS } from "@/lib/constants";
+>>>>>>> 799de29 (updates)
 
 export default function Home() {
   const container = {
@@ -34,7 +45,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-industrial-dark">
       {/* High-Impact Visual Hero */}
-      <section className="relative min-h-screen lg:min-h-[110vh] flex items-center industrial-mesh overflow-hidden rounded-b-[4rem] sm:rounded-b-[6rem]">
+      <section className="relative min-h-0 flex items-start industrial-mesh overflow-hidden rounded-b-[4rem] sm:rounded-b-[6rem]">
         {/* Dark Gradient Overlay for Clarity */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-transparent z-0"></div>
 
@@ -42,13 +53,13 @@ export default function Home() {
         <div className="absolute top-1/4 -left-20 w-80 h-80 bg-industrial-blue blur-[120px] opacity-40 animate-pulse"></div>
         <div className="absolute top-1/3 -right-20 w-96 h-96 bg-energy-yellow blur-[150px] opacity-10 animate-pulse"></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-32 pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-36 pb-32">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-7">
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md text-energy-yellow text-xs font-black uppercase tracking-[0.3em] mb-8"
+                className="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md text-energy-yellow text-[10px] font-black uppercase tracking-[0.3em] mb-4"
               >
                 <div className="w-2 h-2 rounded-full bg-energy-yellow animate-ping"></div>
                 Premium Mahindra Powerol Solutions
@@ -58,20 +69,24 @@ export default function Home() {
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
+<<<<<<< HEAD
                 className="text-[2.2rem] md:text-[3.2rem] lg:text-[4.2rem] font-black text-white leading-[0.85] tracking-tighter mb-8 text-glow drop-shadow-2xl"
+=======
+                className="text-[2rem] md:text-[2.8rem] lg:text-[3.8rem] font-black text-white leading-[0.85] tracking-tighter mb-4 text-glow drop-shadow-2xl uppercase"
+>>>>>>> 799de29 (updates)
               >
-                UNINTERRUPTED <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-energy-yellow to-yellow-200">ENERGY</span> <br />
-                ELITE INFRA
+                ADVANCED <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-energy-yellow to-yellow-200">GENERATOR</span> <br />
+                & POWER BACKUP SYSTEMS
               </motion.h1>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-lg md:text-xl text-slate-400 max-w-xl mb-12 font-medium leading-relaxed"
+                className="text-base md:text-lg text-slate-400 max-w-2xl mb-6 font-medium leading-relaxed"
               >
-                Setting the gold standard in Bangalore since 2009. We engineer robust power backup ecosystems from 5 KVA to 1010 KVA.
+                Engineered for performance. Delivering scalable power solutions from small businesses to large-scale industrial operations.
               </motion.p>
 
               <motion.div
@@ -82,15 +97,15 @@ export default function Home() {
               >
                 <Link
                   href="/contact"
-                  className="group relative px-10 py-5 bg-energy-yellow text-industrial-blue rounded-2xl font-black text-lg transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(249,168,37,0.4)]"
+                  className="group relative px-8 py-4 bg-energy-yellow text-industrial-blue rounded-2xl font-black text-base transition-all hover:scale-105 active:scale-95 shadow-[0_0_25px_rgba(249,168,37,0.3)]"
                 >
                   <span className="relative z-10 flex items-center gap-2 uppercase tracking-wider">
-                    Secure Power Now <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                    Secure Power Now <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
                 <Link
                   href="/services"
-                  className="px-10 py-5 bg-white/5 border border-white/10 text-white rounded-2xl font-black text-lg backdrop-blur-xl transition-all hover:bg-white/10 flex items-center gap-3"
+                  className="px-8 py-4 bg-white/5 border border-white/10 text-white rounded-2xl font-black text-base backdrop-blur-xl transition-all hover:bg-white/10 flex items-center gap-3"
                 >
                   VIEW CATALOG
                 </Link>
@@ -108,27 +123,27 @@ export default function Home() {
                 <div className="aspect-square glass-panel rounded-[4rem] relative overflow-hidden group">
                   <div className="absolute inset-0 bg-gradient-to-tr from-industrial-blue via-transparent to-energy-yellow/10"></div>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <Zap size={200} className="text-white opacity-[0.02] -rotate-12" />
+                    <Zap size={150} className="text-white opacity-[0.02] -rotate-12" />
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-                      <div className="text-energy-yellow font-black text-9xl tracking-[0.2em] opacity-20">DG</div>
+                      <div className="text-energy-yellow font-black text-7xl tracking-[0.2em] opacity-20">DG</div>
                     </div>
                   </div>
-                  <div className="absolute bottom-16 left-12 right-12 p-8 bg-black/40 backdrop-blur-3xl rounded-3xl border border-white/10">
+                  <div className="absolute bottom-16 left-12 right-12 p-6 bg-black/40 backdrop-blur-3xl rounded-3xl border border-white/10">
                     <div className="flex justify-between items-center mb-4">
-                      <span className="text-energy-yellow text-xs font-black uppercase tracking-widest">Active System</span>
-                      <span className="text-white text-xs font-bold">1010 KVA MAX</span>
+                      <span className="text-energy-yellow text-[10px] font-black uppercase tracking-widest">Active System</span>
+                      <span className="text-white text-[10px] font-bold">1010 KVA MAX</span>
                     </div>
-                    <div className="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
+                    <div className="w-full bg-white/10 h-1 rounded-full overflow-hidden">
                       <div className="w-[85%] h-full bg-energy-yellow shadow-[0_0_10px_#F9A825]"></div>
                     </div>
-                    <p className="text-white text-lg font-black mt-6 tracking-tight">PEAK PERFORMANCE <br />RELIABILITY</p>
+                    <p className="text-white text-base font-black mt-6 tracking-tight">PEAK PERFORMANCE <br />RELIABILITY</p>
                   </div>
                 </div>
                 {/* Floating Badges */}
-                <div className="absolute -top-6 -right-6 p-6 glass-panel rounded-3xl border border-energy-yellow/30 animate-float">
-                  <Award size={32} className="text-energy-yellow mb-2" />
-                  <div className="text-white font-black">15+ YEARS</div>
-                  <div className="text-slate-400 text-[10px] uppercase font-bold">TRUSTED EXPERTISE</div>
+                <div className="absolute -top-6 -right-6 p-5 glass-panel rounded-3xl border border-energy-yellow/30 animate-float shadow-2xl">
+                  <Award size={28} className="text-energy-yellow mb-2" />
+                  <div className="text-white font-black text-sm">15+ YEARS</div>
+                  <div className="text-slate-400 text-[8px] uppercase font-bold tracking-widest opacity-60">TRUSTED EXPERTISE</div>
                 </div>
               </motion.div>
             </div>
@@ -136,17 +151,32 @@ export default function Home() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Modern Value Propositions */}
       <section className="py-16 bg-industrial-dark relative z-20 -mt-20">
+=======
+
+
+      {/* Industrial HUD - High-Tech Sales Highlights */}
+      <section className="py-24 bg-transparent overflow-hidden relative">
+>>>>>>> 799de29 (updates)
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            variants={container}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-          >
+          <div className="text-center mb-16">
+            <motion.span
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="px-4 py-2 rounded-lg bg-energy-yellow/10 text-energy-yellow text-[8px] font-black uppercase tracking-[0.3em] mb-6 inline-block border border-energy-yellow/20"
+            >
+              System Operations & Excellence
+            </motion.span>
+            <h2 className="text-2xl md:text-4xl font-black text-white tracking-tighter uppercase mb-4 leading-none">
+              Sales <span className="text-energy-yellow italic underline decoration-4 underline-offset-8">Highlights</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
+<<<<<<< HEAD
               { label: "Authorized Dealer", desc: "Official Mahindra Powerol partners since day one.", icon: ShieldCheck },
               { label: "Elite Response", desc: "90-minute emergency site support across Bangalore.", icon: Zap },
               { label: "Project Mastery", desc: "850+ successful installations across all sectors.", icon: Award },
@@ -161,10 +191,43 @@ export default function Home() {
               </motion.div>
             ))}
           </motion.div>
+=======
+              { id: "01", title: "Tech Experts", status: "CONSULT_ACTIVE", desc: "Engineering-led team for precise complex power solutions.", icon: Shield },
+              { id: "02", title: "Site Visits", status: "MAPPING_LIVE", desc: "Comprehensive technical assessments for 100% guarantee.", icon: MapPin },
+              { id: "03", title: "Prompt Delivery", status: "LOGISTICS_READY", desc: "Rapid logistics and immediate dispatch from our hubs.", icon: Truck },
+              { id: "04", title: "Guidelines", status: "SAFETY_LOCKED", desc: "Strict adherence to safety protocols and global standards.", icon: FileText },
+            ].map((node, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative h-[450px] overflow-hidden rounded-[3rem] glass-panel border-white/5 hover:border-energy-yellow/30 transition-all duration-700 cursor-default"
+              >
+                {/* Background HUD Aura */}
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-energy-yellow/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+                
+                <div className="p-10 relative z-10 h-full flex flex-col items-start justify-center">
+                  <div className="w-14 h-14 rounded-2xl bg-white/5 text-energy-yellow flex items-center justify-center mb-8 border border-white/10 group-hover:bg-energy-yellow group-hover:text-industrial-blue group-hover:scale-110 transition-all duration-500">
+                    <node.icon size={28} />
+                  </div>
+                  
+                  <h4 className="text-xl font-black text-white mb-6 uppercase tracking-tighter">{node.title}</h4>
+                  
+                  <p className="text-slate-400 text-sm font-medium leading-relaxed group-hover:text-white transition-colors duration-500">
+                    {node.desc}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+>>>>>>> 799de29 (updates)
         </div>
       </section>
 
       {/* Services Grid with 3D Interaction feel */}
+<<<<<<< HEAD
       <section className="py-16 bg-industrial-blue/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -180,6 +243,23 @@ export default function Home() {
                 </div>
                 <h4 className="text-xl font-black text-white group-hover:text-white mb-3 uppercase tracking-tight">{service.title}</h4>
                 <p className="text-white/50 text-sm font-medium group-hover:text-white/70 mb-8">
+=======
+      <section className="py-20 bg-transparent">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 tracking-tighter uppercase">Our Domains</h3>
+            <div className="h-1 w-20 bg-energy-yellow mx-auto rounded-full shadow-[0_0_15px_#F9A825]"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {SERVICES.slice(0, 3).map((service, idx) => (
+              <div key={idx} className="group p-12 rounded-[3.5rem] glass-panel transition-all duration-500 hover:bg-industrial-blue/40 hover:shadow-[0_30px_60px_rgba(11,60,93,0.3)] hover:-translate-y-4">
+                <div className="w-16 h-16 rounded-2xl bg-white/5 text-energy-yellow flex items-center justify-center mb-8 shadow-sm group-hover:bg-energy-yellow group-hover:text-industrial-blue group-hover:scale-110 transition-all duration-500">
+                  <service.icon size={32} />
+                </div>
+                <h4 className="text-xl font-black text-white mb-5 uppercase tracking-tight">{service.title}</h4>
+                <p className="text-slate-400 text-sm font-medium mb-10">
+>>>>>>> 799de29 (updates)
                   {service.description}
                 </p>
                 <Link
@@ -202,27 +282,27 @@ export default function Home() {
             <motion.h2
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              className="text-3xl md:text-5xl font-black text-white mb-10 tracking-tighter leading-[1.1]"
+              className="text-2xl md:text-4xl font-black text-white mb-6 tracking-tighter leading-[1.1]"
             >
               READY TO POWER YOUR <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-energy-yellow to-yellow-100">BIGGEST AMBITIONS?</span>
             </motion.h2>
-            <p className="text-xl text-slate-300 mb-14 font-medium uppercase tracking-[0.3em] opacity-80">
+            <p className="text-lg text-slate-300 mb-8 font-medium uppercase tracking-[0.3em] opacity-80">
               Immediate Consultation for Installations & AMCs.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
               <Link
                 href="/contact"
-                className="px-14 py-6 bg-white text-industrial-blue rounded-3xl font-black text-xl hover:bg-energy-yellow transition-all shadow-2xl active:scale-95 uppercase"
+                className="px-12 py-5 bg-white text-industrial-blue rounded-[2rem] font-black text-lg hover:bg-energy-yellow transition-all shadow-2xl active:scale-95 uppercase"
               >
                 Get a Quote
               </Link>
               <a
                 href={`tel:${COMPANY_INFO.phone[0]}`}
-                className="flex items-center gap-4 text-white text-3xl font-black tracking-tighter hover:text-energy-yellow transition-colors"
+                className="flex items-center gap-4 text-white text-2xl md:text-3xl font-black tracking-tighter hover:text-energy-yellow transition-colors"
               >
-                <div className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center">
-                  <Phone size={24} className="text-energy-yellow fill-energy-yellow" />
+                <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center">
+                  <Phone size={20} className="text-energy-yellow fill-energy-yellow" />
                 </div>
                 {COMPANY_INFO.phone[0]}
               </a>
@@ -231,6 +311,7 @@ export default function Home() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Premium Infinite Marquee Showcase */}
       <section className="py-16 bg-industrial-dark relative overflow-hidden border-t border-white/5">
         <div className="absolute inset-0 industrial-mesh opacity-20"></div>
@@ -296,6 +377,71 @@ export default function Home() {
                 </div>
               </motion.div>
             ))}
+=======
+      {/* High-Impact Infinite Marquee with Blueprint Background */}
+      <section className="py-24 relative overflow-hidden bg-industrial-dark">
+        {/* Blueprint Grid and Radial Glow */}
+        <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: `radial-gradient(circle at 2px 2px, #F9A825 1px, transparent 0)`, backgroundSize: "40px 40px" }}></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-energy-yellow/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div className="max-w-screen-2xl mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <motion.span
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="px-4 py-2 rounded-lg bg-energy-yellow/10 text-energy-yellow text-[8px] font-black uppercase tracking-[0.3em] mb-6 inline-block border border-energy-yellow/20"
+            >
+              Our Engineering Network
+            </motion.span>
+            <h2 className="text-2xl md:text-4xl font-black text-white tracking-tighter uppercase mb-4">
+              Our Valued <span className="text-energy-yellow">Customers</span>
+            </h2>
+            <div className="h-1 w-20 bg-gradient-to-r from-energy-yellow to-yellow-200 mx-auto rounded-full shadow-[0_0_20px_#F9A825]"></div>
+          </div>
+          
+          <div className="flex flex-col gap-12 relative">
+            {/* Row 1 - Right to Left */}
+            <div className="relative w-full overflow-hidden">
+              <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-industrial-dark to-transparent z-20 pointer-events-none"></div>
+              <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-industrial-dark to-transparent z-20 pointer-events-none"></div>
+              
+              <motion.div
+                animate={{ x: [0, "-50%"] }}
+                transition={{ x: { repeat: Infinity, repeatType: "loop", duration: 15, ease: "linear" } }}
+                className="flex whitespace-nowrap"
+              >
+                {[...CLIENTS, ...CLIENTS].map((client, idx) => (
+                  <span
+                    key={`r1-${idx}`}
+                    className="inline-block mx-12 text-2xl md:text-4xl font-black text-white/30 tracking-tighter hover:text-energy-yellow transition-all cursor-default uppercase italic hover:scale-105"
+                  >
+                    {client}
+                  </span>
+                ))}
+              </motion.div>
+            </div>
+
+            {/* Row 2 - Left to Right */}
+            <div className="relative w-full overflow-hidden">
+              <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-industrial-dark to-transparent z-20 pointer-events-none"></div>
+              <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-industrial-dark to-transparent z-20 pointer-events-none"></div>
+              
+              <motion.div
+                animate={{ x: ["-50%", 0] }}
+                transition={{ x: { repeat: Infinity, repeatType: "loop", duration: 25, ease: "linear" } }}
+                className="flex whitespace-nowrap"
+              >
+                {[...CLIENTS, ...CLIENTS].reverse().map((client, idx) => (
+                  <span
+                    key={`r2-${idx}`}
+                    className="inline-block mx-12 text-2xl md:text-3xl font-black text-white/20 tracking-tighter hover:text-energy-yellow transition-all cursor-default uppercase italic hover:scale-105"
+                  >
+                    {client}
+                  </span>
+                ))}
+              </motion.div>
+            </div>
+>>>>>>> 799de29 (updates)
           </div>
         </div>
       </section>
