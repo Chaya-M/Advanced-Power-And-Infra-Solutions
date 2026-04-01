@@ -48,23 +48,10 @@ const Navbar = () => {
                                 </div>
                             </div>
                             <div className="flex flex-col">
-<<<<<<< HEAD
                                 <span className="text-lg font-black tracking-tight leading-none transition-colors text-white">
                                     ADVANCED POWER
                                 </span>
                                 <span className="text-[10px] font-bold tracking-[0.2em] transition-colors text-energy-yellow">
-=======
-                                <span className={cn(
-                                    "text-base font-black tracking-tight leading-none transition-colors",
-                                    scrolled ? "text-industrial-blue" : "text-white"
-                                )}>
-                                    ADVANCED POWER
-                                </span>
-                                <span className={cn(
-                                    "text-[8px] font-bold tracking-[0.2em] transition-colors",
-                                    scrolled ? "text-slate-500" : "text-energy-yellow"
-                                )}>
->>>>>>> 799de29 (updates)
                                     & INFRA SOLUTIONS
                                 </span>
                             </div>
@@ -79,13 +66,8 @@ const Navbar = () => {
                                     key={link.name}
                                     href={link.href}
                                     className={cn(
-<<<<<<< HEAD
                                         "px-4 py-2 rounded-xl text-sm font-bold transition-all hover:scale-105",
                                         scrolled ? "text-white/80 hover:bg-white/5 hover:text-energy-yellow" : "text-white hover:bg-white/10"
-=======
-                                        "px-3 py-2 rounded-xl text-xs font-bold transition-all hover:scale-105",
-                                        scrolled ? "text-slate-700 hover:bg-industrial-blue/5" : "text-white hover:bg-white/10"
->>>>>>> 799de29 (updates)
                                     )}
                                 >
                                     {link.name}

@@ -4,29 +4,23 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
+  Star,
+  Quote,
+  Truck,
+  Clock,
+  FileText,
+  MapPin,
+  Shield,
   Zap,
   ShieldCheck,
   Users,
   ArrowRight,
   Phone,
   Award,
-  ChevronRight,
-<<<<<<< HEAD
-  Star,
-  Quote
+  ChevronRight
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { COMPANY_INFO, SERVICES, CLIENTS, TESTIMONIALS } from "@/lib/constants";
-=======
-  Truck,
-  Clock,
-  FileText,
-  MapPin,
-  Shield
-} from "lucide-react";
-import { cn } from "@/lib/utils";
-import { COMPANY_INFO, SERVICES, CLIENTS } from "@/lib/constants";
->>>>>>> 799de29 (updates)
 
 export default function Home() {
   const container = {
@@ -69,11 +63,7 @@ export default function Home() {
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-                className="text-[2.2rem] md:text-[3.2rem] lg:text-[4.2rem] font-black text-white leading-[0.85] tracking-tighter mb-8 text-glow drop-shadow-2xl"
-=======
                 className="text-[2rem] md:text-[2.8rem] lg:text-[3.8rem] font-black text-white leading-[0.85] tracking-tighter mb-4 text-glow drop-shadow-2xl uppercase"
->>>>>>> 799de29 (updates)
               >
                 ADVANCED <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-energy-yellow to-yellow-200">GENERATOR</span> <br />
@@ -151,15 +141,8 @@ export default function Home() {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Modern Value Propositions */}
-      <section className="py-16 bg-industrial-dark relative z-20 -mt-20">
-=======
-
-
       {/* Industrial HUD - High-Tech Sales Highlights */}
       <section className="py-24 bg-transparent overflow-hidden relative">
->>>>>>> 799de29 (updates)
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <motion.span
@@ -176,22 +159,6 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-<<<<<<< HEAD
-              { label: "Authorized Dealer", desc: "Official Mahindra Powerol partners since day one.", icon: ShieldCheck },
-              { label: "Elite Response", desc: "90-minute emergency site support across Bangalore.", icon: Zap },
-              { label: "Project Mastery", desc: "850+ successful installations across all sectors.", icon: Award },
-              { label: "Client Focused", desc: "320+ AMC contracts with dedicated service managers.", icon: Users },
-            ].map((v, i) => (
-              <motion.div key={i} variants={item} className="p-10 rounded-[2.5rem] glass-panel border border-white/5 hover:border-energy-yellow/30 transition-all hover:-translate-y-2 group">
-                <div className="w-16 h-16 rounded-2xl bg-white/5 text-energy-yellow flex items-center justify-center mb-8 border border-white/10 group-hover:bg-energy-yellow group-hover:text-industrial-blue transition-colors shadow-sm">
-                  <v.icon size={30} />
-                </div>
-                <h4 className="text-xl font-black text-white mb-4 leading-tight">{v.label}</h4>
-                <p className="text-white/60 font-medium text-sm leading-relaxed">{v.desc}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-=======
               { id: "01", title: "Tech Experts", status: "CONSULT_ACTIVE", desc: "Engineering-led team for precise complex power solutions.", icon: Shield },
               { id: "02", title: "Site Visits", status: "MAPPING_LIVE", desc: "Comprehensive technical assessments for 100% guarantee.", icon: MapPin },
               { id: "03", title: "Prompt Delivery", status: "LOGISTICS_READY", desc: "Rapid logistics and immediate dispatch from our hubs.", icon: Truck },
@@ -222,28 +189,10 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
->>>>>>> 799de29 (updates)
         </div>
       </section>
 
       {/* Services Grid with 3D Interaction feel */}
-<<<<<<< HEAD
-      <section className="py-16 bg-industrial-blue/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h3 className="text-3xl md:text-4xl font-black text-white mb-4 tracking-tighter">OUR DOMAINS</h3>
-            <div className="h-1.5 w-20 bg-energy-yellow mx-auto rounded-full shadow-[0_0_15px_#F9A825/40]"></div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {SERVICES.map((service, idx) => (
-              <div key={idx} className="group p-8 rounded-[2.5rem] bg-industrial-dark border border-white/5 transition-all duration-500 hover:bg-industrial-blue hover:shadow-[0_30px_60px_rgba(11,60,93,0.3)] hover:-translate-y-3">
-                <div className="w-16 h-16 rounded-2xl bg-white/5 text-energy-yellow flex items-center justify-center mb-6 border border-white/10 group-hover:bg-energy-yellow group-hover:text-industrial-blue group-hover:scale-105 transition-all duration-500">
-                  <service.icon size={32} />
-                </div>
-                <h4 className="text-xl font-black text-white group-hover:text-white mb-3 uppercase tracking-tight">{service.title}</h4>
-                <p className="text-white/50 text-sm font-medium group-hover:text-white/70 mb-8">
-=======
       <section className="py-20 bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
@@ -259,7 +208,6 @@ export default function Home() {
                 </div>
                 <h4 className="text-xl font-black text-white mb-5 uppercase tracking-tight">{service.title}</h4>
                 <p className="text-slate-400 text-sm font-medium mb-10">
->>>>>>> 799de29 (updates)
                   {service.description}
                 </p>
                 <Link
@@ -311,73 +259,6 @@ export default function Home() {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Premium Infinite Marquee Showcase */}
-      <section className="py-16 bg-industrial-dark relative overflow-hidden border-t border-white/5">
-        <div className="absolute inset-0 industrial-mesh opacity-20"></div>
-        <div className="max-w-7xl mx-auto px-4 relative z-10 mb-16 text-center">
-          <span className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-slate-400 text-[10px] font-black uppercase tracking-[0.4em]">Elite Engineering Partners</span>
-          <h2 className="text-3xl font-black text-white mt-6 tracking-tight">TRUSTED BY INDUSTRY LEADERS</h2>
-        </div>
-
-        <div className="relative flex overflow-x-hidden group">
-          <div className="animate-marquee whitespace-nowrap flex gap-8 pr-8">
-            {[...CLIENTS, ...CLIENTS].map((client, i) => (
-              <div
-                key={i}
-                className="inline-flex items-center px-12 py-8 rounded-[2rem] glass-panel border border-white/5 hover:border-energy-yellow/30 hover:bg-white/5 transition-all cursor-default"
-              >
-                <span className="text-2xl font-black text-energy-yellow/70 hover:text-energy-yellow transition-all tracking-tighter italic">
-                  {client}
-                </span>
-              </div>
-            ))}
-          </div>
-          {/* Gradient Masks for smooth fade edges */}
-          <div className="absolute inset-y-0 left-0 w-60 bg-gradient-to-r from-industrial-dark to-transparent z-20 pointer-events-none"></div>
-          <div className="absolute inset-y-0 right-0 w-60 bg-gradient-to-l from-industrial-dark to-transparent z-20 pointer-events-none"></div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-24 bg-industrial-dark relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <span className="text-energy-yellow text-xs font-black uppercase tracking-[0.3em]">Success Stories</span>
-            <h2 className="text-3xl md:text-5xl font-black text-white mt-4 tracking-tight">VOICES OF TRUST</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {TESTIMONIALS.map((testimonial, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                viewport={{ once: true }}
-                className="p-10 rounded-[2.5rem] glass-panel border border-white/5 relative group"
-              >
-                <Quote size={40} className="text-energy-yellow opacity-10 absolute top-8 right-8" />
-                <div className="flex gap-1 mb-6">
-                  {[...Array(5)].map((_, idx) => (
-                    <Star
-                      key={idx}
-                      size={14}
-                      className={cn(
-                        "transition-colors",
-                        idx < testimonial.rating ? "text-energy-yellow fill-energy-yellow" : "text-white/10"
-                      )}
-                    />
-                  ))}
-                </div>
-                <p className="text-white/70 italic mb-10 leading-relaxed font-medium">"{testimonial.content}"</p>
-                <div className="pt-8 border-t border-white/5">
-                  <div className="font-black text-white tracking-tight uppercase">{testimonial.name}</div>
-                  <div className="text-energy-yellow/70 text-xs font-bold uppercase tracking-widest mt-1">{testimonial.role}</div>
-                </div>
-              </motion.div>
-            ))}
-=======
       {/* High-Impact Infinite Marquee with Blueprint Background */}
       <section className="py-24 relative overflow-hidden bg-industrial-dark">
         {/* Blueprint Grid and Radial Glow */}
@@ -441,10 +322,52 @@ export default function Home() {
                 ))}
               </motion.div>
             </div>
->>>>>>> 799de29 (updates)
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <section className="py-24 bg-industrial-dark relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <span className="text-energy-yellow text-xs font-black uppercase tracking-[0.3em]">Success Stories</span>
+            <h2 className="text-3xl md:text-5xl font-black text-white mt-4 tracking-tight">VOICES OF TRUST</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {TESTIMONIALS.map((testimonial, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="p-10 rounded-[2.5rem] glass-panel border border-white/5 relative group"
+              >
+                <Quote size={40} className="text-energy-yellow opacity-10 absolute top-8 right-8" />
+                <div className="flex gap-1 mb-6">
+                  {[...Array(5)].map((_, idx) => (
+                    <Star
+                      key={idx}
+                      size={14}
+                      className={cn(
+                        "transition-colors",
+                        idx < testimonial.rating ? "text-energy-yellow fill-energy-yellow" : "text-white/10"
+                      )}
+                    />
+                  ))}
+                </div>
+                <p className="text-white/70 italic mb-10 leading-relaxed font-medium">"{testimonial.content}"</p>
+                <div className="pt-8 border-t border-white/5">
+                  <div className="font-black text-white tracking-tight uppercase">{testimonial.name}</div>
+                  <div className="text-energy-yellow/70 text-xs font-bold uppercase tracking-widest mt-1">{testimonial.role}</div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }
