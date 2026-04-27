@@ -15,11 +15,11 @@ const Footer = () => {
                                 <Zap className="h-6 w-6 text-energy-yellow fill-energy-yellow" />
                             </div>
                             <span className="text-xl font-bold text-white tracking-tight">
-                                AIP SOLUTIONS
+                                APIS SOLUTIONS
                             </span>
                         </Link>
                         <p className="text-slate-400 text-xs leading-relaxed">
-                            Excellence in Diesel Generator solutions since 2009. Authorized dealer for Mahindra Powerol, providing reliable backup power for construction, industry, and residential needs.
+                            Excellence in Diesel Generator solutions since 2009. Dealers for Cummins, Tata, KOEL, Caterpillar, TMTL, and Ashok Leyland, providing reliable backup power for construction, industry, and residential needs.
                         </p>
                         <div className="flex gap-4">
                             <a href={`https://wa.me/${COMPANY_INFO.whatsapp.replace('+', '')}`} className="bg-white/5 p-2 rounded-full hover:bg-energy-yellow hover:text-industrial-blue transition-colors border border-white/5">

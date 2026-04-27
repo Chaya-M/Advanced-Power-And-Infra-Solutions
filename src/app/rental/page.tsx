@@ -35,7 +35,7 @@ export default function Rental() {
                         <div>
                             <div className="mb-12">
                                 <motion.span className="px-4 py-2 rounded-lg bg-energy-yellow/10 text-energy-yellow text-[8px] font-black uppercase tracking-[0.3em] mb-4 inline-block border border-energy-yellow/20">
-                                    Why AIP Rental?
+                                    Why APIS Rental?
                                 </motion.span>
                                 <h2 className="text-xl md:text-3xl font-black text-white uppercase tracking-tighter italic">Why Rent <span className="text-energy-yellow underline decoration-4 underline-offset-8">With Us?</span></h2>
                             </div>

@@ -19,8 +19,10 @@ import {
   Award,
   ChevronRight
 } from "lucide-react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { COMPANY_INFO, SERVICES, CLIENTS, TESTIMONIALS } from "@/lib/constants";
+import founderImg from "./about/founder.jpeg";
 
 export default function Home() {
   const container = {
@@ -56,7 +58,7 @@ export default function Home() {
                 className="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md text-energy-yellow text-[10px] font-black uppercase tracking-[0.3em] mb-4"
               >
                 <div className="w-2 h-2 rounded-full bg-energy-yellow animate-ping"></div>
-                Premium Mahindra Powerol Solutions
+                Premium Multi-Brand Power Solutions
               </motion.div>
 
               <motion.h1
@@ -141,6 +143,65 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Founder's Vision - Premium HUD Style */}
+      <section className="py-24 bg-industrial-blue/30 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: `radial-gradient(circle at 2px 2px, #F9A825 1px, transparent 0)`, backgroundSize: "40px 40px" }}></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              className="relative"
+            >
+              <div className="aspect-[4/5] rounded-[3rem] overflow-hidden border-8 border-white/5 shadow-2xl relative group">
+                <Image 
+                  src={founderImg}
+                  alt="M S Murthy - Founder"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-industrial-blue/80 via-transparent to-transparent opacity-60"></div>
+                <div className="absolute bottom-10 left-10 right-10">
+                  <p className="text-2xl font-black italic text-white leading-tight">M S Murthy</p>
+                  <p className="text-energy-yellow font-bold text-xs uppercase tracking-widest mt-2">Managing Director & Founder</p>
+                </div>
+              </div>
+              {/* Decorative Frame */}
+              <div className="absolute -top-6 -left-6 w-32 h-32 border-l-2 border-t-2 border-energy-yellow/30 rounded-tl-[3rem] pointer-events-none"></div>
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 border-r-2 border-b-2 border-energy-yellow/30 rounded-br-[3rem] pointer-events-none"></div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              className="space-y-8"
+            >
+              <div className="inline-block px-4 py-2 rounded-lg bg-energy-yellow/10 text-energy-yellow text-[10px] font-black uppercase tracking-[0.3em] border border-energy-yellow/20">
+                Founders Message
+              </div>
+              <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase leading-none">
+                A Vision for <br />
+                <span className="text-energy-yellow italic underline decoration-4 underline-offset-8">Uninterrupted</span> Power
+              </h2>
+              <div className="space-y-6 text-slate-300 text-lg leading-relaxed font-medium">
+                <p>
+                  "Since 2009, my goal has been simple: to provide a single point of contact for businesses seeking reliable backup power. We bridge the gap between complex engineering and seamless operational continuity."
+                </p>
+                <p className="text-slate-400 text-base italic">
+                  With over 15 years of technical leadership, we have transformed from a small service team into a premier multi-brand provider trusted by over 450+ high-profile clients across Bangalore.
+                </p>
+              </div>
+              <div className="pt-8">
+                <Link href="/about" className="text-energy-yellow font-black text-xs uppercase tracking-[0.2em] flex items-center gap-3 group">
+                  EXPLORE OUR STORY
+                  <div className="w-10 h-[1px] bg-energy-yellow/30 group-hover:w-16 transition-all duration-300"></div>
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Industrial HUD - High-Tech Sales Highlights */}
       <section className="py-24 bg-transparent overflow-hidden relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -170,7 +231,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="group relative h-[450px] overflow-hidden rounded-[3rem] glass-panel border-white/5 hover:border-energy-yellow/30 transition-all duration-700 cursor-default"
+                className="group relative h-[320px] overflow-hidden rounded-[3rem] glass-panel border-white/5 hover:border-energy-yellow/30 transition-all duration-700 cursor-default"
               >
                 {/* Background HUD Aura */}
                 <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-energy-yellow/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
@@ -238,22 +299,33 @@ export default function Home() {
             <p className="text-lg text-slate-300 mb-8 font-medium uppercase tracking-[0.3em] opacity-80">
               Immediate Consultation for Installations & AMCs.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
+            <div className="flex flex-col xl:flex-row items-center justify-center gap-6 xl:gap-12">
               <Link
                 href="/contact"
                 className="px-12 py-5 bg-white text-industrial-blue rounded-[2rem] font-black text-lg hover:bg-energy-yellow transition-all shadow-2xl active:scale-95 uppercase"
               >
                 Get a Quote
               </Link>
-              <a
-                href={`tel:${COMPANY_INFO.phone[0]}`}
-                className="flex items-center gap-4 text-white text-2xl md:text-3xl font-black tracking-tighter hover:text-energy-yellow transition-colors"
-              >
-                <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center">
-                  <Phone size={20} className="text-energy-yellow fill-energy-yellow" />
-                </div>
-                {COMPANY_INFO.phone[0]}
-              </a>
+              <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10">
+                <a
+                  href={`tel:${COMPANY_INFO.phone[0]}`}
+                  className="flex items-center gap-4 text-white text-xl md:text-2xl font-black tracking-tighter hover:text-energy-yellow transition-colors"
+                >
+                  <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center">
+                    <Phone size={16} className="text-energy-yellow fill-energy-yellow" />
+                  </div>
+                  {COMPANY_INFO.phone[0]}
+                </a>
+                <a
+                  href={`tel:${COMPANY_INFO.phone[1]}`}
+                  className="flex items-center gap-4 text-white text-xl md:text-2xl font-black tracking-tighter hover:text-energy-yellow transition-colors"
+                >
+                  <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center">
+                    <Phone size={16} className="text-energy-yellow fill-energy-yellow" />
+                  </div>
+                  {COMPANY_INFO.phone[1]}
+                </a>
+              </div>
             </div>
           </div>
         </div>

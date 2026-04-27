@@ -43,7 +43,7 @@ export default function Terms() {
                         <div className="w-1.5 h-6 bg-energy-yellow rounded-full"></div>
                         3. Limitation of Liability
                     </h3>
-                    <p>AIP Solutions is not liable for any direct or indirect damages arising from the use of this website or the inability to access its power service infrastructure.</p>
+                    <p>APIS Solutions is not liable for any direct or indirect damages arising from the use of this website or the inability to access its power service infrastructure.</p>
                 </div>
 
                 <div className="space-y-4">

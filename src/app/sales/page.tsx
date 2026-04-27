@@ -22,7 +22,7 @@ export default function Sales() {
                         Authorized <span className="text-energy-yellow">Sales Hub</span>
                     </motion.h1>
                     <p className="text-base text-slate-300 max-w-2xl mx-auto opacity-80 font-medium">
-                        Direct procurement of Mahindra Powerol Diesel Generators. We provide end-to-end sales support from selection to installation.
+                        Direct procurement of Cummins, Tata, KOEL, Caterpillar, TMTL, and Ashok Leyland Diesel Generators. We provide end-to-end sales support from selection to installation.
                     </p>
                 </div>
             </section>

@@ -209,7 +209,7 @@ export default function Projects() {
                         Success <span className="text-energy-yellow">Projects</span>
                     </motion.h1>
                     <p className="text-base text-slate-300 max-w-3xl leading-relaxed opacity-80 font-medium">
-                        Showcasing our precision installations and the market-leading organizations that trust AIP Solutions for their mission-critical power.
+                        Showcasing our precision installations and the market-leading organizations that trust APIS Solutions for their mission-critical power.
                     </p>
                 </div>
             </section>

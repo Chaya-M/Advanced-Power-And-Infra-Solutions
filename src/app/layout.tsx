@@ -22,7 +22,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: `${COMPANY_INFO.name} | ${COMPANY_INFO.tagline}`,
-  description: "Excellence in Diesel Generator solutions since 2009. Authorized dealer for Mahindra Powerol, providing reliable backup power for construction, industry, and residential needs.",
+  description: "Excellence in Diesel Generator solutions since 2009. Dealers for Cummins, Tata, KOEL, Caterpillar, TMTL, and Ashok Leyland, providing reliable backup power for construction, industry, and residential needs.",
 };
 
 export default function RootLayout({

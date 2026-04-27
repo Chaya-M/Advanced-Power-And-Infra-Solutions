@@ -5,7 +5,7 @@ export const COMPANY_INFO = {
     tagline: "Delivering Power on time every time",
     established: 2009,
     headOffice: "Bangalore, India",
-    authorizedDealer: "Mahindra Powerol Diesel Generator Sets",
+    authorizedDealer: "Cummins, Tata, KOEL, Caterpillar, TMTL, Ashok Leyland",
     capacityRange: "5 KVA – 1010 KVA",
     address: "No.190, Elite Residency, Kodipalya Main Road, Kengeri, Near Namma Layout, Bangalore – 560056",
     phone: ["+91 9686098702", "+91 9902807767"],
@@ -87,8 +87,6 @@ export const CLIENTS = [
     "LAKSHMI STONE CRUSHERS",
     "SIGMA CONCRETES",
     "BILL FORGE",
-    "HDFC Bank",
-    "Bharathi AXA Bank",
     "LIC"
 ];
 
@@ -96,13 +94,13 @@ export const TESTIMONIALS = [
     {
         name: "Rajesh Kumar",
         role: "Facility Manager, Arvind Mills",
-        content: "AIP Solutions has been our go-to partner for generator maintenance. Their response time during emergencies is unparalleled.",
+        content: "APIS Solutions has been our go-to partner for generator maintenance. Their response time during emergencies is unparalleled.",
         rating: 5
     },
     {
         name: "Dr. Sunita Sharma",
         role: "Administrator, Vegus Hospital",
-        content: "In a hospital, power backup isn't optional. AIP ensures our systems are always ready. Their professionalism is top-notch.",
+        content: "In a hospital, power backup isn't optional. APIS ensures our systems are always ready. Their professionalism is top-notch.",
         rating: 5
     },
     {
