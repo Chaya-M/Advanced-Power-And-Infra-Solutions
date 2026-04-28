@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -17,14 +17,85 @@ import {
   ArrowRight,
   Phone,
   Award,
-  ChevronRight
+  ChevronRight,
+  CheckCircle2,
+  RefreshCcw,
+  Briefcase
 } from "lucide-react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { COMPANY_INFO, SERVICES, CLIENTS, TESTIMONIALS } from "@/lib/constants";
 
+const domainHighlights = [
+  {
+    title: "Sales Solutions",
+    description: "Get the right diesel generator with technical guidance, brand options, and dependable delivery support.",
+    features: [
+      "Multi-brand generator supply from 5 KVA to 1010 KVA",
+      "Load study and site inspection before final recommendation",
+      "Support for commercial, industrial, residential, and project sites",
+      "Installation guidance, commissioning, and post-sales support",
+    ],
+    icon: Zap,
+    href: "/services#sales",
+  },
+  {
+    title: "Rental Solutions",
+    description: "Choose rental generators for temporary power, urgent backup needs, or project-based operations.",
+    features: [
+      "Short-term and long-term diesel generator rentals",
+      "Fast delivery for construction sites, events, and emergency backup",
+      "Flexible capacity options based on site demand",
+      "Reliable service support during the rental period",
+    ],
+    icon: RefreshCcw,
+    href: "/services#rental",
+  },
+  {
+    title: "Service Support",
+    description: "Keep every DG set dependable with installation, preventive maintenance, AMC coverage, and repairs.",
+    features: [
+      "Professional installation and commissioning",
+      "Routine maintenance and emergency breakdown support",
+      "Annual Maintenance Contracts for long-term reliability",
+    ],
+    icon: ShieldCheck,
+    href: "/services#support",
+  },
+  {
+    title: "Used Generator Buyback",
+    description: "Sell your used generator with support for evaluation, inspection, and a smooth handover process.",
+    features: [
+      "Purchase support for used diesel generators",
+      "Condition review and basic technical assessment",
+      "Suitable for upgrade, replacement, or asset clearance needs",
+      "Direct enquiry support for faster response",
+    ],
+    icon: Briefcase,
+    href: "/services#buyback",
+  },
+];
+
+const heroGenerators = [
+  { src: "/images/cummins.png", alt: "Cummins generator brand", label: "CUMMINS", power: "Authorized Dealer" },
+  { src: "/images/tata.png", alt: "Tata generator brand", label: "TATA", power: "Authorized Dealer" },
+  { src: "/images/koel.png", alt: "KOEL generator brand", label: "KOEL", power: "Authorized Dealer" },
+  { src: "/images/tmtl.png", alt: "TMTL generator brand", label: "TMTL", power: "Authorized Dealer" },
+  { src: "/images/ashok.png", alt: "Ashok Leyland generator brand", label: "ASHOK LEYLAND", power: "Authorized Dealer" },
+];
+
 
 export default function Home() {
+  const [activeGenerator, setActiveGenerator] = useState(0);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setActiveGenerator((current) => (current + 1) % heroGenerators.length);
+    }, 3000);
+
+    return () => window.clearInterval(interval);
+  }, []);
+
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -111,32 +182,42 @@ export default function Home() {
                 transition={{ delay: 0.4, duration: 1 }}
                 className="relative z-10"
               >
-                {/* Visual Placeholder for Generator (Using high-end UI elements) */}
-                <div className="aspect-square glass-panel rounded-[4rem] relative overflow-hidden group">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-industrial-blue via-transparent to-energy-yellow/10"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Zap size={150} className="text-white opacity-[0.02] -rotate-12" />
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-                      <div className="text-energy-yellow font-black text-7xl tracking-[0.2em] opacity-20">DG</div>
-                    </div>
+                {/* Rotating generator visual */}
+                <div className="aspect-square relative overflow-hidden">
+                  <div className="absolute inset-0 overflow-hidden">
+                    {heroGenerators.map((generator, index) => (
+                      <Image
+                        key={generator.src}
+                        src={generator.src}
+                        alt={generator.alt}
+                        fill
+                        priority={index === 0}
+                        sizes="(min-width: 1024px) 36vw, 90vw"
+                        className={cn(
+                          "object-contain object-center p-3 transition-opacity duration-700",
+                          index === activeGenerator ? "opacity-100" : "opacity-0"
+                        )}
+                      />
+                    ))}
                   </div>
-                  <div className="absolute bottom-16 left-12 right-12 p-6 bg-black/40 backdrop-blur-3xl rounded-3xl border border-white/10">
-                    <div className="flex justify-between items-center mb-4">
-                      <span className="text-energy-yellow text-[10px] font-black uppercase tracking-widest">Active System</span>
-                      <span className="text-white text-[10px] font-bold">1010 KVA MAX</span>
+                  <div className="absolute inset-x-10 top-10 flex items-center justify-end">
+                    <div className="flex gap-2">
+                      {heroGenerators.map((generator, index) => (
+                        <button
+                          key={generator.src}
+                          type="button"
+                          aria-label={`Show ${generator.label}`}
+                          onClick={() => setActiveGenerator(index)}
+                          className={cn(
+                            "h-2.5 rounded-full transition-all",
+                            index === activeGenerator ? "w-8 bg-energy-yellow" : "w-2.5 bg-white/30"
+                          )}
+                        />
+                      ))}
                     </div>
-                    <div className="w-full bg-white/10 h-1 rounded-full overflow-hidden">
-                      <div className="w-[85%] h-full bg-energy-yellow shadow-[0_0_10px_#F9A825]"></div>
-                    </div>
-                    <p className="text-white text-base font-black mt-6 tracking-tight">PEAK PERFORMANCE <br />RELIABILITY</p>
                   </div>
                 </div>
                 {/* Floating Badges */}
-                <div className="absolute -top-6 -right-6 p-5 glass-panel rounded-3xl border border-energy-yellow/30 animate-float shadow-2xl">
-                  <Award size={28} className="text-energy-yellow mb-2" />
-                  <div className="text-white font-black text-sm">15+ YEARS</div>
-                  <div className="text-slate-400 text-[8px] uppercase font-bold tracking-widest opacity-60">TRUSTED EXPERTISE</div>
-                </div>
               </motion.div>
             </div>
           </div>
@@ -203,21 +284,29 @@ export default function Home() {
             <div className="h-1 w-20 bg-energy-yellow mx-auto rounded-full shadow-[0_0_15px_#F9A825]"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {SERVICES.slice(0, 3).map((service, idx) => (
-              <div key={idx} className="group p-8 rounded-[3.5rem] glass-panel transition-all duration-500 hover:bg-industrial-blue/40 hover:shadow-[0_30px_60px_rgba(11,60,93,0.3)] hover:-translate-y-4">
-                <div className="w-16 h-16 rounded-2xl bg-white/5 text-energy-yellow flex items-center justify-center mb-8 shadow-sm group-hover:bg-energy-yellow group-hover:text-industrial-blue group-hover:scale-110 transition-all duration-500">
-                  <service.icon size={32} />
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10">
+            {domainHighlights.map((domain, idx) => (
+              <div key={idx} className="group p-8 rounded-[2rem] glass-panel transition-all duration-500 hover:bg-industrial-blue/40 hover:shadow-[0_30px_60px_rgba(11,60,93,0.3)] hover:-translate-y-4">
+                <div className="w-16 h-16 rounded-2xl bg-energy-yellow/95 text-industrial-blue flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-all duration-500">
+                  <domain.icon size={30} />
                 </div>
-                <h4 className="text-xl font-black text-white mb-5 uppercase tracking-tight">{service.title}</h4>
-                <p className="text-slate-400 text-sm font-medium mb-10">
-                  {service.description}
+                <h4 className="text-xl font-black text-white mb-4 uppercase tracking-tight">{domain.title}</h4>
+                <p className="text-slate-400 text-sm font-medium mb-6 leading-relaxed">
+                  {domain.description}
                 </p>
+                <ul className="space-y-3 mb-8">
+                  {domain.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-3 text-sm text-slate-200 leading-relaxed">
+                      <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-energy-yellow" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
                 <Link
-                  href={`/services#${service.slug}`}
+                  href={domain.href}
                   className="inline-flex items-center gap-2 font-black text-xs uppercase tracking-[0.2em] text-energy-yellow/70 group-hover:text-energy-yellow transition-colors"
                 >
-                  ENGINEERING DETAILS <ArrowRight size={14} />
+                  VIEW DETAILS <ArrowRight size={14} />
                 </Link>
               </div>
             ))}

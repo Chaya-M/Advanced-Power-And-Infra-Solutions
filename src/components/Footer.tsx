@@ -38,10 +38,16 @@ const Footer = () => {
                             <span className="w-8 h-0.5 bg-energy-yellow rounded-full"></span>
                         </h3>
                         <ul className="space-y-4">
-                            {["Home", "About Us", "Generator Rental", "Generator Sales", "Projects", "Contact"].map((link) => (
+                            {["Home", "About Us", "Services", "Projects", "Contact"].map((link) => (
                                 <li key={link}>
                                     <Link
-                                        href={link === "Home" ? "/" : `/${link.toLowerCase().replace(" ", "-")}`}
+                                        href={
+                                            link === "Home"
+                                                ? "/"
+                                                : link === "About Us"
+                                                  ? "/about"
+                                                  : `/${link.toLowerCase().replace(" ", "-")}`
+                                        }
                                         className="hover:text-energy-yellow transition-colors flex items-center gap-2 group text-xs font-medium"
                                     >
                                         <div className="w-1.5 h-1.5 rounded-full bg-energy-yellow opacity-0 group-hover:opacity-100 transition-opacity"></div>

@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Shield, Target, Users, Award, CheckCircle2, Zap, Settings } from "lucide-react";
+import { Shield, Users, Award, Zap, Settings } from "lucide-react";
 import { COMPANY_INFO } from "@/lib/constants";
 
 import founderImg from "./founder.jpeg";
@@ -145,74 +145,6 @@ export default function About() {
                     </div>
                 </div>
             </section>
-
-            {/* Core Values - Redesigned Technical HUD Concept */}
-            <section className="py-12 bg-transparent relative overflow-hidden">
-                {/* Background technical grid */}
-                <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: `linear-gradient(#F9A825 1px, transparent 1px), linear-gradient(90deg, #F9A825 1px, transparent 1px)`, backgroundSize: "40px 40px" }}></div>
-                
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="text-center mb-10">
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-energy-yellow/10 border border-energy-yellow/20 text-energy-yellow text-[8px] font-black uppercase tracking-[0.4em] mb-6"
-                        >
-                            <Zap size={10} className="animate-pulse" />
-                            Our Foundation
-                        </motion.div>
-                        <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase mb-6 leading-none">
-                            Our Core <span className="text-energy-yellow italic underline decoration-8 underline-offset-[12px]">Values</span>
-                        </h2>
-                        <p className="text-slate-500 max-w-xl mx-auto font-medium text-sm">
-                            The technological and ethical pillars that drive every power solution we deliver.
-                        </p>
-                    </div>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        {[
-                            { title: "Reliability", desc: "We deliver power on time, ensuring your operations never stop.", icon: Shield, code: "SYS-01" },
-                            { title: "Excellence", desc: "15+ years of technical expertise in every generator we service.", icon: Award, code: "SYS-02" },
-                            { title: "Customer First", desc: "24/7 support and customized solutions for every client.", icon: Target, code: "SYS-03" }
-                        ].map((value, idx) => (
-                            <motion.div 
-                                key={idx} 
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: idx * 0.15 }}
-                                className="group relative h-full"
-                            >
-                                {/* Animated glow background */}
-                                <div className="absolute -inset-1 bg-gradient-to-r from-energy-yellow/0 via-energy-yellow/20 to-energy-yellow/0 rounded-[3rem] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                                
-                                <div className="relative glass-panel p-8 rounded-[3rem] border-white/5 group-hover:border-energy-yellow/40 transition-all duration-500 h-full overflow-hidden">
-                                    {/* HUD Accents */}
-                                    <div className="absolute top-6 right-8 text-[10px] font-black text-white/10 group-hover:text-energy-yellow/30 transition-colors uppercase tracking-widest">{value.code}</div>
-                                    <div className="absolute bottom-0 right-0 w-32 h-32 bg-energy-yellow/5 rounded-full blur-3xl -translate-x-10 translate-y-10 group-hover:bg-energy-yellow/10 transition-all duration-700"></div>
-                                    
-                                    <div className="w-16 h-16 rounded-2xl bg-white/5 text-energy-yellow flex items-center justify-center mb-8 border border-white/10 group-hover:scale-110 group-hover:bg-energy-yellow group-hover:text-industrial-blue group-hover:shadow-[0_0_30px_rgba(249,168,37,0.4)] transition-all duration-500">
-                                        <value.icon size={32} />
-                                    </div>
-                                    
-                                    <h4 className="text-2xl font-black text-white mb-4 uppercase tracking-tighter group-hover:text-glow transition-all duration-500">{value.title}</h4>
-                                    <p className="text-slate-400 font-medium leading-relaxed group-hover:text-white/90 transition-colors duration-500 relative z-10">{value.desc}</p>
-                                    
-                                    {/* Progress bar accent */}
-                                    <div className="mt-8 h-1 w-full bg-white/5 rounded-full overflow-hidden">
-                                        <motion.div 
-                                            initial={{ width: 0 }}
-                                            whileInView={{ width: "100%" }}
-                                            transition={{ duration: 1.5, delay: idx * 0.2 }}
-                                            className="h-full bg-gradient-to-r from-energy-yellow/50 to-energy-yellow"
-                                        />
-                                    </div>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
 
             {/* Team - Redesigned Technical Expert Roster */}
             <section className="py-12 bg-transparent relative overflow-hidden">
