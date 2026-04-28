@@ -3,11 +3,11 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Shield, Target, Users, Award, CheckCircle2, Zap } from "lucide-react";
+import { Shield, Target, Users, Award, CheckCircle2, Zap, Settings } from "lucide-react";
 import { COMPANY_INFO } from "@/lib/constants";
 
 import founderImg from "./founder.jpeg";
-import teamImg from "./team.png";
+import teamImg from "./team.jpeg";
 
 export default function About() {
     return (
@@ -32,7 +32,7 @@ export default function About() {
             </section>
 
             {/* Origin Story - Modernized Technical Layout */}
-            <section className="py-16 relative overflow-hidden bg-transparent">
+            <section className="py-10 relative overflow-hidden bg-transparent">
                 <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: `radial-gradient(circle at 2px 2px, #FFFFFF 1px, transparent 0)`, backgroundSize: "60px 60px" }}></div>
                 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -95,7 +95,7 @@ export default function About() {
             </section>
 
             {/* Meet the Founder */}
-            <section className="py-16 bg-industrial-blue text-white overflow-hidden relative">
+            <section className="py-10 bg-industrial-blue text-white overflow-hidden relative">
                 <div className="absolute top-0 right-0 w-1/3 h-full bg-energy-yellow/5 skew-x-12 translate-x-20"></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -107,7 +107,7 @@ export default function About() {
                                     <Award className="w-8 h-8 text-energy-yellow shrink-0 mt-1" />
                                     <div>
                                         <p className="font-bold text-white mb-1">Academic Excellence</p>
-                                        <p>B.E – Mechanical Engineering Graduate from Bangalore University (2000 Batch).</p>
+                                        <p>B.E – Mechanical Engineering Graduate from Bangalore University.</p>
                                     </div>
                                 </div>
                                 <p>
@@ -146,88 +146,144 @@ export default function About() {
                 </div>
             </section>
 
-            {/* Core Values - Simplified HUD Design */}
-            <section className="py-16 bg-transparent relative overflow-hidden">
-                <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: `radial-gradient(circle at 2px 2px, #F9A825 1px, transparent 0)`, backgroundSize: "40px 40px" }}></div>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-                    <div className="mb-12">
-                        <motion.span
-                            initial={{ opacity: 0, scale: 0.9 }}
+            {/* Core Values - Redesigned Technical HUD Concept */}
+            <section className="py-12 bg-transparent relative overflow-hidden">
+                {/* Background technical grid */}
+                <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: `linear-gradient(#F9A825 1px, transparent 1px), linear-gradient(90deg, #F9A825 1px, transparent 1px)`, backgroundSize: "40px 40px" }}></div>
+                
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div className="text-center mb-10">
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            className="px-4 py-2 rounded-lg bg-energy-yellow/10 text-energy-yellow text-[10px] font-black uppercase tracking-[0.3em] mb-4 inline-block border border-energy-yellow/20"
+                            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-energy-yellow/10 border border-energy-yellow/20 text-energy-yellow text-[8px] font-black uppercase tracking-[0.4em] mb-6"
                         >
+                            <Zap size={10} className="animate-pulse" />
                             Our Foundation
-                        </motion.span>
-                        <h2 className="text-2xl md:text-4xl font-black text-white tracking-tighter uppercase mb-4">
-                            Our Core <span className="text-energy-yellow italic underline decoration-4 underline-offset-8">Values</span>
+                        </motion.div>
+                        <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase mb-6 leading-none">
+                            Our Core <span className="text-energy-yellow italic underline decoration-8 underline-offset-[12px]">Values</span>
                         </h2>
+                        <p className="text-slate-500 max-w-xl mx-auto font-medium text-sm">
+                            The technological and ethical pillars that drive every power solution we deliver.
+                        </p>
                     </div>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         {[
-                            { title: "Reliability", desc: "We deliver power on time, ensuring your operations never stop.", icon: Shield },
-                            { title: "Excellence", desc: "15+ years of technical expertise in every generator we service.", icon: Award },
-                            { title: "Customer First", desc: "24/7 support and customized solutions for every client.", icon: Target }
+                            { title: "Reliability", desc: "We deliver power on time, ensuring your operations never stop.", icon: Shield, code: "SYS-01" },
+                            { title: "Excellence", desc: "15+ years of technical expertise in every generator we service.", icon: Award, code: "SYS-02" },
+                            { title: "Customer First", desc: "24/7 support and customized solutions for every client.", icon: Target, code: "SYS-03" }
                         ].map((value, idx) => (
                             <motion.div 
                                 key={idx} 
-                                initial={{ opacity: 0, y: 20 }}
+                                initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: idx * 0.1 }}
-                                className="glass-panel p-10 rounded-[3rem] border-white/5 hover:border-energy-yellow/30 transition-all duration-500 group"
+                                transition={{ delay: idx * 0.15 }}
+                                className="group relative h-full"
                             >
-                                <div className="w-16 h-16 rounded-2xl bg-white/5 text-energy-yellow flex items-center justify-center mb-8 border border-white/10 group-hover:bg-energy-yellow group-hover:text-industrial-blue transition-all duration-500">
-                                    <value.icon size={32} />
+                                {/* Animated glow background */}
+                                <div className="absolute -inset-1 bg-gradient-to-r from-energy-yellow/0 via-energy-yellow/20 to-energy-yellow/0 rounded-[3rem] blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                                
+                                <div className="relative glass-panel p-8 rounded-[3rem] border-white/5 group-hover:border-energy-yellow/40 transition-all duration-500 h-full overflow-hidden">
+                                    {/* HUD Accents */}
+                                    <div className="absolute top-6 right-8 text-[10px] font-black text-white/10 group-hover:text-energy-yellow/30 transition-colors uppercase tracking-widest">{value.code}</div>
+                                    <div className="absolute bottom-0 right-0 w-32 h-32 bg-energy-yellow/5 rounded-full blur-3xl -translate-x-10 translate-y-10 group-hover:bg-energy-yellow/10 transition-all duration-700"></div>
+                                    
+                                    <div className="w-16 h-16 rounded-2xl bg-white/5 text-energy-yellow flex items-center justify-center mb-8 border border-white/10 group-hover:scale-110 group-hover:bg-energy-yellow group-hover:text-industrial-blue group-hover:shadow-[0_0_30px_rgba(249,168,37,0.4)] transition-all duration-500">
+                                        <value.icon size={32} />
+                                    </div>
+                                    
+                                    <h4 className="text-2xl font-black text-white mb-4 uppercase tracking-tighter group-hover:text-glow transition-all duration-500">{value.title}</h4>
+                                    <p className="text-slate-400 font-medium leading-relaxed group-hover:text-white/90 transition-colors duration-500 relative z-10">{value.desc}</p>
+                                    
+                                    {/* Progress bar accent */}
+                                    <div className="mt-8 h-1 w-full bg-white/5 rounded-full overflow-hidden">
+                                        <motion.div 
+                                            initial={{ width: 0 }}
+                                            whileInView={{ width: "100%" }}
+                                            transition={{ duration: 1.5, delay: idx * 0.2 }}
+                                            className="h-full bg-gradient-to-r from-energy-yellow/50 to-energy-yellow"
+                                        />
+                                    </div>
                                 </div>
-                                <h4 className="text-2xl font-black text-white mb-4 uppercase tracking-tighter">{value.title}</h4>
-                                <p className="text-slate-400 font-medium leading-relaxed group-hover:text-white transition-colors duration-500">{value.desc}</p>
                             </motion.div>
                         ))}
                     </div>
                 </div>
             </section>
 
-            {/* Team - Simplified HUD Design */}
-            <section className="py-16 bg-transparent">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <div className="mb-12">
-                        <motion.span
+
+            {/* Team - Redesigned Technical Expert Roster */}
+            <section className="py-12 bg-transparent relative overflow-hidden">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                    <div className="mb-10">
+                        <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            className="px-4 py-2 rounded-lg bg-energy-yellow/10 text-energy-yellow text-[10px] font-black uppercase tracking-[0.3em] mb-4 inline-block border border-energy-yellow/20"
+                            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-energy-yellow/10 border border-energy-yellow/20 text-energy-yellow text-[8px] font-black uppercase tracking-[0.4em] mb-6"
                         >
-                            The Experts Behind APIS
-                        </motion.span>
-                        <h2 className="text-2xl md:text-4xl font-black text-white tracking-tighter uppercase mb-4">
-                            Our Elite <span className="text-energy-yellow italic underline decoration-4 underline-offset-8">Team</span>
+                            <Users size={10} className="animate-pulse" />
+                            Technical Intelligence
+                        </motion.div>
+                        <h2 className="text-3xl md:text-5xl font-black text-white tracking-tighter uppercase mb-6 leading-none">
+                            Our Elite <span className="text-energy-yellow italic underline decoration-8 underline-offset-[12px]">Team</span>
                         </h2>
+                        <p className="text-slate-500 max-w-xl mx-auto font-medium text-sm">
+                            Combining decades of field experience with advanced engineering precision.
+                        </p>
                     </div>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                         {[
-                            { role: "Leadership", desc: "Visionary management guiding our growth since 2009." },
-                            { role: "Technical Lead", desc: "Expert in DG set installation and commissioning." },
-                            { role: "Service Engineers", desc: "Quick response team for routine and emergency maintenance." },
-                            { role: "Support Staff", desc: "Ensuring smooth operations and client communications." }
+                            { role: "Leadership", desc: "Visionary management guiding our growth since 2009.", icon: Award },
+                            { role: "Technical Lead", desc: "Expert in DG set installation and commissioning.", icon: Settings },
+                            { role: "Service Engineers", desc: "Quick response team for routine and emergency maintenance.", icon: Zap },
+                            { role: "Support Staff", desc: "Ensuring smooth operations and client communications.", icon: Shield }
                         ].map((team, idx) => (
                             <motion.div 
                                 key={idx}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="glass-panel p-10 rounded-[3rem] border-white/5 hover:border-energy-yellow/30 transition-all duration-500 group"
+                                className="group relative h-full"
                             >
-                                <div className="w-16 h-16 rounded-2xl bg-white/5 text-energy-yellow flex items-center justify-center mb-8 border border-white/10 group-hover:bg-energy-yellow group-hover:text-industrial-blue transition-all duration-500">
-                                    <Users size={32} />
+                                <div className="glass-panel p-6 rounded-[2.5rem] border-white/5 group-hover:border-energy-yellow/30 transition-all duration-500 h-full flex flex-col items-start text-left overflow-hidden relative">
+                                    {/* Blueprint background pattern on hover */}
+                                    <div className="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-700 pointer-events-none" style={{ backgroundImage: `radial-gradient(circle at 1px 1px, #F9A825 1px, transparent 0)`, backgroundSize: "10px 10px" }}></div>
+                                    
+                                    {/* Scanline animation */}
+                                    <div className="absolute inset-x-0 top-0 h-[1px] bg-energy-yellow/50 blur-sm opacity-0 group-hover:opacity-100 group-hover:animate-[scanline_3s_linear_infinite] pointer-events-none"></div>
+
+                                    <div className="w-12 h-12 rounded-xl bg-white/5 text-energy-yellow flex items-center justify-center mb-6 border border-white/10 group-hover:bg-energy-yellow group-hover:text-industrial-blue transition-all duration-500">
+                                        <team.icon size={24} />
+                                    </div>
+                                    <h4 className="text-lg font-black text-white mb-3 uppercase tracking-tighter italic">{team.role}</h4>
+                                    <p className="text-slate-400 text-xs font-medium leading-relaxed group-hover:text-white transition-colors duration-500">{team.desc}</p>
+                                    
+                                    {/* Corner accents */}
+                                    <div className="absolute bottom-4 right-4 opacity-10 group-hover:opacity-40 transition-opacity">
+                                        <div className="flex gap-1">
+                                            <div className="w-1 h-1 bg-energy-yellow rounded-full"></div>
+                                            <div className="w-1 h-1 bg-energy-yellow rounded-full"></div>
+                                            <div className="w-1 h-1 bg-energy-yellow rounded-full opacity-50"></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <h4 className="text-xl font-black text-white mb-4 uppercase tracking-tighter">{team.role}</h4>
-                                <p className="text-slate-400 text-sm font-medium leading-relaxed group-hover:text-white transition-colors duration-500">{team.desc}</p>
                             </motion.div>
                         ))}
                     </div>
                 </div>
 
-                <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
+                <style jsx>{`
+                    @keyframes scanline {
+                        0% { transform: translateY(0); }
+                        100% { transform: translateY(300px); }
+                    }
+                `}</style>
+
+
+                <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}

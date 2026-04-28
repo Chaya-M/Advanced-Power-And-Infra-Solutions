@@ -9,7 +9,7 @@ export default function Contact() {
     return (
         <div className="pt-32 min-h-screen bg-transparent">
             {/* Page Header */}
-            <section className="bg-industrial-blue py-12 text-white relative overflow-hidden">
+            <section className="bg-industrial-blue py-8 text-white relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10">
                     <Zap className="w-96 h-96 -bottom-20 -right-20 absolute rotate-12" />
                 </div>
@@ -27,14 +27,14 @@ export default function Contact() {
                 </div>
             </section>
 
-            <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 relative z-10">
+            <div className="max-w-7xl mx-auto px-4 py-10 sm:px-6 lg:px-8 relative z-10">
                 {/* Blueprint Background Accent */}
                 <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: `radial-gradient(circle at 2px 2px, #FFFFFF 1px, transparent 0)`, backgroundSize: "60px 60px" }}></div>
                 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 relative">
                     {/* Contact Info */}
                     <div>
-                        <div className="mb-12">
+                        <div className="mb-8">
                             <motion.span
                                 className="px-4 py-2 rounded-lg bg-energy-yellow/10 text-energy-yellow text-[8px] font-black uppercase tracking-[0.3em] mb-4 inline-block border border-energy-yellow/20"
                             >
@@ -45,7 +45,7 @@ export default function Contact() {
                             </h2>
                         </div>
                         
-                        <div className="space-y-8">
+                        <div className="space-y-6">
                             {[
                                 { title: "Head Office Address", icon: MapPin, value: COMPANY_INFO.address, type: 'text' },
                                 { title: "Phone Numbers", icon: Phone, value: COMPANY_INFO.phone, type: 'phone' },
@@ -85,7 +85,7 @@ export default function Contact() {
                             ))}
                         </div>
 
-                        <div className="mt-16">
+                        <div className="mt-10">
                             <motion.a
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -102,13 +102,13 @@ export default function Contact() {
                     <motion.div 
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        className="glass-panel p-10 md:p-14 rounded-[3.5rem] border-white/5 relative overflow-hidden"
+                        className="glass-panel p-8 md:p-10 rounded-[3.5rem] border-white/5 relative overflow-hidden"
                     >
                         <div className="absolute top-0 right-0 w-32 h-32 bg-energy-yellow/5 rounded-bl-[4rem]"></div>
-                        <h3 className="text-xl md:text-2xl font-black text-white mb-10 tracking-tighter uppercase italic">
+                        <h3 className="text-xl md:text-2xl font-black text-white mb-8 tracking-tighter uppercase italic">
                             Request a <span className="text-energy-yellow">Service</span>
                         </h3>
-                        <form className="space-y-8 relative z-10">
+                        <form className="space-y-6 relative z-10">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 <div className="space-y-3">
                                     <label className="block text-[9px] font-black text-slate-500 uppercase tracking-[0.3em] ml-2">Full Name</label>
@@ -150,7 +150,7 @@ export default function Contact() {
             </div>
 
             {/* Map Section - Modern Technical Style */}
-            <section className="h-[450px] w-full relative overflow-hidden group">
+            <section className="h-[350px] w-full relative overflow-hidden group">
                 <div className="absolute inset-0 bg-industrial-dark grayscale contrast-125 opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000">
                     {/* Placeholder for map - in real app this would be an iframe */}
                     <div className="w-full h-full bg-[#0a1a25] flex items-center justify-center">
@@ -162,7 +162,7 @@ export default function Contact() {
                     <motion.div 
                         initial={{ y: 50, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
-                        className="glass-panel px-10 py-8 rounded-[2.5rem] border-white/10 text-center shadow-2xl backdrop-blur-2xl"
+                        className="glass-panel px-8 py-6 rounded-[2.5rem] border-white/10 text-center shadow-2xl backdrop-blur-2xl"
                     >
                         <div className="w-10 h-10 bg-energy-yellow rounded-full flex items-center justify-center mx-auto mb-4 shadow-[0_0_20px_rgba(249,168,37,0.5)]">
                             <MapPin className="w-5 h-5 text-industrial-blue" />

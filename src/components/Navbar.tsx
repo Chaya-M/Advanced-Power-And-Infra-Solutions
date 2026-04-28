@@ -33,8 +33,8 @@ const Navbar = () => {
             className={cn(
                 "fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 transition-all duration-500 rounded-2xl border",
                 scrolled
-                    ? "bg-industrial-dark/95 backdrop-blur-2xl shadow-2xl border-white/5 py-2"
-                    : "bg-industrial-blue/20 backdrop-blur-lg border-white/10 py-4"
+                    ? "bg-industrial-dark/95 backdrop-blur-2xl shadow-2xl border-white/5 py-1"
+                    : "bg-industrial-blue/20 backdrop-blur-lg border-white/10 py-2"
             )}
         >
             <div className="px-6 lg:px-10">

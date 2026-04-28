@@ -6,7 +6,7 @@ import { COMPANY_INFO, SERVICES } from "@/lib/constants";
 const Footer = () => {
     return (
         <footer className="bg-industrial-dark text-slate-300">
-            <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                     {/* Company Bio */}
                     <div className="space-y-6">
@@ -101,7 +101,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+                <div className="border-t border-slate-800 mt-10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
                     <p>© {new Date().getFullYear()} {COMPANY_INFO.name}. All rights reserved.</p>
                     <div className="flex gap-6">
                         <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>

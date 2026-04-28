@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function Terms() {
     return (
-        <div className="pt-40 pb-24 max-w-4xl mx-auto px-4 relative z-10">
+        <div className="pt-32 pb-16 max-w-4xl mx-auto px-4 relative z-10">
             <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: `radial-gradient(circle at 2px 2px, #FFFFFF 1px, transparent 0)`, backgroundSize: "60px 60px" }}></div>
             <motion.h1 
                 initial={{ opacity: 0, x: -20 }}
@@ -19,10 +19,10 @@ export default function Terms() {
                 Terms of <span className="text-energy-yellow">Service</span>
             </motion.h1>
             
-            <div className="glass-panel p-8 md:p-12 rounded-[2.5rem] border-white/5 space-y-8 text-sm text-slate-400 font-medium leading-relaxed">
+            <div className="glass-panel p-6 md:p-10 rounded-[2.5rem] border-white/5 space-y-6 text-sm text-slate-400 font-medium leading-relaxed">
                 <p className="text-base text-white/80">By accessing and using this mission-critical node, you agree to comply with and be bound by the following industrial terms and conditions.</p>
 
-                <div className="space-y-4">
+                <div className="space-y-3">
                     <h3 className="text-lg font-black text-white uppercase tracking-widest italic flex items-center gap-2">
                         <div className="w-1.5 h-6 bg-energy-yellow rounded-full"></div>
                         1. Service Enquiries

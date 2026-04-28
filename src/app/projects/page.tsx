@@ -196,7 +196,7 @@ export default function Projects() {
     return (
         <div className="pt-32 min-h-screen bg-transparent">
             {/* Page Header */}
-            <section className="bg-industrial-blue py-12 text-white relative overflow-hidden">
+            <section className="bg-industrial-blue py-8 text-white relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10">
                     <Zap className="w-96 h-96 -bottom-20 -right-20 absolute rotate-12" />
                 </div>
@@ -215,10 +215,10 @@ export default function Projects() {
             </section>
 
             {/* Featured Projects Grid */}
-            <section className="py-16 relative overflow-hidden">
+            <section className="py-10 relative overflow-hidden">
                 <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: `radial-gradient(circle at 2px 2px, #FFFFFF 1px, transparent 0)`, backgroundSize: "60px 60px" }}></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="mb-16">
+                    <div className="mb-10">
                         <motion.span className="px-4 py-2 rounded-lg bg-energy-yellow/10 text-energy-yellow text-[8px] font-black uppercase tracking-[0.3em] mb-4 inline-block border border-energy-yellow/20">
                             Case Studies
                         </motion.span>
@@ -233,10 +233,10 @@ export default function Projects() {
             </section>
 
             {/* Client List - High impact technical indicators */}
-            <section className="py-24 bg-transparent relative overflow-hidden">
+            <section className="py-16 bg-transparent relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: `radial-gradient(circle at 2px 2px, #F9A825 1px, transparent 0)`, backgroundSize: "40px 40px" }}></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-10">
                         <motion.span className="px-4 py-2 rounded-lg bg-energy-yellow/10 text-energy-yellow text-[8px] font-black uppercase tracking-[0.3em] mb-4 inline-block border border-energy-yellow/20">
                             Authorized Trust
                         </motion.span>
@@ -249,7 +249,7 @@ export default function Projects() {
             </section>
 
             {/* Final CTA - Industrial Power Branding */}
-            <section className="py-24 relative overflow-hidden">
+            <section className="py-16 relative overflow-hidden">
                 <div className="absolute inset-0 bg-energy-yellow"></div>
                 <div className="absolute inset-0 opacity-20" style={{ backgroundImage: `radial-gradient(circle at 2px 2px, #061621 1px, transparent 0)`, backgroundSize: "30px 30px" }}></div>
                 <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
