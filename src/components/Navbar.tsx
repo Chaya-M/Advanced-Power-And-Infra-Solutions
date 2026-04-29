@@ -31,8 +31,8 @@ const Navbar = () => {
             className={cn(
                 "fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 transition-all duration-500 rounded-2xl border shadow-[0_20px_50px_rgba(0,0,0,0.5)]",
                 scrolled
-                    ? "bg-black backdrop-blur-2xl border-white/10 py-1"
-                    : "bg-black/80 backdrop-blur-lg border-white/5 py-2"
+                    ? "bg-black border-white/10 py-1"
+                    : "bg-black border-white/5 py-2"
             )}
         >
             <div className="px-6 lg:px-10">
@@ -74,9 +74,9 @@ const Navbar = () => {
                             <div className="ml-4 pl-4 border-l border-white/10">
                                 <a
                                     href={`tel:${COMPANY_INFO.phone[0]}`}
-                                    className="inline-flex items-center justify-center px-5 py-2 rounded-xl shadow-[0_0_20px_rgba(249,168,37,0.3)] text-xs font-black text-industrial-blue bg-energy-yellow hover:bg-yellow-400 hover:scale-105 transition-all active:scale-95"
+                                    className="inline-flex items-center justify-center px-5 py-2 rounded-xl shadow-[0_0_20px_rgba(249,168,37,0.3)] text-xs font-black text-black bg-energy-yellow hover:bg-yellow-400 hover:scale-105 transition-all active:scale-95"
                                 >
-                                    <Phone className="mr-2 h-3.5 w-3.5 fill-industrial-blue" />
+                                    <Phone className="mr-2 h-3.5 w-3.5 fill-black text-black" />
                                     ENQUIRE
                                 </a>
                             </div>
@@ -126,9 +126,9 @@ const Navbar = () => {
                     <div className="mt-4 px-3">
                         <a
                             href={`tel:${COMPANY_INFO.phone[0]}`}
-                            className="w-full inline-flex items-center justify-center px-4 py-3 border border-transparent rounded-lg shadow-sm text-base font-bold text-industrial-blue bg-energy-yellow hover:bg-yellow-500"
+                            className="w-full inline-flex items-center justify-center px-4 py-3 border border-transparent rounded-lg shadow-sm text-base font-bold text-black bg-energy-yellow hover:bg-yellow-500"
                         >
-                            <Phone className="mr-2 h-5 w-5" />
+                            <Phone className="mr-2 h-5 w-5 fill-black" />
                             Call +91 9686098702
                         </a>
                     </div>

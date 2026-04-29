@@ -295,29 +295,29 @@ export default function Home() {
             <div className="h-1 w-24 bg-energy-yellow mx-auto rounded-full shadow-[0_0_15px_#F9A825]"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 lg:gap-6 items-stretch">
             {domainHighlights.map((domain, idx) => (
-              <div key={idx} className="group p-10 rounded-[2.5rem] glass-panel transition-all duration-500 hover:bg-industrial-blue/40 hover:shadow-[0_30px_60px_rgba(11,60,93,0.3)] hover:-translate-y-4 h-full flex flex-col">
-                <div className="w-16 h-16 rounded-2xl bg-energy-yellow/95 text-industrial-blue flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-all duration-500">
-                  <domain.icon size={30} />
+              <div key={idx} className="group p-6 rounded-2xl glass-panel transition-all duration-500 hover:bg-industrial-blue/40 hover:shadow-[0_15px_30px_rgba(11,60,93,0.3)] hover:-translate-y-1 h-full flex flex-col">
+                <div className="w-12 h-12 rounded-xl bg-energy-yellow/95 text-industrial-blue flex items-center justify-center mb-5 shadow-sm group-hover:scale-105 transition-all duration-500">
+                  <domain.icon size={22} />
                 </div>
-                <h4 className="text-xl font-black text-white mb-4 uppercase tracking-tight">{domain.title}</h4>
-                <p className="text-slate-400 text-sm font-medium mb-8 leading-relaxed">
+                <h4 className="text-base font-black text-white mb-2 uppercase tracking-tight">{domain.title}</h4>
+                <p className="text-slate-400 text-[12px] font-medium mb-5 leading-relaxed">
                   {domain.description}
                 </p>
-                <ul className="space-y-4 mb-10 flex-grow">
+                <ul className="space-y-2.5 mb-8 flex-grow">
                   {domain.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-3 text-sm text-slate-200 leading-relaxed">
-                      <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-energy-yellow" />
+                    <li key={feature} className="flex items-start gap-2.5 text-[12px] text-slate-200 leading-relaxed">
+                      <CheckCircle2 size={13} className="mt-0.5 shrink-0 text-energy-yellow" />
                       <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
                 <Link
                   href={domain.href}
-                  className="mt-auto inline-flex items-center gap-2 font-black text-xs uppercase tracking-[0.2em] text-energy-yellow/70 group-hover:text-energy-yellow transition-colors border-t border-white/5 pt-6"
+                  className="mt-auto inline-flex items-center gap-2 font-black text-[9px] uppercase tracking-[0.2em] text-energy-yellow/70 group-hover:text-energy-yellow transition-colors border-t border-white/5 pt-4"
                 >
-                  VIEW DETAILS <ArrowRight size={14} />
+                  VIEW DETAILS <ArrowRight size={11} />
                 </Link>
               </div>
             ))}
