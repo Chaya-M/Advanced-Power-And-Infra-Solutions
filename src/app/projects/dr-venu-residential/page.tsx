@@ -22,39 +22,39 @@ export default function ResidentialCaseStudy() {
     return (
         <div className="pt-24 min-h-screen bg-[#FDFDFB]">
             {/* Case Study Hero */}
-            <section className="bg-white pt-24 pb-16 text-[#1B4332] relative overflow-hidden">
+            <section className="bg-white pt-16 pb-12 text-[#1B4332] relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <Link 
                         href="/projects" 
-                        className="inline-flex items-center gap-2 text-slate-400 hover:text-[#1B4332] transition-colors mb-12 text-sm font-bold uppercase tracking-widest"
+                        className="inline-flex items-center gap-2 text-slate-400 hover:text-[#1B4332] transition-colors mb-6 text-sm font-bold uppercase tracking-widest"
                     >
                         <ArrowLeft size={16} /> Back to Projects
                     </Link>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             animate={{ opacity: 1, x: 0 }}
                         >
-                            <div className="inline-flex items-center gap-3 px-4 py-2 bg-[#1B4332] text-white text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+                            <div className="inline-flex items-center gap-3 px-4 py-2 bg-[#1B4332] text-white text-[10px] font-black uppercase tracking-[0.3em] mb-6">
                                 <MapPin size={12} />
                                 Koramangala, Bangalore
                             </div>
-                            <h1 className="text-4xl md:text-7xl font-black mb-8 tracking-tighter uppercase leading-[0.9] text-[#1B4332]">
+                            <h1 className="text-4xl md:text-7xl font-black mb-6 tracking-tighter uppercase leading-[0.9] text-[#1B4332]">
                                 Dr. Venu <br />
-                                <span className="opacity-40 italic">Residential Project</span>
+                                <span className="text-black">Residential Project</span>
                             </h1>
-                            <p className="text-lg md:text-xl text-slate-600 max-w-xl leading-relaxed font-medium mb-12">
+                            <p className="text-lg md:text-xl text-slate-600 max-w-xl leading-relaxed font-medium mb-8">
                                 A technical case study on achieving 100% license approval and seamless electrical integration for a high-end luxury residential complex.
                             </p>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                <div className="p-8 border border-slate-100 bg-white shadow-sm">
+                                <div className="p-8 border border-slate-300 bg-white shadow-sm">
                                     <div className="text-[10px] font-black text-red-600 uppercase tracking-widest mb-2">Impact Metric</div>
                                     <div className="text-3xl font-black text-[#1B4332]">100% Approval</div>
                                     <div className="text-sm text-slate-500 mt-1 uppercase font-bold tracking-tight">Regulatory License Success</div>
                                 </div>
-                                <div className="p-8 border border-slate-100 bg-white shadow-sm">
+                                <div className="p-8 border border-slate-300 bg-white shadow-sm">
                                     <div className="text-[10px] font-black text-[#2D6A4F] uppercase tracking-widest mb-2">Reliability</div>
                                     <div className="text-3xl font-black text-[#1B4332]">Zero Downtime</div>
                                     <div className="text-sm text-slate-500 mt-1 uppercase font-bold tracking-tight">Continuous Power Delivery</div>
@@ -76,7 +76,7 @@ export default function ResidentialCaseStudy() {
                                 />
                                 <div className="absolute bottom-0 left-0 right-0 bg-[#1B4332] p-8">
                                     <div className="text-[10px] font-black text-white/50 uppercase tracking-widest mb-1">Primary Asset</div>
-                                    <div className="text-2xl font-black text-white uppercase tracking-tight italic">Residential Infrastructure</div>
+                                    <div className="text-2xl font-black text-white uppercase tracking-tight">Residential Infrastructure</div>
                                 </div>
                             </div>
                         </motion.div>
@@ -85,12 +85,12 @@ export default function ResidentialCaseStudy() {
             </section>
 
             {/* The Challenge */}
-            <section className="py-32 bg-[#1B4332] text-white">
+            <section className="py-16 bg-[#1B4332] text-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <h2 className="text-3xl md:text-6xl font-black uppercase tracking-tighter italic leading-[0.9] mb-12">
-                                The <span className="opacity-40">Challenge</span>
+                            <h2 className="text-3xl md:text-6xl font-black uppercase tracking-tighter leading-[0.9] mb-8">
+                                The <span className="text-black">Challenge</span>
                             </h2>
                             <p className="text-lg text-slate-300 leading-relaxed mb-10">
                                 Managing a complex electrical load for a luxury 5-floor residential building required more than just wiring. The project faced stringent regulatory hurdles and required a dual-layered backup strategy to meet luxury standards.
@@ -134,7 +134,7 @@ export default function ResidentialCaseStudy() {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
-                                    className="bg-white p-8 border-l-4 border-red-600 flex items-start gap-6"
+                                    className="bg-white p-6 border-l-4 border-red-600 flex items-start gap-4"
                                 >
                                     <div className="w-12 h-12 bg-[#F8F9F4] flex items-center justify-center shrink-0">
                                         <item.icon size={24} className="text-[#1B4332]" />
@@ -152,10 +152,10 @@ export default function ResidentialCaseStudy() {
             </section>
 
             {/* Field Documentation */}
-            <section className="py-32 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-20">
-                    <h2 className="text-3xl md:text-5xl font-black text-[#1B4332] uppercase tracking-tighter italic leading-none mb-6">
-                        Field <span className="opacity-40">Documentation</span>
+            <section className="py-16 bg-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
+                    <h2 className="text-3xl md:text-5xl font-black text-[#1B4332] uppercase tracking-tighter leading-none mb-6">
+                        Field <span className="text-black">Documentation</span>
                     </h2>
                     <div className="h-1 w-20 bg-[#1B4332] mx-auto"></div>
                 </div>
@@ -183,12 +183,12 @@ export default function ResidentialCaseStudy() {
             </section>
 
             {/* Testimonial */}
-            <section className="py-32 bg-[#F8F9F4] relative overflow-hidden">
+            <section className="py-16 bg-[#F8F9F4] relative overflow-hidden">
                 <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
-                    <div className="mb-12 flex justify-center text-red-600">
+                    <div className="mb-8 flex justify-center text-red-600">
                         <Quote size={60} fill="currentColor" />
                     </div>
-                    <blockquote className="text-3xl md:text-5xl font-black text-[#1B4332] leading-tight mb-12 uppercase italic tracking-tighter">
+                    <blockquote className="text-3xl md:text-5xl font-black text-[#1B4332] leading-tight mb-8 uppercase tracking-tighter">
                         "Efficient execution and handled all the bureaucracy for us."
                     </blockquote>
                     <div className="flex flex-col items-center">
@@ -199,8 +199,9 @@ export default function ResidentialCaseStudy() {
             </section>
 
             {/* Footer-like CTA */}
-            <section className="py-24 bg-white border-t border-slate-100">
+            <section className="py-12 bg-white border-t border-slate-100">
                 <div className="max-w-7xl mx-auto px-4 text-center">
+                    <h3 className="text-2xl md:text-4xl font-black text-black uppercase mb-8">Ready to Power Your Success Story?</h3>
                     <Link 
                         href="/contact" 
                         className="inline-flex items-center gap-4 bg-[#1B4332] text-white px-12 py-6 rounded-sm font-black text-sm uppercase tracking-widest hover:bg-red-600 transition-all shadow-2xl active:scale-95"

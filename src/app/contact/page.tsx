@@ -9,7 +9,7 @@ export default function Contact() {
     return (
         <div className="pt-32 min-h-screen bg-transparent">
             {/* Page Header */}
-            <section className="bg-industrial-blue py-8 text-white relative overflow-hidden">
+            <section className="bg-black py-8 text-white relative overflow-hidden border-b border-white/5">
                 <div className="absolute inset-0 opacity-10">
                     <Zap className="w-96 h-96 -bottom-20 -right-20 absolute rotate-12" />
                 </div>
@@ -17,11 +17,11 @@ export default function Contact() {
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-2xl md:text-4xl font-black mb-4 tracking-tighter uppercase italic"
+                        className="text-2xl md:text-4xl font-black mb-4 tracking-tighter uppercase text-white"
                     >
-                        Get in <span className="text-energy-yellow">Touch</span>
+                        GET IN TOUCH
                     </motion.h1>
-                    <p className="text-base text-slate-300 max-w-2xl mx-auto opacity-80 font-medium">
+                    <p className="text-base text-white max-w-2xl mx-auto font-medium">
                         Your mission-critical power infrastructure starts with a single conversation.
                     </p>
                 </div>
@@ -141,7 +141,7 @@ export default function Contact() {
                                 <textarea className="w-full px-6 py-4 rounded-[1.5rem] bg-white/5 border border-white/10 text-sm text-white focus:border-energy-yellow/50 focus:ring-4 focus:ring-energy-yellow/5 outline-none transition-all min-h-[140px] placeholder:text-white/10 resize-none font-medium" placeholder="Briefly describe your power requirements..."></textarea>
                             </div>
 
-                            <button type="submit" className="w-full bg-energy-yellow text-industrial-blue py-5 rounded-[1.5rem] font-black text-lg hover:bg-white transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-2xl shadow-energy-yellow/20 uppercase tracking-widest italic leading-none">
+                            <button type="submit" className="w-full bg-[#1B4332] text-white py-5 rounded-[1.5rem] font-black text-lg hover:bg-red-600 transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-2xl shadow-[#1B4332]/20 uppercase tracking-widest italic leading-none">
                                 Submit Enquiry
                             </button>
                         </form>
@@ -168,7 +168,9 @@ export default function Contact() {
                             <MapPin className="w-5 h-5 text-industrial-blue" />
                         </div>
                         <h4 className="text-lg font-black text-white italic tracking-tighter uppercase mb-2">Visit Our Head Office</h4>
-                        <p className="text-sm text-slate-400 font-medium mb-6 italic tracking-tight">Kengeri, Bangalore - 560056</p>
+                        <p className="text-sm text-slate-400 font-medium mb-6 italic tracking-tight max-w-[280px] mx-auto">
+                            {COMPANY_INFO.address}
+                        </p>
                         <a 
                             href="https://maps.google.com" 
                             target="_blank" 

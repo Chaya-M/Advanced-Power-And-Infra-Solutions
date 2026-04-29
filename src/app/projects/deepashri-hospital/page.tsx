@@ -22,7 +22,7 @@ export default function DeepashriHospitalCaseStudy() {
     return (
         <div className="min-h-screen bg-black">
             {/* Case Study Hero */}
-            <section className="bg-black pt-32 pb-32 text-white relative overflow-hidden">
+            <section className="bg-black pt-20 pb-16 text-white relative overflow-hidden">
                 <div className="absolute inset-0 opacity-20 pointer-events-none">
                     <div className="absolute top-0 right-0 w-full h-full" 
                         style={{ 
@@ -35,30 +35,30 @@ export default function DeepashriHospitalCaseStudy() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <Link 
                         href="/projects" 
-                        className="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors mb-12 text-sm font-bold uppercase tracking-widest"
+                        className="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors mb-6 text-sm font-bold uppercase tracking-widest"
                     >
                         <ArrowLeft size={16} /> Back to Projects
                     </Link>
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             animate={{ opacity: 1, x: 0 }}
                         >
-                            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#2D6A4F]/20 border border-[#2D6A4F]/40 text-[#2D6A4F] text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+                            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#2D6A4F]/20 border border-[#2D6A4F]/40 text-[#2D6A4F] text-[10px] font-black uppercase tracking-[0.3em] mb-4">
                                 <div className="w-2 h-2 rounded-full bg-[#2D6A4F] animate-pulse"></div>
                                 Healthcare Success
                             </div>
-                            <h1 className="text-4xl md:text-7xl font-black mb-8 tracking-tighter uppercase leading-[0.9]">
+                            <h1 className="text-4xl md:text-7xl font-black mb-4 tracking-tighter uppercase leading-[0.9]">
                                 Deepashri <br />
-                                <span className="text-[#67f3b2] italic">Hospital</span>
+                                <span className="text-black">Hospital</span>
                             </h1>
-                            <div className="flex items-center gap-4 text-slate-400 mb-12">
+                            <div className="flex items-center gap-4 text-slate-400 mb-6">
                                 <MapPin size={20} className="text-[#2D6A4F]" />
                                 <span className="text-lg font-bold uppercase tracking-widest">Bangalore, Karnataka</span>
                             </div>
 
-                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 pt-12 border-t border-white/10">
+                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-8 border-t border-white/10">
                                 <div>
                                     <div className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-2">Project Type</div>
                                     <div className="text-xl font-bold text-white">Healthcare</div>
@@ -92,10 +92,10 @@ export default function DeepashriHospitalCaseStudy() {
             </section>
 
             {/* Technical Challenges */}
-            <section className="py-24 bg-white">
+            <section className="py-12 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-20">
-                        <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter italic leading-none mb-6" style={{ color: '#000000', opacity: 1 }}>
+                    <div className="text-center mb-10">
+                        <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter leading-none mb-6" style={{ color: '#000000', opacity: 1 }}>
                             Technical <span className="text-red-600" style={{ color: '#dc2626' }}>Challenges</span>
                         </h2>
                         <div className="h-1 w-20 bg-red-600 mx-auto"></div>
@@ -125,7 +125,7 @@ export default function DeepashriHospitalCaseStudy() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1 }}
-                                className="bg-white p-10 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 group"
+                                className="bg-white p-10 rounded-2xl shadow-sm border border-slate-300 hover:shadow-xl transition-all duration-300 group"
                             >
                                 <div className="w-14 h-14 rounded-2xl bg-[#2D6A4F]/10 flex items-center justify-center mb-8 group-hover:bg-[#2D6A4F] transition-colors">
                                     <challenge.icon size={28} className="text-[#2D6A4F] group-hover:text-white" />
@@ -143,9 +143,9 @@ export default function DeepashriHospitalCaseStudy() {
             </section>
 
             {/* The Solution */}
-            <section className="py-32 bg-slate-50 relative overflow-hidden">
+            <section className="py-16 bg-slate-50 relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="relative order-2 lg:order-1">
                             <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl bg-slate-50 flex items-center justify-center">
                                 <Hospital size={120} className="text-[#2D6A4F]/20" />
@@ -155,10 +155,10 @@ export default function DeepashriHospitalCaseStudy() {
                         </div>
 
                         <div className="order-1 lg:order-2">
-                            <h2 className="text-3xl md:text-6xl font-black uppercase tracking-tighter italic leading-[0.9] mb-12" style={{ color: '#000000', opacity: 1 }}>
+                            <h2 className="text-3xl md:text-6xl font-black uppercase tracking-tighter leading-[0.9] mb-6" style={{ color: '#000000', opacity: 1 }}>
                                 The <span className="text-[#2D6A4F]" style={{ color: '#2D6A4F' }}>Solution</span>
                             </h2>
-                            <div className="space-y-8">
+                            <div className="space-y-4">
                                 {[
                                     {
                                         title: "40 KV Dedicated Infrastructure",
@@ -197,11 +197,11 @@ export default function DeepashriHospitalCaseStudy() {
             </section>
 
             {/* Results & Impact */}
-            <section className="py-24 bg-black text-white relative overflow-hidden">
+            <section className="py-12 bg-black text-white relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-20">
-                        <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter italic leading-none mb-6">
-                            Results & <span className="text-[#2D6A4F]">Impact</span>
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter leading-none mb-6">
+                            Results & <span className="text-black">Impact</span>
                         </h2>
                     </div>
 
@@ -231,12 +231,12 @@ export default function DeepashriHospitalCaseStudy() {
             </section>
 
             {/* Client Testimonial */}
-            <section className="py-32 bg-white">
+            <section className="py-16 bg-white">
                 <div className="max-w-4xl mx-auto px-4 text-center">
-                    <div className="mb-12 flex justify-center text-[#2D6A4F]/20">
+                    <div className="mb-6 flex justify-center text-[#2D6A4F]/20">
                         <Quote size={80} />
                     </div>
-                    <blockquote className="text-2xl md:text-4xl font-bold text-[#1B4332] italic leading-tight mb-12">
+                    <blockquote className="text-2xl md:text-4xl font-bold text-[#1B4332] leading-tight mb-8">
                         "Infrastructure Care provided a seamless transition during our block expansion. Their technical expertise ensured our life support systems never flickered."
                     </blockquote>
                     <div className="flex flex-col items-center">
@@ -248,9 +248,9 @@ export default function DeepashriHospitalCaseStudy() {
             </section>
 
             {/* CTA */}
-            <section className="py-24 bg-slate-50">
+            <section className="py-12 bg-slate-50">
                 <div className="max-w-7xl mx-auto px-4 text-center">
-                    <h3 className="text-2xl md:text-4xl font-black text-[#1B4332] uppercase mb-12">Ensuring Continuous Care?</h3>
+                    <h3 className="text-2xl md:text-4xl font-black text-black uppercase mb-8">Ensuring Continuous Care?</h3>
                     <Link 
                         href="/contact" 
                         className="inline-flex items-center gap-4 bg-[#1B4332] text-white px-12 py-6 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-red-600 transition-all shadow-2xl active:scale-95"

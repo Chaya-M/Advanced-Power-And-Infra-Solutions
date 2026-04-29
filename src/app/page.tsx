@@ -117,7 +117,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-industrial-dark">
       {/* High-Impact Visual Hero */}
-      <section className="relative min-h-0 flex items-start industrial-mesh overflow-hidden rounded-b-[4rem] sm:rounded-b-[6rem]">
+      <section className="relative min-h-0 flex items-start industrial-mesh overflow-hidden rounded-none">
         {/* Dark Gradient Overlay for Clarity */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-transparent z-0"></div>
 
@@ -125,7 +125,7 @@ export default function Home() {
         <div className="absolute top-1/4 -left-20 w-80 h-80 bg-industrial-blue blur-[120px] opacity-40 animate-pulse"></div>
         <div className="absolute top-1/3 -right-20 w-96 h-96 bg-energy-yellow blur-[150px] opacity-10 animate-pulse"></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-32 pb-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-20 pb-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-7">
               <motion.div
@@ -164,7 +164,7 @@ export default function Home() {
               >
                 <Link
                   href="/contact"
-                  className="group relative px-8 py-4 bg-red-500 text-white rounded-md font-black text-base transition-all hover:scale-105 hover:bg-red-600 active:scale-95"
+                  className="group relative px-8 py-4 bg-red-600 text-white rounded-none font-black text-xs hover:scale-105 transition-all shadow-2xl active:scale-95 uppercase overflow-hidden"
                 >
                   <span className="relative z-10 flex items-center gap-2 uppercase tracking-wider">
                     Explore Systems <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -172,7 +172,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/services"
-                  className="px-8 py-4 bg-transparent border border-[#67f3b2]/60 text-[#67f3b2] rounded-md font-black text-base transition-all hover:bg-[#67f3b2]/10 flex items-center gap-3"
+                  className="px-8 py-4 bg-transparent border border-[#67f3b2]/60 text-[#67f3b2] rounded-none font-black text-base transition-all hover:bg-[#67f3b2]/10 flex items-center gap-3"
                 >
                   VIEW SPECIFICATIONS
                 </Link>
@@ -213,7 +213,7 @@ export default function Home() {
                           aria-label={`Show ${generator.label}`}
                           onClick={() => setActiveGenerator(index)}
                           className={cn(
-                            "h-2.5 rounded-full transition-all",
+                            "h-2.5 rounded-none transition-all",
                             index === activeGenerator ? "w-8 bg-energy-yellow" : "w-2.5 bg-white/30"
                           )}
                         />
@@ -230,9 +230,9 @@ export default function Home() {
 
 
       {/* Technical Foundation Section (Updated to match Image 2) */}
-      <section className="py-24 !bg-[#F8F9F4] overflow-hidden relative border-y border-slate-200">
+      <section className="pt-6 pb-12 !bg-[#F8F9F4] overflow-hidden relative border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-4 mb-16">
+          <div className="flex items-center gap-4 mb-8">
             <div className="w-1.5 h-8 !bg-[#1B4332]"></div>
             <h2 className="text-xl md:text-2xl font-bold !text-[#1B4332] tracking-tight uppercase">
               Technical Foundation
@@ -268,7 +268,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="!bg-white p-10 border !border-[#1B4332] rounded-sm flex flex-col items-start min-h-[380px] hover:shadow-xl transition-all duration-300 group"
+                className="!bg-white p-10 border !border-[#1B4332] rounded-none flex flex-col items-start min-h-[380px] hover:shadow-xl transition-all duration-300 group"
               >
                 <div className="mb-10 group-hover:scale-110 transition-transform duration-300 !text-[#1B4332]">
                   <node.icon size={42} strokeWidth={1.5} />
@@ -288,17 +288,17 @@ export default function Home() {
       </section>
 
       {/* Services Grid with 3D Interaction feel */}
-      <section className="py-16 bg-transparent">
+      <section className="py-8 bg-transparent">
         <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-12">
-          <div className="text-center mb-12">
+          <div className="text-center mb-6">
             <h3 className="text-3xl md:text-4xl font-black text-white mb-4 tracking-tighter uppercase">Our Domains</h3>
-            <div className="h-1 w-24 bg-energy-yellow mx-auto rounded-full shadow-[0_0_15px_#F9A825]"></div>
+            <div className="h-1 w-24 bg-energy-yellow mx-auto rounded-none shadow-[0_0_15px_#F9A825]"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 lg:gap-6 items-stretch">
             {domainHighlights.map((domain, idx) => (
-              <div key={idx} className="group p-6 rounded-2xl glass-panel transition-all duration-500 hover:bg-industrial-blue/40 hover:shadow-[0_15px_30px_rgba(11,60,93,0.3)] hover:-translate-y-1 h-full flex flex-col">
-                <div className="w-12 h-12 rounded-xl bg-energy-yellow/95 text-industrial-blue flex items-center justify-center mb-5 shadow-sm group-hover:scale-105 transition-all duration-500">
+              <div key={idx} className="group p-6 rounded-none glass-panel transition-all duration-500 hover:bg-industrial-blue/40 hover:shadow-[0_15px_30px_rgba(11,60,93,0.3)] hover:-translate-y-1 h-full flex flex-col">
+                <div className="w-12 h-12 rounded-none bg-energy-yellow/95 text-industrial-blue flex items-center justify-center mb-5 shadow-sm group-hover:scale-105 transition-all duration-500">
                   <domain.icon size={22} />
                 </div>
                 <h4 className="text-base font-black text-white mb-2 uppercase tracking-tight">{domain.title}</h4>
@@ -326,9 +326,9 @@ export default function Home() {
       </section>
 
       {/* Leading Organizations We Serve */}
-      <section className="py-24 !bg-[#F8F9F4] overflow-hidden border-y border-slate-200">
+      <section className="py-12 !bg-[#F8F9F4] overflow-hidden border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
+          <div className="mb-6">
             <h2 className="text-3xl md:text-4xl font-bold !text-[#1B4332] leading-tight uppercase tracking-tight whitespace-nowrap">
               Trusted By Industry Leaders
             </h2>
@@ -368,7 +368,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="relative group overflow-hidden rounded-sm p-8 min-h-[380px] flex flex-col justify-end transition-all duration-700 hover:shadow-2xl hover:-translate-y-2 bg-black"
+                className="relative group overflow-hidden rounded-none p-8 min-h-[380px] flex flex-col justify-end transition-all duration-700 hover:shadow-2xl hover:-translate-y-2 bg-black"
               >
                 {/* Background Image */}
                 <Image 
@@ -396,7 +396,7 @@ export default function Home() {
                   <ul className="space-y-2">
                     {block.clients.map((client, idx) => (
                       <li key={idx} className="flex items-center gap-3 text-white/80 text-[10px] font-bold uppercase tracking-widest">
-                        <div className="w-1.5 h-1.5 rounded-full bg-red-600 shadow-[0_0_8px_rgba(220,38,38,0.8)]"></div>
+                        <div className="w-1.5 h-1.5 rounded-none bg-red-600 shadow-[0_0_8px_rgba(220,38,38,0.8)]"></div>
                         {client}
                       </li>
                     ))}
@@ -409,31 +409,31 @@ export default function Home() {
       </section>
 
       {/* High-Octane CTA - Redesigned for Premium Impact */}
-      <section className="py-20 px-4 relative">
-        <div className="max-w-7xl mx-auto rounded-[3.5rem] bg-gradient-to-br from-[#0c2b1b] via-[#081a12] to-black relative overflow-hidden p-10 md:p-20 border border-white/5 shadow-[0_50px_100px_rgba(0,0,0,0.7)]">
+      <section className="py-10 px-4 relative">
+        <div className="max-w-7xl mx-auto rounded-none bg-gradient-to-br from-[#0c2b1b] via-[#081a12] to-black relative overflow-hidden p-8 md:p-12 border border-white/5 shadow-[0_50px_100px_rgba(0,0,0,0.7)]">
           {/* Animated Ambient Glows */}
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-energy-yellow/5 blur-[120px] rounded-full pointer-events-none"></div>
-          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-red-600/5 blur-[120px] rounded-full pointer-events-none"></div>
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-energy-yellow/5 blur-[120px] rounded-none pointer-events-none"></div>
+          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-red-600/5 blur-[120px] rounded-none pointer-events-none"></div>
           <div className="absolute inset-0 industrial-mesh opacity-20"></div>
 
           <div className="relative z-10 text-center max-w-5xl mx-auto">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-8 tracking-tighter leading-none uppercase"
+              className="text-3xl md:text-5xl lg:text-5xl font-black text-white mb-4 tracking-tighter leading-none uppercase"
             >
               READY TO POWER YOUR <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-energy-yellow via-yellow-100 to-energy-yellow">BIGGEST AMBITIONS?</span>
             </motion.h2>
             
-            <p className="text-xs md:text-sm text-[#b6dfcb] mb-12 font-black uppercase tracking-[0.5em] opacity-60">
+            <p className="text-xs md:text-sm text-[#b6dfcb] mb-6 font-black uppercase tracking-[0.5em] opacity-60">
               Immediate Consultation for Installations & AMCs.
             </p>
 
-            <div className="flex flex-col xl:flex-row items-center justify-center gap-10 xl:gap-16">
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
               <Link
                 href="/contact"
-                className="group relative px-14 py-6 bg-energy-yellow text-[#0c2b1b] rounded-full font-black text-xl hover:scale-105 transition-all shadow-[0_25px_50px_rgba(74,125,101,0.4)] active:scale-95 uppercase overflow-hidden"
+                className="group relative px-10 py-4 bg-energy-yellow text-[#0c2b1b] rounded-none font-black text-lg hover:scale-105 transition-all shadow-[0_25px_50px_rgba(74,125,101,0.4)] active:scale-95 uppercase overflow-hidden"
               >
                 <span className="relative z-10">Get a Quote</span>
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
@@ -444,9 +444,9 @@ export default function Home() {
                   <a
                     key={i}
                     href={`tel:${phone}`}
-                    className="flex items-center gap-5 text-white text-xl md:text-2xl lg:text-4xl font-black tracking-tighter hover:text-energy-yellow transition-all group whitespace-nowrap"
+                    className="flex items-center gap-4 text-white text-lg md:text-xl lg:text-3xl font-black tracking-tighter hover:text-energy-yellow transition-all group whitespace-nowrap"
                   >
-                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-energy-yellow/20 group-hover:border-energy-yellow/40 transition-all duration-300">
+                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-none bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-energy-yellow/20 group-hover:border-energy-yellow/40 transition-all duration-300">
                       <Phone size={24} className="text-energy-yellow" />
                     </div>
                     {phone}
@@ -459,7 +459,7 @@ export default function Home() {
       </section>
 
       {/* Quick Stats Section - Simple yet Creative */}
-      <section className="py-24 bg-[#04100b] border-y border-white/5 relative overflow-hidden">
+      <section className="py-12 bg-[#04100b] border-y border-white/5 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-0 md:divide-x md:divide-white/10">
             {[
@@ -492,9 +492,9 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-industrial-dark relative overflow-hidden">
+      <section className="py-8 bg-industrial-dark relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="text-center mb-10">
+          <div className="text-center mb-6">
             <span className="text-energy-yellow text-xs font-black uppercase tracking-[0.3em]">Success Stories</span>
             <h2 className="text-3xl md:text-5xl font-black text-white mt-4 tracking-tight">VOICES OF TRUST</h2>
           </div>
@@ -507,7 +507,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="p-8 rounded-[2.5rem] glass-panel border border-white/5 relative group"
+                className="p-8 rounded-none glass-panel border border-white/5 relative group"
               >
                 <Quote size={40} className="text-energy-yellow opacity-10 absolute top-8 right-8" />
                 <div className="flex gap-1 mb-6">

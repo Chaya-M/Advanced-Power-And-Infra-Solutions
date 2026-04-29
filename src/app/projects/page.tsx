@@ -89,7 +89,7 @@ export default function ProjectsPage() {
     return (
         <div className="min-h-screen bg-black">
             {/* Success Story Header - Pure Black */}
-            <section className="bg-black pt-32 pb-16 text-white relative overflow-hidden border-b border-white/5">
+            <section className="bg-black pt-32 pb-8 text-white relative overflow-hidden border-b border-white/5">
                 <div className="absolute inset-0 opacity-20">
                     <Zap className="w-[30rem] h-[30rem] -bottom-32 -right-32 absolute rotate-12 text-energy-yellow" />
                 </div>
@@ -128,8 +128,8 @@ export default function ProjectsPage() {
 
             {/* Project Grid Section */}
             <section className="bg-white">
-                <div className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="py-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {PROJECTS_DATA.map((project) => (
                             <motion.div 
                                 key={project.id}
@@ -154,12 +154,12 @@ export default function ProjectsPage() {
                                 </div>
 
                                 {/* Content Area */}
-                                <div className="p-8 flex flex-col flex-grow bg-white">
-                                    <h3 className="text-2xl font-black mb-6 leading-tight tracking-tight uppercase" style={{ color: '#000000', opacity: 1 }}>
+                                <div className="p-4 flex flex-col flex-grow bg-white">
+                                    <h3 className="text-xl font-black mb-3 leading-tight tracking-tight uppercase" style={{ color: '#000000', opacity: 1 }}>
                                         {project.title}
                                     </h3>
 
-                                    <div className="space-y-4 flex-grow mb-10">
+                                    <div className="space-y-3 flex-grow mb-4">
                                         {project.highlights.map((item, i) => (
                                             <div key={i} className="flex items-start gap-4" style={{ color: '#000000', opacity: 1 }}>
                                                 <div className="mt-1 shrink-0">
@@ -175,7 +175,7 @@ export default function ProjectsPage() {
 
                                         {/* Testimonial specifically for Deepashri */}
                                         {project.id === 'deepashri-hospital' && (
-                                            <div className="mt-8 p-6 bg-slate-50 border-l-2 border-red-600 rounded-sm">
+                                            <div className="mt-3 p-3 bg-slate-50 border-l-2 border-red-600 rounded-sm">
                                                 <p className="text-[10px] italic text-slate-600 leading-relaxed mb-4">
                                                     "Infrastructure Care provided a seamless transition during our block expansion. Their technical expertise ensured our life support systems never flickered."
                                                 </p>
@@ -186,7 +186,7 @@ export default function ProjectsPage() {
                                         )}
                                     </div>
 
-                                    <div className="mt-auto pt-6 border-t border-slate-100">
+                                    <div className="mt-auto pt-4 border-t border-slate-100">
                                         <Link 
                                             href={
                                                 project.id === "bharat-cement" ? "/projects/stone-crusher" : 
@@ -210,24 +210,24 @@ export default function ProjectsPage() {
 
 
             {/* Trusted Leaders - Infinite Marquee */}
-            <section className="py-24 bg-black relative overflow-hidden">
-                <div className="absolute inset-0 opacity-10 pointer-events-none" 
+            <section className="py-12 !bg-[#F8F9F4] relative overflow-hidden border-t border-slate-200">
+                <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
                     style={{ 
-                        backgroundImage: `linear-gradient(#2D6A4F 1px, transparent 1px), linear-gradient(90deg, #2D6A4F 1px, transparent 1px)`, 
-                        backgroundSize: "60px 60px" 
+                        backgroundImage: `linear-gradient(#1B4332 1px, transparent 1px), linear-gradient(90deg, #1B4332 1px, transparent 1px)`, 
+                        backgroundSize: "40px 40px" 
                     }}>
                 </div>
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="flex flex-col items-center text-center mb-16">
-                        <span className="text-[10px] font-black uppercase tracking-[0.5em] text-[#2D6A4F] mb-4">Network & Partnerships</span>
-                        <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter italic leading-none text-white">
-                            TRUSTED <span className="opacity-40 italic">LEADERS</span>
+                    <div className="flex flex-col items-center text-center mb-8">
+                        <span className="text-[10px] font-black uppercase tracking-[0.5em] text-red-600 mb-4">Network & Partnerships</span>
+                        <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-none" style={{ color: '#000000' }}>
+                            TRUSTED LEADERS
                         </h2>
                     </div>
                 </div>
 
-                <div className="relative mt-20 flex overflow-hidden py-10">
+                <div className="relative mt-8 flex overflow-hidden py-6">
                     <motion.div 
                         animate={{ 
                             x: [0, -1920],
@@ -242,24 +242,24 @@ export default function ProjectsPage() {
                         {[...clients, ...clients, ...clients].map((logo, idx) => (
                             <div 
                                 key={idx}
-                                className="inline-flex items-center gap-6 px-10 py-6 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm group hover:bg-white/10 transition-all hover:border-[#2D6A4F]/50"
+                                className="inline-flex items-center gap-6 px-8 py-4 bg-black border border-white/10 rounded-none shadow-xl group transition-all hover:border-energy-yellow/50"
                             >
-                                <div className="h-12 w-12 rounded-xl bg-[#2D6A4F]/20 flex items-center justify-center text-[#2D6A4F] font-black text-xl border border-[#2D6A4F]/30 group-hover:bg-[#2D6A4F] group-hover:text-white transition-all">
+                                <div className="h-10 w-10 rounded-none bg-[#2D6A4F] flex items-center justify-center text-white font-black text-lg border border-white/10 group-hover:bg-energy-yellow group-hover:text-black transition-all">
                                     {logo.short}
                                 </div>
                                 <div className="flex flex-col">
-                                    <span className="text-sm font-black uppercase tracking-widest text-white">{logo.name}</span>
-                                    <span className="text-[8px] font-bold text-[#2D6A4F] uppercase tracking-[0.2em]">Partner since 2022</span>
+                                    <span className="text-[13px] font-black uppercase tracking-widest text-white">{logo.name}</span>
+                                    <span className="text-[8px] font-bold text-energy-yellow uppercase tracking-[0.2em]">Partner since 2022</span>
                                 </div>
                             </div>
                         ))}
                     </motion.div>
 
-                    <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10"></div>
-                    <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10"></div>
+                    <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#F8F9F4] to-transparent z-10"></div>
+                    <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#F8F9F4] to-transparent z-10"></div>
                 </div>
 
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         {[
                             { label: "Active Clients", val: "50+" },
@@ -267,9 +267,9 @@ export default function ProjectsPage() {
                             { label: "Bengaluru Reach", val: "100%" },
                             { label: "Service Score", val: "4.9/5" }
                         ].map((stat, i) => (
-                            <div key={i} className="border-t border-white/10 pt-6">
-                                <div className="text-2xl font-black text-white">{stat.val}</div>
-                                <div className="text-[10px] font-bold text-[#2D6A4F] uppercase tracking-widest mt-1">{stat.label}</div>
+                            <div key={i} className="border-t border-slate-200 pt-6">
+                                <div className="text-2xl font-black text-black">{stat.val}</div>
+                                <div className="text-[10px] font-bold text-black/60 uppercase tracking-widest mt-1">{stat.label}</div>
                             </div>
                         ))}
                     </div>

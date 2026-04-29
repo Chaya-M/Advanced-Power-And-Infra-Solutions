@@ -29,7 +29,7 @@ const Navbar = () => {
     return (
         <nav
             className={cn(
-                "fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 transition-all duration-500 rounded-2xl border shadow-[0_20px_50px_rgba(0,0,0,0.5)]",
+                "fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 transition-all duration-500 rounded-none border shadow-[0_20px_50px_rgba(0,0,0,0.5)]",
                 scrolled
                     ? "bg-black border-white/10 py-1"
                     : "bg-black border-white/5 py-2"
@@ -41,7 +41,7 @@ const Navbar = () => {
                         <Link href="/" className="flex items-center gap-3 active:scale-95 transition-transform">
                             <div className="relative">
                                 <div className="absolute inset-0 bg-energy-yellow blur-lg opacity-20 group-hover:opacity-40 transition-opacity"></div>
-                                <div className="bg-industrial-blue p-2.5 rounded-xl relative z-10 border border-white/10">
+                                <div className="bg-industrial-blue p-2.5 rounded-none relative z-10 border border-white/10">
                                     <Zap className="h-6 w-6 text-energy-yellow fill-energy-yellow" />
                                 </div>
                             </div>
@@ -64,7 +64,7 @@ const Navbar = () => {
                                     key={link.name}
                                     href={link.href}
                                     className={cn(
-                                        "px-4 py-2 rounded-xl text-sm font-bold transition-all hover:scale-105",
+                                        "px-4 py-2 rounded-none text-sm font-bold transition-all hover:scale-105",
                                         scrolled ? "text-white/80 hover:bg-white/5 hover:text-energy-yellow" : "text-white hover:bg-white/10"
                                     )}
                                 >
@@ -74,7 +74,7 @@ const Navbar = () => {
                             <div className="ml-4 pl-4 border-l border-white/10">
                                 <a
                                     href={`tel:${COMPANY_INFO.phone[0]}`}
-                                    className="inline-flex items-center justify-center px-5 py-2 rounded-xl shadow-[0_0_20px_rgba(249,168,37,0.3)] text-xs font-black text-black bg-energy-yellow hover:bg-yellow-400 hover:scale-105 transition-all active:scale-95"
+                                    className="inline-flex items-center justify-center px-5 py-2 rounded-none shadow-[0_0_20px_rgba(249,168,37,0.3)] text-xs font-black text-black bg-energy-yellow hover:bg-yellow-400 hover:scale-105 transition-all active:scale-95"
                                 >
                                     <Phone className="mr-2 h-3.5 w-3.5 fill-black text-black" />
                                     ENQUIRE
@@ -87,7 +87,7 @@ const Navbar = () => {
                     <div className="md:hidden flex items-center gap-4">
                         <a
                             href={`tel:${COMPANY_INFO.phone[0]}`}
-                            className="p-2 bg-energy-yellow rounded-full text-industrial-blue"
+                            className="p-2 bg-energy-yellow rounded-none text-industrial-blue"
                         >
                             <Phone className="h-5 w-5" />
                         </a>
@@ -126,7 +126,7 @@ const Navbar = () => {
                     <div className="mt-4 px-3">
                         <a
                             href={`tel:${COMPANY_INFO.phone[0]}`}
-                            className="w-full inline-flex items-center justify-center px-4 py-3 border border-transparent rounded-lg shadow-sm text-base font-bold text-black bg-energy-yellow hover:bg-yellow-500"
+                            className="w-full inline-flex items-center justify-center px-4 py-3 border border-transparent rounded-none shadow-sm text-base font-bold text-black bg-energy-yellow hover:bg-yellow-500"
                         >
                             <Phone className="mr-2 h-5 w-5 fill-black" />
                             Call +91 9686098702

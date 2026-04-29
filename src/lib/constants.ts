@@ -7,7 +7,7 @@ export const COMPANY_INFO = {
     headOffice: "Bangalore, India",
     authorizedDealer: "Cummins, Tata, KOEL, Caterpillar, TMTL, Ashok Leyland",
     capacityRange: "5 KVA – 1010 KVA",
-    address: "No.190, Elite Residency, Kodipalya Main Road, Kengeri, Near Namma Layout, Bangalore – 560056",
+    address: "No.190, Elite Residency, Kodipalya Main Road, Kengeri, Near Namma Layout, Bangalore - 560056",
     phone: ["+91 9686098702", "+91 9902807767"],
     email: "advancedpowerinfra@gmail.com",
     website: "www.advancedpowerinfra.com",

@@ -11,9 +11,9 @@ import teamImg from "./team.jpeg";
 
 export default function About() {
     return (
-        <div className="pt-32 min-h-screen bg-black">
+        <div className="pt-20 min-h-screen bg-black">
             {/* Page Header - Pure Black */}
-            <section className="bg-black pt-16 pb-8 text-white relative overflow-hidden border-b border-white/5">
+            <section className="bg-black pt-10 pb-6 text-white relative overflow-hidden border-b border-white/5">
                 <div className="absolute inset-0 opacity-10">
                     <Zap className="w-96 h-96 -bottom-20 -right-20 absolute rotate-12 text-energy-yellow" />
                 </div>
@@ -32,7 +32,7 @@ export default function About() {
             </section>
 
             {/* Origin Story - Light Theme */}
-            <section className="pt-24 pb-24 relative overflow-hidden !bg-[#F8F9F4] border-y border-slate-200">
+            <section className="py-12 relative overflow-hidden !bg-[#F8F9F4] border-y border-slate-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <motion.div
@@ -41,11 +41,11 @@ export default function About() {
                             viewport={{ once: true }}
                         >
                             <h2 className="!text-red-600 font-black uppercase tracking-[0.3em] text-[10px] mb-4">Our Engineering Legacy</h2>
-                            <h3 className="text-3xl md:text-5xl font-black !text-[#1B4332] tracking-tighter uppercase mb-8 leading-none">
+                            <h3 className="text-3xl md:text-5xl font-black !text-[#1B4332] tracking-tighter uppercase mb-4 leading-none">
                                 Powering Bangalore <br />
                                 <span className="text-red-600 italic underline decoration-4 underline-offset-8">Since {COMPANY_INFO.established}</span>
                             </h3>
-                            <div className="space-y-6 !text-slate-600 text-lg leading-relaxed font-medium">
+                            <div className="space-y-4 !text-slate-600 text-lg leading-relaxed font-medium">
                                 <p>
                                     Advanced Power And Infra Solutions was established in 2009 with a single mission: to provide <span className="!text-[#1B4332] font-bold">reliable and efficient backup power</span> solutions to the growing industrial infrastructure of Bangalore.
                                 </p>
@@ -56,7 +56,7 @@ export default function About() {
                                     Our expertise spans the entire lifecycle of a diesel generator—from elite sales and installation to high-performance maintenance and strategic buyback services.
                                 </p>
                             </div>
-                            <div className="mt-12 flex flex-wrap gap-6">
+                            <div className="mt-6 flex flex-wrap gap-6">
                                 <div className="flex flex-col bg-industrial-blue p-6 rounded-3xl shadow-2xl border border-white/5">
                                     <span className="text-5xl font-black text-white italic">15+</span>
                                     <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest mt-2">Years of Excellence</span>
@@ -72,7 +72,7 @@ export default function About() {
                             <motion.div 
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
-                                className="aspect-[4/3] bg-industrial-blue rounded-[2rem] border border-white/5 shadow-2xl relative overflow-hidden flex items-center justify-center group"
+                                className="aspect-[4/3] bg-industrial-blue rounded-none border border-white/5 shadow-2xl relative overflow-hidden flex items-center justify-center group"
                             >
                                 <div className="relative z-10 w-full h-full p-8">
                                     <Image 
@@ -90,15 +90,15 @@ export default function About() {
             </section>
 
             {/* Meet the Founder - Pure Black */}
-            <section className="py-24 bg-black text-white overflow-hidden relative border-y border-white/5">
+            <section className="py-12 bg-black text-white overflow-hidden relative border-y border-white/5">
                 <div className="absolute top-0 right-0 w-1/3 h-full bg-energy-yellow/5 skew-x-12 translate-x-20"></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div className="order-2 lg:order-1">
                             <h2 className="text-energy-yellow font-black uppercase tracking-[0.2em] text-sm mb-4">Meet the Founder</h2>
-                            <h3 className="text-3xl md:text-5xl font-black mb-8 italic tracking-tighter">M S MURTHY</h3>
-                            <div className="space-y-6 text-slate-300 text-lg leading-relaxed font-medium">
-                                <div className="flex items-start gap-4 p-6 bg-white/5 rounded-2xl border border-white/10">
+                            <h3 className="text-3xl md:text-5xl font-black mb-4 italic tracking-tighter">M S MURTHY</h3>
+                            <div className="space-y-4 text-slate-300 text-lg leading-relaxed font-medium">
+                                <div className="flex items-start gap-4 p-6 bg-white/5 rounded-none border border-white/10">
                                     <Award className="w-8 h-8 text-energy-yellow shrink-0 mt-1" />
                                     <div>
                                         <p className="font-bold text-white mb-1 text-xl">Academic Excellence</p>
@@ -111,7 +111,7 @@ export default function About() {
                                 <p>
                                     He started his career as an Assistant Marketing Manager at <span className="text-white font-bold">M/s Professional Diesel Power Engineers (Mahindra’s OEM)</span> and continued to excel in key leadership roles at industry giants like <span className="text-white font-bold">M/s GMMCO LIMITED (CATERPILLAR Dealer)</span> and <span className="text-white font-bold">M/s POWERICA LIMITED (CUMMINS OEM)</span>.
                                 </p>
-                                <div className="p-8 bg-energy-yellow rounded-[2.5rem] mt-12 shadow-[0_20px_60px_rgba(249,168,37,0.3)]">
+                                <div className="p-8 bg-energy-yellow rounded-none mt-6 shadow-[0_20px_60px_rgba(249,168,37,0.3)]">
                                     <p className="!text-black font-black text-2xl leading-tight uppercase tracking-tight">
                                         "Founded APIS Solutions in 2009 to provide a Single Point of Contact for customers looking to escape the long chain of service routes."
                                     </p>
@@ -122,7 +122,7 @@ export default function About() {
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
-                                className="aspect-[4/5] rounded-[3.5rem] overflow-hidden border-8 border-white/5 shadow-[0_50px_100px_rgba(0,0,0,0.6)] relative group"
+                                className="aspect-[4/5] rounded-none overflow-hidden border-8 border-white/5 shadow-[0_50px_100px_rgba(0,0,0,0.6)] relative group"
                             >
                                 <Image 
                                     src={founderImg}
@@ -142,9 +142,9 @@ export default function About() {
             </section>
 
             {/* Team - Light Theme */}
-            <section className="py-24 !bg-[#F8F9F4] relative overflow-hidden border-y border-slate-200">
+            <section className="py-12 !bg-[#F8F9F4] relative overflow-hidden border-y border-slate-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                    <div className="mb-16">
+                    <div className="mb-8">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
@@ -156,7 +156,7 @@ export default function About() {
                         <h2 className="text-4xl md:text-6xl font-black !text-[#1B4332] tracking-tighter uppercase mb-6 leading-none">
                             Our Elite <span className="text-red-600 italic underline decoration-8 underline-offset-[12px]">Team</span>
                         </h2>
-                        <p className="text-slate-500 max-w-2xl mx-auto font-bold text-base uppercase tracking-widest opacity-70">
+                        <p className="text-[#1B4332] max-w-2xl mx-auto font-bold text-base uppercase tracking-widest">
                             Combining decades of field experience with advanced engineering precision.
                         </p>
                     </div>
@@ -175,8 +175,8 @@ export default function About() {
                                 transition={{ delay: idx * 0.1 }}
                                 className="group relative h-full"
                             >
-                                <div className="bg-black p-8 rounded-[2.5rem] border-2 border-[#1B4332] group-hover:border-red-600/50 transition-all duration-500 h-full flex flex-col items-center text-center overflow-hidden relative shadow-2xl hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
-                                    <div className="w-16 h-16 rounded-2xl bg-white/5 text-red-600 flex items-center justify-center mb-8 border border-white/10 group-hover:bg-red-600 group-hover:text-white transition-all duration-500 shadow-sm">
+                                <div className="bg-black p-8 rounded-none border-2 border-[#1B4332] group-hover:border-red-600/50 transition-all duration-500 h-full flex flex-col items-center text-center overflow-hidden relative shadow-2xl hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
+                                    <div className="w-16 h-16 rounded-none bg-white/5 text-red-600 flex items-center justify-center mb-8 border border-white/10 group-hover:bg-red-600 group-hover:text-white transition-all duration-500 shadow-sm">
                                         <team.icon size={28} />
                                     </div>
                                     <h4 className="text-xl font-black text-white mb-4 uppercase tracking-tighter italic">{team.role}</h4>
@@ -199,7 +199,7 @@ export default function About() {
                             viewport={{ once: true }}
                             className="relative"
                         >
-                            <div className="aspect-[16/7] md:aspect-[21/7] rounded-[3.5rem] md:rounded-[4.5rem] overflow-hidden border-[12px] border-white shadow-2xl relative group">
+                            <div className="aspect-[16/7] md:aspect-[21/7] rounded-none overflow-hidden border-[12px] border-white shadow-2xl relative group">
                                 <Image 
                                     src={teamImg}
                                     alt="APIS Solutions Team"
