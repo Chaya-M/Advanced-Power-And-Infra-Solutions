@@ -89,7 +89,7 @@ export default function ProjectsPage() {
     return (
         <div className="min-h-screen bg-black">
             {/* Success Story Header - Pure Black */}
-            <section className="bg-black pt-24 md:pt-32 pb-6 md:pb-8 text-white relative overflow-hidden border-b border-white/5">
+            <section className="bg-black pt-28 md:pt-32 pb-6 md:pb-8 text-white relative overflow-hidden border-b border-white/5">
                 <div className="absolute inset-0 opacity-20">
                     <Zap className="w-[30rem] h-[30rem] -bottom-32 -right-32 absolute rotate-12 text-energy-yellow" />
                 </div>

@@ -46,10 +46,10 @@ const Navbar = () => {
                                 </div>
                             </div>
                             <div className="flex flex-col justify-center">
-                                <span className="text-[14px] md:text-lg font-black tracking-tight leading-tight transition-colors text-white uppercase">
+                                <span className="text-[13px] md:text-lg font-black tracking-tight leading-tight transition-colors text-white uppercase">
                                     ADVANCED POWER
                                 </span>
-                                <span className="text-[7px] md:text-[10px] font-bold tracking-[0.2em] transition-colors text-energy-yellow uppercase">
+                                <span className="text-[6.5px] md:text-[10px] font-bold tracking-[0.2em] transition-colors text-energy-yellow uppercase">
                                     & INFRA SOLUTIONS
                                 </span>
                             </div>

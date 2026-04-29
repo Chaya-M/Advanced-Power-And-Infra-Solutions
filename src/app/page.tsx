@@ -125,7 +125,7 @@ export default function Home() {
         <div className="absolute top-1/4 -left-20 w-80 h-80 bg-industrial-blue blur-[120px] opacity-40 animate-pulse"></div>
         <div className="absolute top-1/3 -right-20 w-96 h-96 bg-energy-yellow blur-[150px] opacity-10 animate-pulse"></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-20 pb-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-28 md:pt-32 lg:pt-20 pb-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-7">
               <motion.div
@@ -160,11 +160,11 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="flex flex-wrap gap-6"
+                className="flex items-center gap-4"
               >
                 <Link
                   href="/contact"
-                  className="group relative px-8 py-4 bg-red-600 text-white rounded-none font-black text-xs hover:scale-105 transition-all shadow-2xl active:scale-95 uppercase overflow-hidden"
+                  className="group relative px-4 md:px-8 py-3 md:py-4 bg-red-600 text-white rounded-none font-black text-[10px] md:text-xs hover:scale-105 transition-all shadow-2xl active:scale-95 uppercase overflow-hidden"
                 >
                   <span className="relative z-10 flex items-center gap-2 uppercase tracking-wider">
                     Explore Systems <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -172,7 +172,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/services"
-                  className="px-8 py-4 bg-transparent border border-[#67f3b2]/60 text-[#67f3b2] rounded-none font-black text-base transition-all hover:bg-[#67f3b2]/10 flex items-center gap-3"
+                  className="px-4 md:px-8 py-3 md:py-4 bg-transparent border border-[#67f3b2]/60 text-[#67f3b2] rounded-none font-black text-[10px] md:text-base transition-all hover:bg-[#67f3b2]/10 flex items-center gap-2 md:gap-3"
                 >
                   VIEW SPECIFICATIONS
                 </Link>

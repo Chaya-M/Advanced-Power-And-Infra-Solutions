@@ -49,7 +49,7 @@ export default function DeepashriHospitalCaseStudy() {
                                 <div className="w-2 h-2 rounded-full bg-[#2D6A4F] animate-pulse"></div>
                                 Healthcare Success
                             </div>
-                             <h1 className="text-3xl md:text-7xl font-black mb-4 tracking-tighter uppercase leading-[0.9]" style={{ color: '#000000' }}>
+                             <h1 className="text-3xl md:text-7xl font-black mb-4 tracking-tighter uppercase leading-[0.9] text-white">
                                 Deepashri <br />
                                 <span>Hospital</span>
                             </h1>
@@ -201,7 +201,7 @@ export default function DeepashriHospitalCaseStudy() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter leading-none mb-6">
-                            Results & <span className="text-black">Impact</span>
+                            Results & <span className="text-[#2D6A4F]">Impact</span>
                         </h2>
                     </div>
 

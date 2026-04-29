@@ -60,7 +60,7 @@ export default function ServicesPage() {
                 <div className="absolute top-20 -left-16 h-72 w-72 rounded-full bg-industrial-blue/40 blur-[110px]" />
                 <div className="absolute right-0 top-24 h-80 w-80 rounded-full bg-energy-yellow/10 blur-[120px]" />
 
-                <div className="relative z-10 mx-auto max-w-7xl px-4 pb-20 pt-20 sm:px-6 lg:px-8">
+                <div className="relative z-10 mx-auto max-w-7xl px-4 pb-20 pt-28 md:pt-32 lg:pt-20 sm:px-6 lg:px-8">
                     <div className="max-w-4xl">
                         <motion.span
                             initial={{ opacity: 0, y: 12 }}
@@ -280,8 +280,9 @@ export default function ServicesPage() {
                         
                         <div className="max-w-3xl mx-auto text-center relative z-10">
                             <span className="text-xs font-black uppercase tracking-[0.4em] text-energy-yellow">Quick Enquiry</span>
-                            <h3 className="mt-0 text-3xl sm:text-5xl font-black uppercase tracking-tight text-[#1B4332] leading-none">
-                                Need sales or rental <span className="text-red-600 underline decoration-4 underline-offset-8">support fast?</span>
+                            <h3 className="mt-0 text-3xl sm:text-5xl font-black uppercase tracking-tight !text-black leading-none">
+                                Need sales or rental <br />
+                                <span className="text-red-600 underline decoration-4 underline-offset-8">support fast?</span>
                             </h3>
                             <p className="mt-4 text-lg leading-relaxed text-slate-600 font-medium italic">
                                 Speak with our team for generator availability, site support, maintenance planning, or an immediate project quote.

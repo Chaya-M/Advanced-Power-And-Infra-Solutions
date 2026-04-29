@@ -13,7 +13,7 @@ export default function Contact() {
                 <div className="absolute inset-0 opacity-10">
                     <Zap className="w-96 h-96 -bottom-20 -right-20 absolute rotate-12" />
                 </div>
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-12 text-center">
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
