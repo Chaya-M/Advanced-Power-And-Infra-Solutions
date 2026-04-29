@@ -11,8 +11,8 @@ const Footer = () => {
                     {/* Company Bio */}
                     <div className="space-y-6">
                         <Link href="/" className="flex items-center gap-2">
-                            <div className="bg-white/5 p-2 rounded-lg border border-white/10">
-                                <Zap className="h-6 w-6 text-energy-yellow fill-energy-yellow" />
+                            <div className="bg-white p-1 rounded-lg border border-white/10">
+                                <img src="/images/logo.jpeg" alt="APIS Logo" className="h-8 w-auto" />
                             </div>
                             <span className="text-xl font-bold text-white tracking-tight">
                                 APIS SOLUTIONS

@@ -41,8 +41,8 @@ const Navbar = () => {
                         <Link href="/" className="flex items-center gap-3 active:scale-95 transition-transform">
                             <div className="relative">
                                 <div className="absolute inset-0 bg-energy-yellow blur-lg opacity-20 group-hover:opacity-40 transition-opacity"></div>
-                                <div className="bg-industrial-blue p-2.5 rounded-none relative z-10 border border-white/10">
-                                    <Zap className="h-6 w-6 text-energy-yellow fill-energy-yellow" />
+                                <div className="bg-white p-1 rounded-none relative z-10 border border-white/10">
+                                    <img src="/images/logo.jpeg" alt="APIS Logo" className="h-8 w-auto" />
                                 </div>
                             </div>
                             <div className="flex flex-col">

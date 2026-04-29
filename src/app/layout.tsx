@@ -41,6 +41,9 @@ export const metadata: Metadata = {
     title: `${COMPANY_INFO.name} | Industrial Power Solutions`,
     description: "Reliable diesel generator solutions for construction and industry.",
   },
+  icons: {
+    icon: '/icon.jpeg',
+  },
 };
 
 export default function RootLayout({
