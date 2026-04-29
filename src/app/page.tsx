@@ -125,7 +125,7 @@ export default function Home() {
         <div className="absolute top-1/4 -left-20 w-80 h-80 bg-industrial-blue blur-[120px] opacity-40 animate-pulse"></div>
         <div className="absolute top-1/3 -right-20 w-96 h-96 bg-energy-yellow blur-[150px] opacity-10 animate-pulse"></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-32 pb-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-20 pb-4">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-7">
               <motion.div
@@ -141,7 +141,7 @@ export default function Home() {
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-[1.8rem] md:text-[2.8rem] lg:text-[3.8rem] font-black text-white leading-[1.1] md:leading-[0.85] tracking-tighter mb-6 drop-shadow-2xl uppercase"
+                className="text-[1.75rem] md:text-[2.8rem] lg:text-[3.8rem] font-black text-white leading-[0.9] tracking-tighter mb-4 drop-shadow-2xl uppercase"
               >
                 <span className="text-[#67f3b2]">ADVANCED POWER</span> <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#67f3b2] to-[#c5ffe0]">& INFRA SOLUTIONS</span>
@@ -230,16 +230,16 @@ export default function Home() {
 
 
       {/* Technical Foundation Section (Updated to match Image 2) */}
-      <section className="pt-6 pb-12 !bg-[#F8F9F4] overflow-hidden relative border-y border-slate-200">
+      <section className="pt-4 pb-8 !bg-[#F8F9F4] overflow-hidden relative border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-4 mb-8">
+          <div className="flex items-center gap-4 mb-6">
             <div className="w-1.5 h-8 !bg-[#1B4332]"></div>
             <h2 className="text-xl md:text-2xl font-bold !text-[#1B4332] tracking-tight uppercase">
               Technical Foundation
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { 
                 title: "Tech Experts", 
@@ -268,17 +268,17 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="!bg-white p-6 sm:p-10 border !border-[#1B4332] rounded-none flex flex-col items-start min-h-[320px] sm:min-h-[380px] hover:shadow-xl transition-all duration-300 group"
+                className="!bg-white p-5 md:p-6 border !border-[#1B4332] rounded-none flex flex-col items-start min-h-0 md:min-h-[250px] hover:shadow-xl transition-all duration-300 group"
               >
-                <div className="mb-10 group-hover:scale-110 transition-transform duration-300 !text-[#1B4332]">
-                  <node.icon size={42} strokeWidth={1.5} />
+                <div className="mb-4 group-hover:scale-110 transition-transform duration-300 !text-[#1B4332]">
+                  <node.icon size={32} strokeWidth={1.5} />
                 </div>
                 
-                <h4 className="text-lg font-bold !text-[#1B4332] mb-6 uppercase tracking-tight">
+                <h4 className="text-base font-bold !text-[#1B4332] mb-2 uppercase tracking-tight">
                   {node.title}
                 </h4>
                 
-                <p className="!text-[#334D41] text-sm font-medium leading-relaxed">
+                <p className="!text-[#334D41] text-xs font-medium leading-relaxed">
                   {node.desc}
                 </p>
               </motion.div>
@@ -297,7 +297,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 lg:gap-6 items-stretch">
             {domainHighlights.map((domain, idx) => (
-              <div key={idx} className="group p-6 rounded-none glass-panel transition-all duration-500 hover:bg-industrial-blue/40 hover:shadow-[0_15px_30px_rgba(11,60,93,0.3)] hover:-translate-y-1 h-full flex flex-col">
+              <div key={idx} className="group p-5 md:p-6 rounded-none glass-panel transition-all duration-500 hover:bg-industrial-blue/40 hover:shadow-[0_15px_30px_rgba(11,60,93,0.3)] hover:-translate-y-1 h-full flex flex-col">
                 <div className="w-12 h-12 rounded-none bg-energy-yellow/95 text-industrial-blue flex items-center justify-center mb-5 shadow-sm group-hover:scale-105 transition-all duration-500">
                   <domain.icon size={22} />
                 </div>
@@ -329,7 +329,7 @@ export default function Home() {
       <section className="py-12 !bg-[#F8F9F4] overflow-hidden border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-6">
-            <h2 className="text-3xl md:text-4xl font-bold !text-[#1B4332] leading-tight uppercase tracking-tight whitespace-nowrap">
+            <h2 className="text-2xl md:text-4xl font-bold !text-[#1B4332] leading-tight uppercase tracking-tight">
               Trusted By Industry Leaders
             </h2>
             <div className="h-1 w-16 bg-red-600 mt-4"></div>
@@ -368,7 +368,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="relative group overflow-hidden rounded-none p-6 sm:p-8 min-h-[320px] sm:min-h-[380px] flex flex-col justify-end transition-all duration-700 hover:shadow-2xl hover:-translate-y-2 bg-black"
+                className="relative group overflow-hidden rounded-none p-6 md:p-8 min-h-[300px] md:min-h-[380px] flex flex-col justify-end transition-all duration-700 hover:shadow-2xl hover:-translate-y-2 bg-black"
               >
                 {/* Background Image */}
                 <Image 
@@ -409,8 +409,8 @@ export default function Home() {
       </section>
 
       {/* High-Octane CTA - Redesigned for Premium Impact */}
-      <section className="py-10 px-4 relative">
-        <div className="max-w-7xl mx-auto rounded-none bg-gradient-to-br from-[#0c2b1b] via-[#081a12] to-black relative overflow-hidden p-8 md:p-12 border border-white/5 shadow-[0_50px_100px_rgba(0,0,0,0.7)]">
+      <section className="py-4 md:py-8 px-4 relative">
+        <div className="max-w-7xl mx-auto rounded-none bg-gradient-to-br from-[#0c2b1b] via-[#081a12] to-black relative overflow-hidden p-6 md:p-8 border border-white/5 shadow-[0_50px_100px_rgba(0,0,0,0.7)]">
           {/* Animated Ambient Glows */}
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-energy-yellow/5 blur-[120px] rounded-none pointer-events-none"></div>
           <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-red-600/5 blur-[120px] rounded-none pointer-events-none"></div>
@@ -420,34 +420,34 @@ export default function Home() {
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-2xl md:text-5xl lg:text-5xl font-black text-white mb-6 tracking-tighter leading-tight md:leading-none uppercase"
+              className="text-2xl md:text-4xl font-black text-white mb-4 tracking-tighter leading-none uppercase"
             >
-              READY TO POWER YOUR <br className="hidden md:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-energy-yellow via-yellow-100 to-energy-yellow"> BIGGEST AMBITIONS?</span>
+              READY TO POWER YOUR <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-energy-yellow via-yellow-100 to-energy-yellow">BIGGEST AMBITIONS?</span>
             </motion.h2>
             
-            <p className="text-xs md:text-sm text-[#b6dfcb] mb-6 font-black uppercase tracking-[0.5em] opacity-60">
+            <p className="text-[10px] md:text-xs text-[#b6dfcb] mb-6 font-black uppercase tracking-[0.5em] opacity-60">
               Immediate Consultation for Installations & AMCs.
             </p>
 
-            <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-10">
               <Link
                 href="/contact"
-                className="group relative px-10 py-4 bg-energy-yellow text-[#0c2b1b] rounded-none font-black text-lg hover:scale-105 transition-all shadow-[0_25px_50px_rgba(74,125,101,0.4)] active:scale-95 uppercase overflow-hidden"
+                className="group relative px-8 py-3.5 bg-energy-yellow text-[#0c2b1b] rounded-none font-black text-base hover:scale-105 transition-all shadow-[0_25px_50px_rgba(74,125,101,0.4)] active:scale-95 uppercase overflow-hidden"
               >
                 <span className="relative z-10">Get a Quote</span>
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
               </Link>
 
-              <div className="flex flex-col sm:flex-row items-center gap-10">
+              <div className="flex flex-col sm:flex-row items-center gap-6 md:gap-10">
                 {[COMPANY_INFO.phone[0], COMPANY_INFO.phone[1]].map((phone, i) => (
                   <a
                     key={i}
                     href={`tel:${phone}`}
-                    className="flex items-center gap-3 md:gap-4 text-white text-base md:text-xl lg:text-3xl font-black tracking-tighter hover:text-energy-yellow transition-all group whitespace-nowrap"
+                    className="flex items-center gap-3 text-white text-base md:text-lg lg:text-2xl font-black tracking-tighter hover:text-energy-yellow transition-all group whitespace-nowrap"
                   >
-                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-none bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-energy-yellow/20 group-hover:border-energy-yellow/40 transition-all duration-300">
-                      <Phone size={24} className="text-energy-yellow" />
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-none bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-energy-yellow/20 group-hover:border-energy-yellow/40 transition-all duration-300">
+                      <Phone size={20} className="text-energy-yellow" />
                     </div>
                     {phone}
                   </a>
@@ -507,7 +507,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="p-8 rounded-none glass-panel border border-white/5 relative group"
+                className="p-6 md:p-8 rounded-none glass-panel border border-white/5 relative group"
               >
                 <Quote size={40} className="text-energy-yellow opacity-10 absolute top-8 right-8" />
                 <div className="flex gap-1 mb-6">

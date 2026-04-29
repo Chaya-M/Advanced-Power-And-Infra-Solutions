@@ -60,7 +60,7 @@ export default function ServicesPage() {
                 <div className="absolute top-20 -left-16 h-72 w-72 rounded-full bg-industrial-blue/40 blur-[110px]" />
                 <div className="absolute right-0 top-24 h-80 w-80 rounded-full bg-energy-yellow/10 blur-[120px]" />
 
-                <div className="relative z-10 mx-auto max-w-7xl px-4 pb-20 pt-32 sm:px-6 lg:px-8">
+                <div className="relative z-10 mx-auto max-w-7xl px-4 pb-20 pt-20 sm:px-6 lg:px-8">
                     <div className="max-w-4xl">
                         <motion.span
                             initial={{ opacity: 0, y: 12 }}
@@ -73,15 +73,15 @@ export default function ServicesPage() {
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="mb-6 text-[1.6rem] font-black uppercase leading-[1.1] tracking-tighter sm:text-[2.8rem] lg:text-[3.2rem]"
+                            className="mb-6 text-[1.6rem] font-black uppercase leading-none tracking-tighter sm:text-[2.8rem] lg:text-[3.2rem] flex flex-wrap items-center gap-y-2"
                         >
                             <span className="text-white">SALES</span>
-                            <span className="mx-2 text-energy-yellow">•</span>
-                            <span className="text-white">RENTALS</span>
-                            <span className="mx-2 text-energy-yellow">•</span>
-                            <span className="text-white">AMC</span>
-                            <span className="mx-2 text-energy-yellow">•</span>
-                            <span className="text-transparent bg-gradient-to-r from-energy-yellow to-yellow-100 bg-clip-text">
+                            <span className="mx-2 text-energy-yellow hidden sm:inline">•</span>
+                            <span className="text-white ml-2 sm:ml-0">RENTALS</span>
+                            <span className="mx-2 text-energy-yellow hidden sm:inline">•</span>
+                            <span className="text-white ml-2 sm:ml-0">AMC</span>
+                            <span className="mx-2 text-energy-yellow hidden sm:inline">•</span>
+                            <span className="text-transparent bg-gradient-to-r from-energy-yellow to-yellow-100 bg-clip-text ml-2 sm:ml-0">
                                 INSTALLATION
                             </span>
                         </motion.h1>
@@ -133,7 +133,7 @@ export default function ServicesPage() {
                                 >
                                     <div className={`absolute -right-20 -top-20 h-64 w-64 rounded-full ${isGreen ? 'bg-white/10' : 'bg-energy-yellow/5'} blur-3xl transition-all group-hover:opacity-80`} />
                                     
-                                    <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+                                    <div className="grid grid-cols-1 gap-8 lg:gap-12 lg:grid-cols-2">
                                         <div>
                                             <div className={`mb-6 flex h-12 w-12 items-center justify-center rounded-none ${isGreen ? 'bg-white/20 text-white' : 'bg-white/5 border border-white/10 text-energy-yellow'} shadow-xl`}>
                                                 <service.icon className="h-8 w-8" />
@@ -179,7 +179,7 @@ export default function ServicesPage() {
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        className="rounded-none border-2 border-[#2D6A4F] bg-black/40 p-6 md:p-8 backdrop-blur-3xl relative overflow-hidden max-w-6xl mx-auto"
+                        className="rounded-none border-2 border-[#2D6A4F] bg-black/40 p-5 md:p-8 backdrop-blur-3xl relative overflow-hidden max-w-6xl mx-auto"
                     >
                         {/* Technical accents */}
                         <div className="absolute top-0 right-0 w-64 h-64 bg-[#2D6A4F]/10 blur-[100px] rounded-full" />
@@ -188,10 +188,10 @@ export default function ServicesPage() {
                             <span className="inline-flex items-center gap-2 rounded-lg bg-[#2D6A4F]/20 px-4 py-2 text-[10px] font-black uppercase tracking-[0.3em] text-[#2D6A4F] mb-8 mx-auto">
                                 <Zap className="h-3 w-3" /> Unique Feature
                             </span>
-                            <h2 className="text-2xl sm:text-5xl font-black uppercase tracking-tight text-white mb-6">
+                            <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white mb-8">
                                 DG SET <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-400">BUYBACK</span> PROGRAM
                             </h2>
-                            <p className="text-sm sm:text-xl font-bold text-slate-400 uppercase tracking-widest mb-8">
+                            <p className="text-xl font-bold text-slate-400 uppercase tracking-widest mb-8">
                                 Upgrade your power without the hassle of old equipment.
                             </p>
 
@@ -222,18 +222,18 @@ export default function ServicesPage() {
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
                         {industries.map((industry, idx) => (
                             <motion.div
                                 key={idx}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: idx * 0.1 }}
-                                className="p-8 rounded-none border-2 border-[#1B4332]/20 bg-white hover:bg-slate-50 hover:shadow-2xl transition-all duration-500 group"
+                                className="p-4 md:p-6 rounded-none border-2 border-[#1B4332]/20 bg-white hover:bg-slate-50 hover:shadow-2xl transition-all duration-500 group"
                             >
-                                <div className="mb-6 h-1 w-12 bg-red-600 transition-all group-hover:w-full" />
-                                <h3 className="text-lg font-black uppercase tracking-tight mb-3 text-slate-900">{industry.title}</h3>
-                                <p className="text-sm text-slate-500 font-bold leading-relaxed">{industry.desc}</p>
+                                <div className="mb-4 h-1 w-12 bg-red-600 transition-all group-hover:w-full" />
+                                <h3 className="text-base font-black uppercase tracking-tight mb-2 text-slate-900">{industry.title}</h3>
+                                <p className="text-xs text-slate-500 font-bold leading-relaxed">{industry.desc}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -242,7 +242,7 @@ export default function ServicesPage() {
 
             <section className="py-6 bg-black">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                    <div className="rounded-none bg-industrial-blue p-8 shadow-[0_30px_90px_rgba(11,60,93,0.35)] sm:p-10">
+                    <div className="rounded-none bg-industrial-blue p-6 shadow-[0_30px_90px_rgba(11,60,93,0.35)] sm:p-10">
                         <div className="mb-8 max-w-3xl">
                             <span className="text-xs font-black uppercase tracking-[0.3em] text-energy-yellow">All Services</span>
                             <h2 className="mt-4 text-3xl font-black uppercase tracking-tight sm:text-4xl">
@@ -254,18 +254,18 @@ export default function ServicesPage() {
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                        <div className="grid grid-cols-2 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                             {SERVICES.map((service) => (
                                 <div
                                     key={service.slug}
                                     id={service.slug}
-                                    className="rounded-none border-2 border-[#1B4332]/10 bg-white p-4 hover:shadow-xl transition-all duration-300 group"
+                                    className="rounded-none border-2 border-[#1B4332]/10 bg-white p-3 hover:shadow-xl transition-all duration-300 group"
                                 >
-                                    <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-none bg-[#1B4332] text-white">
-                                        <service.icon className="h-5 w-5" />
+                                    <div className="mb-1.5 flex h-8 w-8 items-center justify-center rounded-none bg-[#1B4332] text-white">
+                                        <service.icon className="h-4 w-4" />
                                     </div>
-                                    <h3 className="mb-1 text-base font-black uppercase tracking-tight text-slate-900">{service.title}</h3>
-                                    <p className="text-xs leading-relaxed text-slate-600 font-bold">{service.description}</p>
+                                    <h3 className="mb-1 text-sm font-black uppercase tracking-tight text-slate-900">{service.title}</h3>
+                                    <p className="text-[10px] leading-relaxed text-slate-600 font-bold">{service.description}</p>
                                 </div>
                             ))}
                         </div>
@@ -278,20 +278,13 @@ export default function ServicesPage() {
                     <div className="rounded-none border-2 border-[#1B4332]/20 bg-white p-4 md:p-6 relative overflow-hidden shadow-xl max-w-6xl mx-auto">
                         <div className="absolute top-0 right-0 w-96 h-96 bg-energy-yellow/5 blur-[120px] rounded-full" />
                         
-                        <div className="max-w-4xl mx-auto text-center relative z-20">
-                            <div className="mb-4">
-                                <span className="text-xs font-black uppercase tracking-[0.4em] text-red-600">Direct Support</span>
-                            </div>
-                            <h2 className="mt-0 flex flex-col items-center">
-                                <span className="text-2xl md:text-4xl font-black text-black uppercase tracking-tight mb-2">
-                                    Need sales or rental
-                                </span>
-                                <span className="text-4xl md:text-7xl font-black text-red-600 uppercase tracking-tighter leading-none">
-                                    support fast?
-                                </span>
-                            </h2>
-                            <p className="mt-6 text-base md:text-xl leading-relaxed text-slate-600 font-bold max-w-2xl mx-auto">
-                                Speak with our technical team for generator availability, site support, maintenance planning, or an immediate project quote.
+                        <div className="max-w-3xl mx-auto text-center relative z-10">
+                            <span className="text-xs font-black uppercase tracking-[0.4em] text-energy-yellow">Quick Enquiry</span>
+                            <h3 className="mt-0 text-3xl sm:text-5xl font-black uppercase tracking-tight text-[#1B4332] leading-none">
+                                Need sales or rental <span className="text-red-600 underline decoration-4 underline-offset-8">support fast?</span>
+                            </h3>
+                            <p className="mt-4 text-lg leading-relaxed text-slate-600 font-medium italic">
+                                Speak with our team for generator availability, site support, maintenance planning, or an immediate project quote.
                             </p>
                             
                             <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -299,7 +292,7 @@ export default function ServicesPage() {
                                     <a
                                         key={phone}
                                         href={`tel:${phone}`}
-                                        className="flex items-center justify-between rounded-none bg-[#1B4332] border border-[#1B4332]/10 px-4 py-3 sm:px-8 sm:py-6 font-black text-lg sm:text-xl text-white transition-all hover:bg-red-600 hover:scale-[1.02]"
+                                        className="flex items-center justify-between rounded-none bg-[#1B4332] border border-[#1B4332]/10 px-8 py-6 font-black text-xl text-white transition-all hover:bg-red-600 hover:scale-[1.02]"
                                     >
                                         <span className="flex items-center gap-4">
                                             <Phone className="h-5 w-5 text-energy-yellow group-hover:text-industrial-blue" />

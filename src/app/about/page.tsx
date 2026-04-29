@@ -21,7 +21,7 @@ export default function About() {
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-4xl md:text-7xl font-black mb-6 tracking-tighter uppercase"
+                        className="text-2xl md:text-7xl font-black mb-6 tracking-tighter uppercase"
                     >
                         About <span className="text-energy-yellow">APIS Solutions</span>
                     </motion.h1>
@@ -41,7 +41,7 @@ export default function About() {
                             viewport={{ once: true }}
                         >
                             <h2 className="!text-red-600 font-black uppercase tracking-[0.3em] text-[10px] mb-4">Our Engineering Legacy</h2>
-                            <h3 className="text-3xl md:text-5xl font-black !text-[#1B4332] tracking-tighter uppercase mb-4 leading-none">
+                            <h3 className="text-2xl md:text-5xl font-black !text-[#1B4332] tracking-tighter uppercase mb-4 leading-none">
                                 Powering Bangalore <br />
                                 <span className="text-red-600 italic underline decoration-4 underline-offset-8">Since {COMPANY_INFO.established}</span>
                             </h3>
@@ -57,12 +57,12 @@ export default function About() {
                                 </p>
                             </div>
                             <div className="mt-6 flex flex-wrap gap-6">
-                                <div className="flex flex-col bg-industrial-blue p-6 rounded-3xl shadow-2xl border border-white/5">
-                                    <span className="text-5xl font-black text-white italic">15+</span>
+                                <div className="flex flex-col bg-industrial-blue p-5 md:p-6 rounded-3xl shadow-2xl border border-white/5">
+                                    <span className="text-3xl md:text-5xl font-black text-white italic">15+</span>
                                     <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest mt-2">Years of Excellence</span>
                                 </div>
-                                <div className="flex flex-col bg-industrial-blue p-6 rounded-3xl shadow-2xl border border-white/5">
-                                    <span className="text-5xl font-black text-white italic">450+</span>
+                                <div className="flex flex-col bg-industrial-blue p-5 md:p-6 rounded-3xl shadow-2xl border border-white/5">
+                                    <span className="text-3xl md:text-5xl font-black text-white italic">450+</span>
                                     <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest mt-2">Strategic Clients</span>
                                 </div>
                             </div>
@@ -96,7 +96,7 @@ export default function About() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div className="order-2 lg:order-1">
                             <h2 className="text-energy-yellow font-black uppercase tracking-[0.2em] text-sm mb-4">Meet the Founder</h2>
-                            <h3 className="text-3xl md:text-5xl font-black mb-4 italic tracking-tighter">M S MURTHY</h3>
+                            <h3 className="text-2xl md:text-5xl font-black mb-4 italic tracking-tighter">M S MURTHY</h3>
                             <div className="space-y-4 text-slate-300 text-lg leading-relaxed font-medium">
                                 <div className="flex items-start gap-4 p-6 bg-white/5 rounded-none border border-white/10">
                                     <Award className="w-8 h-8 text-energy-yellow shrink-0 mt-1" />
@@ -153,7 +153,7 @@ export default function About() {
                             <Users size={12} className="animate-pulse" />
                             Technical Intelligence
                         </motion.div>
-                        <h2 className="text-4xl md:text-6xl font-black !text-[#1B4332] tracking-tighter uppercase mb-6 leading-none">
+                        <h2 className="text-2xl md:text-6xl font-black !text-[#1B4332] tracking-tighter uppercase mb-6 leading-none">
                             Our Elite <span className="text-red-600 italic underline decoration-8 underline-offset-[12px]">Team</span>
                         </h2>
                         <p className="text-[#1B4332] max-w-2xl mx-auto font-bold text-base uppercase tracking-widest">
@@ -175,17 +175,17 @@ export default function About() {
                                 transition={{ delay: idx * 0.1 }}
                                 className="group relative h-full"
                             >
-                                <div className="bg-black p-8 rounded-none border-2 border-[#1B4332] group-hover:border-red-600/50 transition-all duration-500 h-full flex flex-col items-center text-center overflow-hidden relative shadow-2xl hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
-                                    <div className="w-16 h-16 rounded-none bg-white/5 text-red-600 flex items-center justify-center mb-8 border border-white/10 group-hover:bg-red-600 group-hover:text-white transition-all duration-500 shadow-sm">
-                                        <team.icon size={28} />
+                                <div className="bg-black p-5 md:p-6 rounded-none border-2 border-[#1B4332] group-hover:border-red-600/50 transition-all duration-500 h-full flex flex-col items-center text-center overflow-hidden relative shadow-2xl hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
+                                    <div className="w-12 h-12 rounded-none bg-white/5 text-red-600 flex items-center justify-center mb-4 border border-white/10 group-hover:bg-red-600 group-hover:text-white transition-all duration-500 shadow-sm">
+                                        <team.icon size={24} />
                                     </div>
-                                    <h4 className="text-xl font-black text-white mb-4 uppercase tracking-tighter italic">{team.role}</h4>
-                                    <p className="text-slate-400 text-sm font-medium leading-relaxed group-hover:text-white transition-colors duration-500">{team.desc}</p>
+                                    <h4 className="text-lg font-black text-white mb-2 uppercase tracking-tighter italic">{team.role}</h4>
+                                    <p className="text-slate-400 text-xs font-medium leading-relaxed group-hover:text-white transition-colors duration-500">{team.desc}</p>
                                     
-                                    <div className="mt-8 flex gap-1 opacity-20 group-hover:opacity-100 transition-opacity">
-                                        <div className="w-1.5 h-1.5 bg-red-600 rounded-full"></div>
-                                        <div className="w-1.5 h-1.5 bg-red-600 rounded-full"></div>
-                                        <div className="w-1.5 h-1.5 bg-red-600 rounded-full opacity-50"></div>
+                                    <div className="mt-4 flex gap-1 opacity-20 group-hover:opacity-100 transition-opacity">
+                                        <div className="w-1 h-1 bg-red-600 rounded-full"></div>
+                                        <div className="w-1 h-1 bg-red-600 rounded-full"></div>
+                                        <div className="w-1 h-1 bg-red-600 rounded-full opacity-50"></div>
                                     </div>
                                 </div>
                             </motion.div>
@@ -199,14 +199,14 @@ export default function About() {
                             viewport={{ once: true }}
                             className="relative"
                         >
-                            <div className="aspect-[16/7] md:aspect-[21/7] rounded-none overflow-hidden border-[12px] border-white shadow-2xl relative group">
+                            <div className="aspect-video md:aspect-[16/9] rounded-none overflow-hidden border-[12px] border-white shadow-2xl relative group bg-white">
                                 <Image 
                                     src={teamImg}
                                     alt="APIS Solutions Team"
                                     fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                    className="object-contain transition-transform duration-700 group-hover:scale-105"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/5 via-transparent to-transparent pointer-events-none"></div>
                             </div>
                             <div className="absolute -bottom-6 -left-6 w-32 h-32 border-l-4 border-b-4 border-red-600/30 rounded-bl-[3rem] pointer-events-none"></div>
                             <div className="absolute -top-6 -right-6 w-32 h-32 border-r-4 border-t-4 border-red-600/30 rounded-tr-[3rem] pointer-events-none"></div>
