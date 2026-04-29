@@ -6,8 +6,8 @@ import { COMPANY_INFO, SERVICES } from "@/lib/constants";
 const Footer = () => {
     return (
         <footer className="bg-industrial-dark text-slate-300">
-            <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+            <div className="max-w-7xl mx-auto px-4 py-10 md:py-8 sm:px-6 lg:px-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
                     {/* Company Bio */}
                     <div className="space-y-6">
                         <Link href="/" className="flex items-center gap-2">

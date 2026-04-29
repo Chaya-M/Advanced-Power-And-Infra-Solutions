@@ -40,7 +40,7 @@ export default function ResidentialCaseStudy() {
                                 <MapPin size={12} />
                                 Koramangala, Bangalore
                             </div>
-                            <h1 className="text-4xl md:text-7xl font-black mb-6 tracking-tighter uppercase leading-[0.9]" style={{ color: '#000000' }}>
+                             <h1 className="text-2xl md:text-7xl font-black mb-6 tracking-tighter uppercase leading-[0.9]" style={{ color: '#000000' }}>
                                 Dr. Venu <br />
                                 <span>Residential Project</span>
                             </h1>
@@ -49,14 +49,14 @@ export default function ResidentialCaseStudy() {
                             </p>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                <div className="p-8 border border-slate-300 bg-white shadow-sm">
+                                <div className="p-6 md:p-8 border border-slate-300 bg-white shadow-sm">
                                     <div className="text-[10px] font-black text-red-600 uppercase tracking-widest mb-2">Impact Metric</div>
-                                    <div className="text-3xl font-black text-[#1B4332]">100% Approval</div>
+                                    <div className="text-2xl font-black text-[#1B4332]">100% Approval</div>
                                     <div className="text-sm text-slate-500 mt-1 uppercase font-bold tracking-tight">Regulatory License Success</div>
                                 </div>
-                                <div className="p-8 border border-slate-300 bg-white shadow-sm">
+                                <div className="p-6 md:p-8 border border-slate-300 bg-white shadow-sm">
                                     <div className="text-[10px] font-black text-[#2D6A4F] uppercase tracking-widest mb-2">Reliability</div>
-                                    <div className="text-3xl font-black text-[#1B4332]">Zero Downtime</div>
+                                    <div className="text-2xl font-black text-[#1B4332]">Zero Downtime</div>
                                     <div className="text-sm text-slate-500 mt-1 uppercase font-bold tracking-tight">Continuous Power Delivery</div>
                                 </div>
                             </div>
@@ -85,7 +85,7 @@ export default function ResidentialCaseStudy() {
             </section>
 
             {/* The Challenge */}
-            <section className="py-16 bg-[#1B4332] text-white">
+            <section className="py-10 md:py-16 bg-[#1B4332] text-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div>
@@ -141,7 +141,7 @@ export default function ResidentialCaseStudy() {
                                     </div>
                                     <div>
                                         <h4 className="text-sm font-black text-slate-400 uppercase tracking-widest mb-1">{item.title}</h4>
-                                        <div className="text-xl font-black text-[#1B4332] uppercase mb-2">{item.spec}</div>
+                                        <div className="text-lg font-black text-[#1B4332] uppercase mb-2">{item.spec}</div>
                                         <p className="text-xs text-slate-500 leading-relaxed font-medium">{item.desc}</p>
                                     </div>
                                 </motion.div>
@@ -152,7 +152,7 @@ export default function ResidentialCaseStudy() {
             </section>
 
             {/* Field Documentation */}
-            <section className="py-16 bg-white">
+            <section className="py-10 md:py-16 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
                     <h2 className="text-3xl md:text-5xl font-black text-[#1B4332] uppercase tracking-tighter leading-none mb-6">
                         Field <span className="text-black">Documentation</span>
@@ -183,12 +183,12 @@ export default function ResidentialCaseStudy() {
             </section>
 
             {/* Testimonial */}
-            <section className="py-16 bg-[#F8F9F4] relative overflow-hidden">
+            <section className="py-10 md:py-16 bg-[#F8F9F4] relative overflow-hidden">
                 <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
                     <div className="mb-8 flex justify-center text-red-600">
                         <Quote size={60} fill="currentColor" />
                     </div>
-                    <blockquote className="text-3xl md:text-5xl font-black text-[#1B4332] leading-tight mb-8 uppercase tracking-tighter">
+                    <blockquote className="text-xl md:text-5xl font-black text-[#1B4332] leading-tight mb-8 uppercase tracking-tighter">
                         "Efficient execution and handled all the bureaucracy for us."
                     </blockquote>
                     <div className="flex flex-col items-center">

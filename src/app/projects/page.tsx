@@ -89,7 +89,7 @@ export default function ProjectsPage() {
     return (
         <div className="min-h-screen bg-black">
             {/* Success Story Header - Pure Black */}
-            <section className="bg-black pt-32 pb-8 text-white relative overflow-hidden border-b border-white/5">
+            <section className="bg-black pt-24 md:pt-32 pb-6 md:pb-8 text-white relative overflow-hidden border-b border-white/5">
                 <div className="absolute inset-0 opacity-20">
                     <Zap className="w-[30rem] h-[30rem] -bottom-32 -right-32 absolute rotate-12 text-energy-yellow" />
                 </div>
@@ -103,19 +103,19 @@ export default function ProjectsPage() {
                             Project Portfolio
                         </div>
                         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-6">
-                            <h1 className="text-4xl md:text-7xl font-black tracking-tighter uppercase leading-none">
+                             <h1 className="text-3xl md:text-7xl font-black tracking-tighter uppercase leading-none">
                                 Success <span className="text-energy-yellow italic">Story</span>
                             </h1>
                             
                             <div className="flex gap-8 pb-2">
                                 <div className="flex flex-col items-center">
-                                    <span className="text-3xl md:text-4xl font-black text-energy-yellow italic leading-none">450+</span>
-                                    <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest mt-2">Successful Installs</span>
+                                    <span className="text-2xl md:text-4xl font-black text-energy-yellow italic leading-none">450+</span>
+                                    <span className="text-[8px] md:text-[9px] font-black text-slate-400 uppercase tracking-widest mt-2">Successful Installs</span>
                                 </div>
                                 <div className="w-[1px] h-10 bg-white/10"></div>
                                 <div className="flex flex-col items-center">
-                                    <span className="text-3xl md:text-4xl font-black text-red-600 italic leading-none">15+</span>
-                                    <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest mt-2">Years of Trust</span>
+                                    <span className="text-2xl md:text-4xl font-black text-red-600 italic leading-none">15+</span>
+                                    <span className="text-[8px] md:text-[9px] font-black text-slate-400 uppercase tracking-widest mt-2">Years of Trust</span>
                                 </div>
                             </div>
                         </div>
@@ -221,7 +221,7 @@ export default function ProjectsPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="flex flex-col items-center text-center mb-8">
                         <span className="text-[10px] font-black uppercase tracking-[0.5em] text-red-600 mb-4">Network & Partnerships</span>
-                        <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-none" style={{ color: '#000000' }}>
+                        <h2 className="text-3xl md:text-8xl font-black uppercase tracking-tighter leading-none" style={{ color: '#000000' }}>
                             TRUSTED LEADERS
                         </h2>
                     </div>

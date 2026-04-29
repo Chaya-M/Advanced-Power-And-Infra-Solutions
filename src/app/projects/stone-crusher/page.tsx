@@ -21,7 +21,7 @@ export default function StoneCrusherCaseStudy() {
     return (
         <div className="min-h-screen bg-black">
             {/* Case Study Hero */}
-            <section className="bg-black pt-20 pb-16 text-white relative overflow-hidden">
+            <section className="bg-black pt-24 md:pt-20 pb-12 md:pb-16 text-white relative overflow-hidden">
                 <div className="absolute inset-0 opacity-20 pointer-events-none">
                     <div className="absolute top-0 right-0 w-full h-full" 
                         style={{ 
@@ -48,7 +48,7 @@ export default function StoneCrusherCaseStudy() {
                                 <div className="w-2 h-2 rounded-full bg-black animate-pulse"></div>
                                 Success Story
                             </div>
-                            <h1 className="text-4xl md:text-7xl font-black mb-4 tracking-tighter uppercase leading-[0.9]">
+                             <h1 className="text-3xl md:text-7xl font-black mb-4 tracking-tighter uppercase leading-[0.9]">
                                 Bharat Cement <br />
                                 <span className="text-[#67f3b2] italic">Stone Crusher</span>
                             </h1>
@@ -124,7 +124,7 @@ export default function StoneCrusherCaseStudy() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1 }}
-                                className="bg-white p-10 rounded-2xl shadow-sm border border-slate-300 hover:shadow-xl transition-all duration-300 group"
+                                className="bg-white p-6 md:p-10 rounded-2xl shadow-sm border border-slate-300 hover:shadow-xl transition-all duration-300 group"
                             >
                                 <div className="w-14 h-14 rounded-2xl bg-[#2D6A4F]/10 flex items-center justify-center mb-8 group-hover:bg-[#2D6A4F] transition-colors">
                                     <challenge.icon size={28} className="text-[#2D6A4F] group-hover:text-white" />
@@ -142,7 +142,7 @@ export default function StoneCrusherCaseStudy() {
             </section>
 
             {/* The Solution */}
-            <section className="py-16 bg-slate-50 relative overflow-hidden">
+            <section className="py-10 md:py-16 bg-slate-50 relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="relative order-2 lg:order-1">
@@ -234,12 +234,12 @@ export default function StoneCrusherCaseStudy() {
             </section>
 
             {/* Client Testimonial */}
-            <section className="py-16 bg-white">
+            <section className="py-10 md:py-16 bg-white">
                 <div className="max-w-4xl mx-auto px-4 text-center">
                     <div className="mb-6 flex justify-center text-[#2D6A4F]/20">
                         <Quote size={80} />
                     </div>
-                    <blockquote className="text-2xl md:text-4xl font-bold text-[#1B4332] leading-tight mb-8">
+                    <blockquote className="text-xl md:text-4xl font-bold text-[#1B4332] leading-tight mb-8">
                         "Advanced Power & Infra Solutions provided more than just a generator; they provided peace of mind. Our production has never been more stable despite the harsh conditions of our facility."
                     </blockquote>
                     <div className="flex flex-col items-center">
@@ -253,7 +253,7 @@ export default function StoneCrusherCaseStudy() {
             {/* CTA */}
             <section className="py-12 bg-slate-50">
                 <div className="max-w-7xl mx-auto px-4 text-center">
-                    <h3 className="text-2xl md:text-4xl font-black uppercase mb-8" style={{ color: '#000000', opacity: 1 }}>Ready to Power Your Success Story?</h3>
+                    <h3 className="text-xl md:text-4xl font-black uppercase mb-8" style={{ color: '#000000', opacity: 1 }}>Ready to Power Your Success Story?</h3>
                     <Link 
                         href="/contact" 
                         className="inline-flex items-center gap-4 bg-[#1B4332] text-white px-12 py-6 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-red-600 transition-all shadow-2xl active:scale-95"
