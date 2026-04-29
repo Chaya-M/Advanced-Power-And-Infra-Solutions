@@ -18,6 +18,20 @@ import {
 } from "lucide-react";
 
 export default function StoneCrusherCaseStudy() {
+    const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
+    const solutionImages = [
+        "/images/projects/stone-crusher/solution.png",
+        "/images/projects/stone-crusher/hero.png",
+        "/images/projects/stone-crusher/site.png"
+    ];
+
+    React.useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentImageIndex((prev) => (prev + 1) % solutionImages.length);
+        }, 3000);
+        return () => clearInterval(timer);
+    }, []);
+
     return (
         <div className="min-h-screen bg-black">
             {/* Case Study Hero */}
@@ -48,7 +62,7 @@ export default function StoneCrusherCaseStudy() {
                                 <div className="w-2 h-2 rounded-full bg-black animate-pulse"></div>
                                 Success Story
                             </div>
-                             <h1 className="text-3xl md:text-7xl font-black mb-4 tracking-tighter uppercase leading-[0.9]">
+                             <h1 className="text-3xl md:text-7xl font-black mb-4 tracking-tighter uppercase leading-[0.9] text-white">
                                 Bharat Cement <br />
                                 <span className="text-[#67f3b2] italic">Stone Crusher</span>
                             </h1>
@@ -79,7 +93,7 @@ export default function StoneCrusherCaseStudy() {
                             className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-2xl"
                         >
                             <Image 
-                                src="/industrial_project_bg.png"
+                                src="/images/projects/stone-crusher/hero.png"
                                 alt="Stone Crusher Facility"
                                 fill
                                 className="object-cover"
@@ -146,13 +160,32 @@ export default function StoneCrusherCaseStudy() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="relative order-2 lg:order-1">
-                            <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl">
-                                <Image 
-                                    src="/images/cummins.png"
-                                    alt="Industrial Generator Solution"
-                                    fill
-                                    className="object-contain p-12 bg-slate-50"
-                                />
+                            <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl bg-slate-50 flex items-center justify-center">
+                                <motion.div
+                                    key={currentImageIndex}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 1 }}
+                                    className="absolute inset-0"
+                                >
+                                    <Image 
+                                        src={solutionImages[currentImageIndex]}
+                                        alt="Stone Crusher Solution"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </motion.div>
+                                <div className="absolute inset-0 bg-gradient-to-br from-[#2D6A4F]/10 to-transparent"></div>
+                                
+                                {/* Image indicators */}
+                                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                                    {solutionImages.map((_, i) => (
+                                        <div 
+                                            key={i}
+                                            className={`h-1.5 rounded-full transition-all duration-500 ${i === currentImageIndex ? 'w-8 bg-white' : 'w-2 bg-white/40'}`}
+                                        />
+                                    ))}
+                                </div>
                             </div>
                             <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-[#2D6A4F]/10 blur-[100px] rounded-full -z-10"></div>
                         </div>
@@ -201,7 +234,16 @@ export default function StoneCrusherCaseStudy() {
 
             {/* Results & Impact */}
             <section className="py-12 bg-black text-white relative overflow-hidden">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="absolute inset-0 opacity-20 pointer-events-none">
+                    <Image 
+                        src="/images/projects/stone-crusher/site.png"
+                        alt="Stone Crusher Site"
+                        fill
+                        className="object-cover grayscale"
+                    />
+                    <div className="absolute inset-0 bg-black/60"></div>
+                </div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter leading-none mb-6">
                             Results & <span className="text-[#2D6A4F]">Impact</span>
@@ -217,7 +259,7 @@ export default function StoneCrusherCaseStudy() {
                             <motion.div
                                 key={i}
                                 initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1 }}
                                 className="text-center"

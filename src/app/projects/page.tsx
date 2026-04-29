@@ -18,7 +18,7 @@ const PROJECTS_DATA = [
         id: "bharat-cement",
         title: "Bharat Cement Product - Stone Crusher",
         category: "INDUSTRIAL",
-        image: "/industrial_project_bg.png",
+        image: "/images/projects/stone-crusher/hero.png",
         highlights: [
             "Supplied high-performance DG sets to Hosur operations.",
             "Comprehensive RMC plant infrastructure power management.",
@@ -30,7 +30,7 @@ const PROJECTS_DATA = [
         id: "dr-venu-residential",
         title: "Dr. Venu Residential Project",
         category: "RESIDENTIAL",
-        image: "/residential_project_bg.png",
+        image: "/images/projects/dr-venu-residential/hero.png",
         highlights: [
             "Complete power solution for a 5-floor luxury residential building.",
             "Decommissioning and service of 25 KV heritage generator.",
@@ -42,7 +42,7 @@ const PROJECTS_DATA = [
         id: "deepashri-hospital",
         title: "Deepashri Hospital",
         category: "HEALTHCARE",
-        image: "/healthcare_project_bg.png",
+        image: "/images/projects/deepashri-hospital/hero.png",
         highlights: [
             "Critical power backup (40 KV) for new specialized hospital block.",
             "Flexible buy-back options implemented for legacy infrastructure units."
@@ -53,7 +53,7 @@ const PROJECTS_DATA = [
         id: "rr-medical-college",
         title: "RR Medical College",
         category: "EDUCATION",
-        image: "/healthcare_project_bg.png",
+        image: "/images/projects/rr-medical-college/hero.png",
         highlights: [
             "Challenge: Efficient disposal of legacy diesel generator sets.",
             "Solution: Expert dismantling and competitive buyback pricing.",

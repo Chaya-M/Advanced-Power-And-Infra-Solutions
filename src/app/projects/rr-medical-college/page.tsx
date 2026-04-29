@@ -19,6 +19,20 @@ import {
 } from "lucide-react";
 
 export default function RRMedicalCollegeCaseStudy() {
+    const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
+    const solutionImages = [
+        "/images/projects/rr-medical-college/solution.png",
+        "/images/projects/rr-medical-college/hero.png",
+        "/images/projects/rr-medical-college/site.png"
+    ];
+
+    React.useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentImageIndex((prev) => (prev + 1) % solutionImages.length);
+        }, 3000);
+        return () => clearInterval(timer);
+    }, []);
+
     return (
         <div className="min-h-screen bg-black">
             {/* Case Study Hero */}
@@ -80,7 +94,7 @@ export default function RRMedicalCollegeCaseStudy() {
                             className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-2xl"
                         >
                             <Image 
-                                src="/healthcare_project_bg.png"
+                                src="/images/projects/rr-medical-college/hero.png"
                                 alt="RR Medical College Campus"
                                 fill
                                 className="object-cover"
@@ -148,8 +162,31 @@ export default function RRMedicalCollegeCaseStudy() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="relative order-2 lg:order-1">
                             <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl bg-slate-50 flex items-center justify-center">
-                                <Building2 size={120} className="text-[#2D6A4F]/20" />
+                                <motion.div
+                                    key={currentImageIndex}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 1 }}
+                                    className="absolute inset-0"
+                                >
+                                    <Image 
+                                        src={solutionImages[currentImageIndex]}
+                                        alt="RR Medical College Solution"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </motion.div>
                                 <div className="absolute inset-0 bg-gradient-to-br from-[#2D6A4F]/10 to-transparent"></div>
+                                
+                                {/* Image indicators */}
+                                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                                    {solutionImages.map((_, i) => (
+                                        <div 
+                                            key={i}
+                                            className={`h-1.5 rounded-full transition-all duration-500 ${i === currentImageIndex ? 'w-8 bg-white' : 'w-2 bg-white/40'}`}
+                                        />
+                                    ))}
+                                </div>
                             </div>
                             <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-[#2D6A4F]/10 blur-[100px] rounded-full -z-10"></div>
                         </div>
@@ -198,7 +235,16 @@ export default function RRMedicalCollegeCaseStudy() {
 
             {/* Results & Impact */}
             <section className="py-12 bg-black text-white relative overflow-hidden">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="absolute inset-0 opacity-20 pointer-events-none">
+                    <Image 
+                        src="/images/projects/rr-medical-college/site.png"
+                        alt="RR Medical College Site"
+                        fill
+                        className="object-cover grayscale"
+                    />
+                    <div className="absolute inset-0 bg-black/60"></div>
+                </div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter leading-none mb-6">
                             Results & <span className="text-[#2D6A4F]">Impact</span>
