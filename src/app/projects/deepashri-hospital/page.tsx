@@ -49,9 +49,9 @@ export default function DeepashriHospitalCaseStudy() {
                                 <div className="w-2 h-2 rounded-full bg-[#2D6A4F] animate-pulse"></div>
                                 Healthcare Success
                             </div>
-                            <h1 className="text-4xl md:text-7xl font-black mb-4 tracking-tighter uppercase leading-[0.9]">
+                            <h1 className="text-4xl md:text-7xl font-black mb-4 tracking-tighter uppercase leading-[0.9]" style={{ color: '#000000' }}>
                                 Deepashri <br />
-                                <span className="text-black">Hospital</span>
+                                <span>Hospital</span>
                             </h1>
                             <div className="flex items-center gap-4 text-slate-400 mb-6">
                                 <MapPin size={20} className="text-[#2D6A4F]" />
@@ -250,7 +250,7 @@ export default function DeepashriHospitalCaseStudy() {
             {/* CTA */}
             <section className="py-12 bg-slate-50">
                 <div className="max-w-7xl mx-auto px-4 text-center">
-                    <h3 className="text-2xl md:text-4xl font-black text-black uppercase mb-8">Ensuring Continuous Care?</h3>
+                    <h3 className="text-2xl md:text-4xl font-black uppercase mb-8" style={{ color: '#000000', opacity: 1 }}>Ensuring Continuous Care?</h3>
                     <Link 
                         href="/contact" 
                         className="inline-flex items-center gap-4 bg-[#1B4332] text-white px-12 py-6 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-red-600 transition-all shadow-2xl active:scale-95"

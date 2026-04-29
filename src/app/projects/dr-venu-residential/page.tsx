@@ -40,9 +40,9 @@ export default function ResidentialCaseStudy() {
                                 <MapPin size={12} />
                                 Koramangala, Bangalore
                             </div>
-                            <h1 className="text-4xl md:text-7xl font-black mb-6 tracking-tighter uppercase leading-[0.9] text-[#1B4332]">
+                            <h1 className="text-4xl md:text-7xl font-black mb-6 tracking-tighter uppercase leading-[0.9]" style={{ color: '#000000' }}>
                                 Dr. Venu <br />
-                                <span className="text-black">Residential Project</span>
+                                <span>Residential Project</span>
                             </h1>
                             <p className="text-lg md:text-xl text-slate-600 max-w-xl leading-relaxed font-medium mb-8">
                                 A technical case study on achieving 100% license approval and seamless electrical integration for a high-end luxury residential complex.
@@ -201,7 +201,7 @@ export default function ResidentialCaseStudy() {
             {/* Footer-like CTA */}
             <section className="py-12 bg-white border-t border-slate-100">
                 <div className="max-w-7xl mx-auto px-4 text-center">
-                    <h3 className="text-2xl md:text-4xl font-black text-black uppercase mb-8">Ready to Power Your Success Story?</h3>
+                    <h3 className="text-2xl md:text-4xl font-black uppercase mb-8" style={{ color: '#000000', opacity: 1 }}>Ready to Power Your Success Story?</h3>
                     <Link 
                         href="/contact" 
                         className="inline-flex items-center gap-4 bg-[#1B4332] text-white px-12 py-6 rounded-sm font-black text-sm uppercase tracking-widest hover:bg-red-600 transition-all shadow-2xl active:scale-95"

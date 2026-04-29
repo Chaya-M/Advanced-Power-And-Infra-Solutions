@@ -44,8 +44,8 @@ export default function StoneCrusherCaseStudy() {
                             initial={{ opacity: 0, x: -30 }}
                             animate={{ opacity: 1, x: 0 }}
                         >
-                            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#2D6A4F]/20 border border-[#2D6A4F]/40 text-[#2D6A4F] text-[10px] font-black uppercase tracking-[0.3em] mb-4">
-                                <div className="w-2 h-2 rounded-full bg-[#2D6A4F] animate-pulse"></div>
+                            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-black/5 border border-black/20 text-black text-[10px] font-black uppercase tracking-[0.3em] mb-4">
+                                <div className="w-2 h-2 rounded-full bg-black animate-pulse"></div>
                                 Success Story
                             </div>
                             <h1 className="text-4xl md:text-7xl font-black mb-4 tracking-tighter uppercase leading-[0.9]">
@@ -253,7 +253,7 @@ export default function StoneCrusherCaseStudy() {
             {/* CTA */}
             <section className="py-12 bg-slate-50">
                 <div className="max-w-7xl mx-auto px-4 text-center">
-                    <h3 className="text-2xl md:text-4xl font-black text-black uppercase mb-8">Ready to Power Your Success Story?</h3>
+                    <h3 className="text-2xl md:text-4xl font-black uppercase mb-8" style={{ color: '#000000', opacity: 1 }}>Ready to Power Your Success Story?</h3>
                     <Link 
                         href="/contact" 
                         className="inline-flex items-center gap-4 bg-[#1B4332] text-white px-12 py-6 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-red-600 transition-all shadow-2xl active:scale-95"
