@@ -23,6 +23,24 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: `${COMPANY_INFO.name} | ${COMPANY_INFO.tagline}`,
   description: "Excellence in Diesel Generator solutions since 2009. Dealers for Cummins, Tata, KOEL, Caterpillar, TMTL, and Ashok Leyland, providing reliable backup power for construction, industry, and residential needs.",
+  keywords: ["Diesel Generator Dealers", "Industrial Power Solutions", "Cummins Generator Rental", "Tata Power Systems", "Generator Sales and Service"],
+  metadataBase: new URL('https://www.advancedpowerinfra.com'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: `${COMPANY_INFO.name} | Industrial Power Solutions`,
+    description: "Providing high-quality diesel generators and backup power solutions across India since 2009.",
+    url: 'https://www.advancedpowerinfra.com',
+    siteName: COMPANY_INFO.name,
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${COMPANY_INFO.name} | Industrial Power Solutions`,
+    description: "Reliable diesel generator solutions for construction and industry.",
+  },
 };
 
 export default function RootLayout({
