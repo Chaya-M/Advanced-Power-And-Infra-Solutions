@@ -1,0 +1,267 @@
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { 
+    Zap, 
+    ArrowLeft, 
+    CheckCircle2, 
+    Clock, 
+    ShieldCheck, 
+    Activity,
+    Settings,
+    MapPin,
+    ArrowRight,
+    Quote
+} from "lucide-react";
+
+export default function StoneCrusherCaseStudy() {
+    return (
+        <div className="pt-24 min-h-screen bg-white">
+            {/* Case Study Hero */}
+            <section className="bg-black pt-24 pb-32 text-white relative overflow-hidden">
+                <div className="absolute inset-0 opacity-20 pointer-events-none">
+                    <div className="absolute top-0 right-0 w-full h-full" 
+                        style={{ 
+                            backgroundImage: `radial-gradient(#2D6A4F 1px, transparent 0)`, 
+                            backgroundSize: "40px 40px" 
+                        }}>
+                    </div>
+                </div>
+
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <Link 
+                        href="/projects" 
+                        className="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors mb-12 text-sm font-bold uppercase tracking-widest"
+                    >
+                        <ArrowLeft size={16} /> Back to Projects
+                    </Link>
+
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            animate={{ opacity: 1, x: 0 }}
+                        >
+                            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[#2D6A4F]/20 border border-[#2D6A4F]/40 text-[#2D6A4F] text-[10px] font-black uppercase tracking-[0.3em] mb-8">
+                                <div className="w-2 h-2 rounded-full bg-[#2D6A4F] animate-pulse"></div>
+                                Success Story
+                            </div>
+                            <h1 className="text-4xl md:text-7xl font-black mb-8 tracking-tighter uppercase leading-[0.9]">
+                                Bharat Cement <br />
+                                <span className="text-[#67f3b2] italic">Stone Crusher</span>
+                            </h1>
+                            <div className="flex items-center gap-4 text-slate-400 mb-12">
+                                <MapPin size={20} className="text-[#2D6A4F]" />
+                                <span className="text-lg font-bold uppercase tracking-widest">Hosur, Tamil Nadu</span>
+                            </div>
+
+                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 pt-12 border-t border-white/10">
+                                <div>
+                                    <div className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-2">Project Scale</div>
+                                    <div className="text-xl font-bold text-white">Industrial</div>
+                                </div>
+                                <div>
+                                    <div className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-2">Duration</div>
+                                    <div className="text-xl font-bold text-white">12 Months</div>
+                                </div>
+                                <div>
+                                    <div className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-2">Status</div>
+                                    <div className="text-xl font-bold text-[#67f3b2]">Active</div>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-2xl"
+                        >
+                            <Image 
+                                src="/industrial_project_bg.png"
+                                alt="Stone Crusher Facility"
+                                fill
+                                className="object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                        </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Technical Challenges */}
+            <section className="py-24 bg-slate-50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-20">
+                        <h2 className="text-3xl md:text-5xl font-black text-[#1B4332] uppercase tracking-tighter italic leading-none mb-6">
+                            Technical <span className="opacity-40">Challenges</span>
+                        </h2>
+                        <div className="h-1 w-20 bg-red-600 mx-auto"></div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {[
+                            {
+                                title: "Extreme Load Fluctuations",
+                                desc: "Stone crushing units demand massive surge currents during startup and variable loads during operation, requiring precise voltage regulation.",
+                                icon: Activity
+                            },
+                            {
+                                title: "Heavy Dust Environment",
+                                desc: "The facility's high particulate concentration required specialized filtration and protective enclosures for the power systems.",
+                                icon: Settings
+                            },
+                            {
+                                title: "24/7 Operational Demand",
+                                desc: "Zero-downtime requirement to maintain production schedules and prevent costly industrial bottlenecks.",
+                                icon: Clock
+                            }
+                        ].map((challenge, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: i * 0.1 }}
+                                className="bg-white p-10 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all duration-300 group"
+                            >
+                                <div className="w-14 h-14 rounded-2xl bg-[#2D6A4F]/10 flex items-center justify-center mb-8 group-hover:bg-[#2D6A4F] transition-colors">
+                                    <challenge.icon size={28} className="text-[#2D6A4F] group-hover:text-white" />
+                                </div>
+                                <h4 className="text-xl font-black text-[#1B4332] mb-4 uppercase tracking-tight">
+                                    {challenge.title}
+                                </h4>
+                                <p className="text-slate-500 text-sm leading-relaxed font-medium">
+                                    {challenge.desc}
+                                </p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* The Solution */}
+            <section className="py-32 relative overflow-hidden">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                        <div className="relative order-2 lg:order-1">
+                            <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl">
+                                <Image 
+                                    src="/images/cummins.png"
+                                    alt="Industrial Generator Solution"
+                                    fill
+                                    className="object-contain p-12 bg-slate-50"
+                                />
+                            </div>
+                            <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-[#2D6A4F]/10 blur-[100px] rounded-full -z-10"></div>
+                        </div>
+
+                        <div className="order-1 lg:order-2">
+                            <h2 className="text-3xl md:text-6xl font-black text-[#1B4332] uppercase tracking-tighter italic leading-[0.9] mb-12">
+                                The <span className="opacity-40">Solution</span>
+                            </h2>
+                            <div className="space-y-8">
+                                {[
+                                    {
+                                        title: "Custom Load Balancing",
+                                        desc: "Implemented synchronized generator systems that dynamically adjust to the crushing unit's massive power surges."
+                                    },
+                                    {
+                                        title: "High-Efficiency Filtration",
+                                        desc: "Dual-stage air intake systems designed specifically for high-dust industrial environments to ensure engine longevity."
+                                    },
+                                    {
+                                        title: "Remote Monitoring Integration",
+                                        desc: "Real-time telemetry systems for 24/7 monitoring of fuel levels, load status, and preventive maintenance alerts."
+                                    }
+                                ].map((item, i) => (
+                                    <motion.div 
+                                        key={i}
+                                        initial={{ opacity: 0, x: 30 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ delay: i * 0.1 }}
+                                        className="flex gap-6"
+                                    >
+                                        <div className="mt-1">
+                                            <CheckCircle2 size={24} className="text-[#2D6A4F]" />
+                                        </div>
+                                        <div>
+                                            <h5 className="text-lg font-black text-[#1B4332] uppercase mb-2">{item.title}</h5>
+                                            <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Results & Impact */}
+            <section className="py-24 bg-black text-white relative overflow-hidden">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-20">
+                        <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter italic leading-none mb-6">
+                            Results & <span className="text-[#2D6A4F]">Impact</span>
+                        </h2>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                        {[
+                            { value: "99.9%", label: "Power Uptime", desc: "Zero unplanned shutdowns in 12 months." },
+                            { value: "15%", label: "Efficiency Gain", desc: "Optimized load balancing reduced fuel waste." },
+                            { value: "Zero", label: "Downtime Issues", desc: "No production delays during peak cycles." }
+                        ].map((stat, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: i * 0.1 }}
+                                className="text-center"
+                            >
+                                <div className="text-5xl md:text-7xl font-black text-[#67f3b2] mb-4 tracking-tighter">
+                                    {stat.value}
+                                </div>
+                                <div className="text-lg font-bold uppercase tracking-widest mb-4">{stat.label}</div>
+                                <p className="text-slate-500 text-sm">{stat.desc}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Client Testimonial */}
+            <section className="py-32 bg-white">
+                <div className="max-w-4xl mx-auto px-4 text-center">
+                    <div className="mb-12 flex justify-center text-[#2D6A4F]/20">
+                        <Quote size={80} />
+                    </div>
+                    <blockquote className="text-2xl md:text-4xl font-bold text-[#1B4332] italic leading-tight mb-12">
+                        "Advanced Power & Infra Solutions provided more than just a generator; they provided peace of mind. Our production has never been more stable despite the harsh conditions of our facility."
+                    </blockquote>
+                    <div className="flex flex-col items-center">
+                        <div className="w-12 h-1 bg-red-600 mb-6"></div>
+                        <div className="font-black text-xl uppercase tracking-widest text-[#1B4332]">Operations Manager</div>
+                        <div className="text-slate-400 font-bold uppercase tracking-widest text-sm mt-2">Bharat Cement Product</div>
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA */}
+            <section className="py-24 bg-slate-50">
+                <div className="max-w-7xl mx-auto px-4 text-center">
+                    <h3 className="text-2xl md:text-4xl font-black text-[#1B4332] uppercase mb-12">Ready to Power Your Success Story?</h3>
+                    <Link 
+                        href="/contact" 
+                        className="inline-flex items-center gap-4 bg-[#1B4332] text-white px-12 py-6 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-red-600 transition-all shadow-2xl active:scale-95"
+                    >
+                        Request Consultation <ArrowRight size={20} />
+                    </Link>
+                </div>
+            </section>
+        </div>
+    );
+}

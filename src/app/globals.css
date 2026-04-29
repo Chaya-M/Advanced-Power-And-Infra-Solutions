@@ -1,25 +1,29 @@
 @import "tailwindcss";
 
 @theme {
-  --color-industrial-blue: #0B3C5D;
-  --color-energy-yellow: #F9A825;
-  --color-industrial-dark: #061621;
+  --color-industrial-blue: #2f6f54;
+  --color-energy-yellow: #4a7d65;
+  --color-industrial-dark: #000000;
 
   --font-sans: "Inter", var(--font-geist-sans);
 }
 
 :root {
-  --industrial-blue: #0B3C5D;
-  --energy-yellow: #F9A825;
-  --industrial-dark: #061621;
-  --glow-yellow: 0 0 20px rgba(249, 168, 37, 0.4);
+  --industrial-blue: #2f6f54;
+  --energy-yellow: #4a7d65;
+  --industrial-dark: #000000;
+  --glow-yellow: none;
 }
 
 body {
   font-family: var(--font-sans);
   scroll-behavior: smooth;
-  background-color: var(--industrial-dark);
-  color: #ffffff;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(34, 197, 94, 0.2), transparent 34%),
+    radial-gradient(circle at 88% 18%, rgba(16, 185, 129, 0.16), transparent 30%),
+    radial-gradient(circle at 52% 95%, rgba(74, 222, 128, 0.12), transparent 38%),
+    linear-gradient(145deg, #000000 0%, #050505 45%, #0a0a0a 100%);
+  color: #d7e8df;
   position: relative;
 }
 
@@ -34,7 +38,7 @@ body::before {
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: right 5% bottom 5%;
-  opacity: 0.2;
+  opacity: 0.06;
   z-index: -1;
   pointer-events: none;
   filter: grayscale(100%) brightness(1.5);
@@ -48,23 +52,23 @@ body::before {
 
 /* Premium Aesthetic Utilities */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(8, 32, 23, 0.72);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(110, 231, 183, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 .industrial-mesh {
-  background-color: #061621;
+  background-color: transparent;
   background-image:
-    radial-gradient(at 0% 0%, rgba(11, 60, 93, 0.7) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(249, 168, 37, 0.1) 0px, transparent 50%),
-    radial-gradient(at 50% 100%, rgba(6, 22, 33, 1) 0px, transparent 100%);
+    radial-gradient(at 0% 0%, rgba(34, 197, 94, 0.12) 0px, transparent 42%),
+    radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.1) 0px, transparent 42%),
+    radial-gradient(at 50% 100%, rgba(74, 222, 128, 0.08) 0px, transparent 100%);
   background-attachment: fixed;
 }
 
 .text-glow {
-  text-shadow: 0 0 20px rgba(249, 168, 37, 0.5);
+  text-shadow: none;
 }
 
 @keyframes float {
@@ -98,4 +102,40 @@ body::before {
 .animate-marquee {
   display: inline-flex;
   animation: marquee 50s linear infinite;
+}
+
+/* Clean white UI baseline */
+main,
+section,
+footer {
+  /* Removed forced transparency to allow theme-specific backgrounds */
+}
+
+/* Remove dark section utilities from legacy classes */
+[class*="bg-industrial-dark"],
+[class*="from-industrial-dark"],
+[class*="to-industrial-dark"],
+[class*="bg-black"] {
+  background-color: #000000;
+}
+
+/* Typography style similar to provided sample */
+h1, h2, h3, h4 {
+  color: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  text-shadow: none;
+}
+
+p, li, label, input, textarea, select, a, span {
+  font-weight: 500;
+  letter-spacing: 0;
+  text-shadow: none;
+}
+
+/* Keep readable contrast for controls */
+button,
+[role="button"] {
+  font-weight: 600;
 }

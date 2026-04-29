@@ -63,3 +63,4 @@ The goal of this update is to transform the existing Home Page into a comprehens
 * **Increased Click-Through Rate (CTR):** Measured on the new "Direct Booking" and "Quick Sale View" buttons.
 * **Reduced Navigation Depth:** Decrease in the average number of clicks required to reach a specific Rental or Sale item.
 
+![alt text](image.png)

@@ -29,10 +29,10 @@ const Navbar = () => {
     return (
         <nav
             className={cn(
-                "fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 transition-all duration-500 rounded-2xl border",
+                "fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 transition-all duration-500 rounded-2xl border shadow-[0_20px_50px_rgba(0,0,0,0.5)]",
                 scrolled
-                    ? "bg-industrial-dark/95 backdrop-blur-2xl shadow-2xl border-white/5 py-1"
-                    : "bg-industrial-blue/20 backdrop-blur-lg border-white/10 py-2"
+                    ? "bg-black backdrop-blur-2xl border-white/10 py-1"
+                    : "bg-black/80 backdrop-blur-lg border-white/5 py-2"
             )}
         >
             <div className="px-6 lg:px-10">
@@ -95,7 +95,7 @@ const Navbar = () => {
                             onClick={() => setIsOpen(!isOpen)}
                             className={cn(
                                 "inline-flex items-center justify-center p-2 rounded-md transition-colors focus:outline-none",
-                                scrolled ? "text-industrial-blue" : "text-white"
+                                scrolled ? "text-white" : "text-white"
                             )}
                         >
                             <span className="sr-only">Open main menu</span>
@@ -108,7 +108,7 @@ const Navbar = () => {
             {/* Mobile Nav */}
             <div
                 className={cn(
-                    "md:hidden absolute w-full transition-all duration-300 ease-in-out bg-white border-b border-slate-200 overflow-hidden",
+                    "md:hidden absolute w-full transition-all duration-300 ease-in-out bg-black/95 backdrop-blur-xl border-b border-white/10 overflow-hidden",
                     isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0 pointer-events-none"
                 )}
             >
@@ -117,7 +117,7 @@ const Navbar = () => {
                         <Link
                             key={link.name}
                             href={link.href}
-                            className="block px-3 py-3 rounded-md text-base font-semibold text-slate-800 hover:bg-slate-100 hover:text-industrial-blue"
+                            className="block px-3 py-3 rounded-md text-base font-semibold text-white hover:bg-white/10 hover:text-energy-yellow"
                             onClick={() => setIsOpen(false)}
                         >
                             {link.name}

@@ -20,7 +20,12 @@ import {
   ChevronRight,
   CheckCircle2,
   RefreshCcw,
-  Briefcase
+  Briefcase,
+  Wrench,
+  ClipboardCheck,
+  Factory,
+  Hospital,
+  Building2
 } from "lucide-react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
@@ -126,30 +131,29 @@ export default function Home() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md text-energy-yellow text-[10px] font-black uppercase tracking-[0.3em] mb-4"
+                className="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-red-500/10 border border-red-500/30 backdrop-blur-md text-red-400 text-[10px] font-black uppercase tracking-[0.3em] mb-4"
               >
-                <div className="w-2 h-2 rounded-full bg-energy-yellow animate-ping"></div>
-                Premium Multi-Brand Power Solutions
+                <div className="w-2 h-2 rounded-full bg-red-500 animate-ping"></div>
+                Industrial Power Solutions
               </motion.div>
 
               <motion.h1
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-[2rem] md:text-[2.8rem] lg:text-[3.8rem] font-black text-white leading-[0.85] tracking-tighter mb-4 text-glow drop-shadow-2xl uppercase"
+                className="text-[2rem] md:text-[2.8rem] lg:text-[3.8rem] font-black text-white leading-[0.85] tracking-tighter mb-4 drop-shadow-2xl uppercase"
               >
-                ADVANCED <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-energy-yellow to-yellow-200">GENERATOR</span> <br />
-                & POWER BACKUP SYSTEMS
+                <span className="text-[#67f3b2]">ADVANCED POWER</span> <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#67f3b2] to-[#c5ffe0]">& INFRA SOLUTIONS</span>
               </motion.h1>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-base md:text-lg text-slate-400 max-w-2xl mb-6 font-medium leading-relaxed"
+                className="text-base md:text-lg text-[#b6dfcb] max-w-2xl mb-6 font-medium leading-relaxed"
               >
-                Engineered for performance. Delivering scalable power solutions from small businesses to large-scale industrial operations.
+                Engineered for zero-failure environments. We provide industrial-grade power infrastructure that guarantees continuity for mission-critical operations worldwide.
               </motion.p>
 
               <motion.div
@@ -160,17 +164,17 @@ export default function Home() {
               >
                 <Link
                   href="/contact"
-                  className="group relative px-8 py-4 bg-energy-yellow text-industrial-blue rounded-2xl font-black text-base transition-all hover:scale-105 active:scale-95 shadow-[0_0_25px_rgba(249,168,37,0.3)]"
+                  className="group relative px-8 py-4 bg-red-500 text-white rounded-md font-black text-base transition-all hover:scale-105 hover:bg-red-600 active:scale-95"
                 >
                   <span className="relative z-10 flex items-center gap-2 uppercase tracking-wider">
-                    Secure Power Now <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                    Explore Systems <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
                 <Link
                   href="/services"
-                  className="px-8 py-4 bg-white/5 border border-white/10 text-white rounded-2xl font-black text-base backdrop-blur-xl transition-all hover:bg-white/10 flex items-center gap-3"
+                  className="px-8 py-4 bg-transparent border border-[#67f3b2]/60 text-[#67f3b2] rounded-md font-black text-base transition-all hover:bg-[#67f3b2]/10 flex items-center gap-3"
                 >
-                  VIEW CATALOG
+                  VIEW SPECIFICATIONS
                 </Link>
               </motion.div>
             </div>
@@ -225,51 +229,58 @@ export default function Home() {
       </section>
 
 
-      {/* Industrial HUD - High-Tech Sales Highlights */}
-      <section className="py-16 bg-transparent overflow-hidden relative">
+      {/* Technical Foundation Section (Updated to match Image 2) */}
+      <section className="py-24 !bg-[#F8F9F4] overflow-hidden relative border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <motion.span
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              className="px-4 py-2 rounded-lg bg-energy-yellow/10 text-energy-yellow text-[8px] font-black uppercase tracking-[0.3em] mb-6 inline-block border border-energy-yellow/20"
-            >
-              System Operations & Excellence
-            </motion.span>
-            <h2 className="text-2xl md:text-4xl font-black text-white tracking-tighter uppercase mb-4 leading-none">
-              Sales <span className="text-energy-yellow italic underline decoration-4 underline-offset-8">Highlights</span>
+          <div className="flex items-center gap-4 mb-16">
+            <div className="w-1.5 h-8 !bg-[#1B4332]"></div>
+            <h2 className="text-xl md:text-2xl font-bold !text-[#1B4332] tracking-tight uppercase">
+              Technical Foundation
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { id: "01", title: "Tech Experts", status: "CONSULT_ACTIVE", desc: "Engineering-led team for precise complex power solutions.", icon: Shield },
-              { id: "02", title: "Site Visits", status: "MAPPING_LIVE", desc: "Comprehensive technical assessments for 100% guarantee.", icon: MapPin },
-              { id: "03", title: "Prompt Delivery", status: "LOGISTICS_READY", desc: "Rapid logistics and immediate dispatch from our hubs.", icon: Truck },
-              { id: "04", title: "Guidelines", status: "SAFETY_LOCKED", desc: "Strict adherence to safety protocols and global standards.", icon: FileText },
+              { 
+                title: "Tech Experts", 
+                desc: "Specialized engineering teams dedicated to structural power integrity and systems integration.", 
+                icon: Wrench 
+              },
+              { 
+                title: "Site Visits", 
+                desc: "On-site technical assessment and architectural alignment for complex installation environments.", 
+                icon: MapPin 
+              },
+              { 
+                title: "Prompt Delivery", 
+                desc: "Logistics infrastructure designed for rapid deployment of heavy machinery across all territories.", 
+                icon: Truck 
+              },
+              { 
+                title: "Guidelines", 
+                desc: "Rigorous compliance with international safety protocols and ISO engineering standards.", 
+                icon: ClipboardCheck 
+              },
             ].map((node, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="group relative h-[320px] overflow-hidden rounded-[3rem] glass-panel border-white/5 hover:border-energy-yellow/30 transition-all duration-700 cursor-default"
+                className="!bg-white p-10 border !border-[#1B4332] rounded-sm flex flex-col items-start min-h-[380px] hover:shadow-xl transition-all duration-300 group"
               >
-                {/* Background HUD Aura */}
-                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-energy-yellow/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
-                
-                <div className="p-8 relative z-10 h-full flex flex-col items-start justify-center">
-                  <div className="w-14 h-14 rounded-2xl bg-white/5 text-energy-yellow flex items-center justify-center mb-8 border border-white/10 group-hover:bg-energy-yellow group-hover:text-industrial-blue group-hover:scale-110 transition-all duration-500">
-                    <node.icon size={28} />
-                  </div>
-                  
-                  <h4 className="text-xl font-black text-white mb-6 uppercase tracking-tighter">{node.title}</h4>
-                  
-                  <p className="text-slate-400 text-sm font-medium leading-relaxed group-hover:text-white transition-colors duration-500">
-                    {node.desc}
-                  </p>
+                <div className="mb-10 group-hover:scale-110 transition-transform duration-300 !text-[#1B4332]">
+                  <node.icon size={42} strokeWidth={1.5} />
                 </div>
+                
+                <h4 className="text-lg font-bold !text-[#1B4332] mb-6 uppercase tracking-tight">
+                  {node.title}
+                </h4>
+                
+                <p className="!text-[#334D41] text-sm font-medium leading-relaxed">
+                  {node.desc}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -277,24 +288,24 @@ export default function Home() {
       </section>
 
       {/* Services Grid with 3D Interaction feel */}
-      <section className="py-12 bg-transparent">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 tracking-tighter uppercase">Our Domains</h3>
-            <div className="h-1 w-20 bg-energy-yellow mx-auto rounded-full shadow-[0_0_15px_#F9A825]"></div>
+      <section className="py-16 bg-transparent">
+        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl md:text-4xl font-black text-white mb-4 tracking-tighter uppercase">Our Domains</h3>
+            <div className="h-1 w-24 bg-energy-yellow mx-auto rounded-full shadow-[0_0_15px_#F9A825]"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
             {domainHighlights.map((domain, idx) => (
-              <div key={idx} className="group p-8 rounded-[2rem] glass-panel transition-all duration-500 hover:bg-industrial-blue/40 hover:shadow-[0_30px_60px_rgba(11,60,93,0.3)] hover:-translate-y-4">
+              <div key={idx} className="group p-10 rounded-[2.5rem] glass-panel transition-all duration-500 hover:bg-industrial-blue/40 hover:shadow-[0_30px_60px_rgba(11,60,93,0.3)] hover:-translate-y-4 h-full flex flex-col">
                 <div className="w-16 h-16 rounded-2xl bg-energy-yellow/95 text-industrial-blue flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-all duration-500">
                   <domain.icon size={30} />
                 </div>
                 <h4 className="text-xl font-black text-white mb-4 uppercase tracking-tight">{domain.title}</h4>
-                <p className="text-slate-400 text-sm font-medium mb-6 leading-relaxed">
+                <p className="text-slate-400 text-sm font-medium mb-8 leading-relaxed">
                   {domain.description}
                 </p>
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-4 mb-10 flex-grow">
                   {domain.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3 text-sm text-slate-200 leading-relaxed">
                       <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-energy-yellow" />
@@ -304,7 +315,7 @@ export default function Home() {
                 </ul>
                 <Link
                   href={domain.href}
-                  className="inline-flex items-center gap-2 font-black text-xs uppercase tracking-[0.2em] text-energy-yellow/70 group-hover:text-energy-yellow transition-colors"
+                  className="mt-auto inline-flex items-center gap-2 font-black text-xs uppercase tracking-[0.2em] text-energy-yellow/70 group-hover:text-energy-yellow transition-colors border-t border-white/5 pt-6"
                 >
                   VIEW DETAILS <ArrowRight size={14} />
                 </Link>
@@ -314,117 +325,168 @@ export default function Home() {
         </div>
       </section>
 
-      {/* High-Octane CTA */}
-      <section className="py-8 px-4">
-        <div className="max-w-7xl mx-auto rounded-[4rem] sm:rounded-[6rem] bg-industrial-blue relative overflow-hidden p-10 md:p-16 shadow-[0_40px_100px_rgba(11,60,93,0.4)]">
-          <div className="absolute top-0 right-0 w-full h-full industrial-mesh opacity-50"></div>
-          <div className="relative z-10 text-center max-w-4xl mx-auto">
+      {/* Leading Organizations We Serve */}
+      <section className="py-24 !bg-[#F8F9F4] overflow-hidden border-y border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold !text-[#1B4332] leading-tight uppercase tracking-tight whitespace-nowrap">
+              Trusted By Industry Leaders
+            </h2>
+            <div className="h-1 w-16 bg-red-600 mt-4"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: "Industrial Projects",
+                clients: ["Arvind Mills Ltd", "Bharath Cements Group", "Sigma Concretes", "Power Build Batteries"],
+                icon: Factory,
+                image: "/images/industrial_project_bg.png"
+              },
+              {
+                title: "Healthcare & Education",
+                clients: ["Chord Road Hospital", "Orchid School", "SJBIT College", "Apoorva Hospital"],
+                icon: Hospital,
+                image: "/images/healthcare_education_bg.png"
+              },
+              {
+                title: "Commercial Complexes",
+                clients: ["Balaji Complex", "Kanaka Apartment", "SN Apartments", "Adithya Apartment"],
+                icon: Building2,
+                image: "/images/commercial_complex_bg.png"
+              },
+              {
+                title: "Infrastructure Partners",
+                clients: ["Starworth Infrastructure", "Viraj Projects", "Chaitanya Projects", "Confident Builders"],
+                icon: Wrench,
+                image: "/images/infrastructure_partners_bg.png"
+              }
+            ].map((block, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="relative group overflow-hidden rounded-sm p-8 min-h-[380px] flex flex-col justify-end transition-all duration-700 hover:shadow-2xl hover:-translate-y-2 bg-black"
+              >
+                {/* Background Image */}
+                <Image 
+                  src={block.image}
+                  alt={block.title}
+                  fill
+                  className="object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-700"
+                />
+                
+                {/* Background Pattern/Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-0"></div>
+
+                {/* Icon in top right */}
+                <div className="absolute top-8 right-8 text-white/40 group-hover:text-white/70 transition-colors duration-500 z-10">
+                  <block.icon size={32} />
+                </div>
+
+                {/* Content */}
+                <div className="relative z-10">
+                  <h4 className="text-xl font-bold text-white mb-6 uppercase leading-tight tracking-tight">
+                    {block.title.split(' ').map((word, idx) => (
+                      <React.Fragment key={idx}>{word} <br /></React.Fragment>
+                    ))}
+                  </h4>
+                  <ul className="space-y-2">
+                    {block.clients.map((client, idx) => (
+                      <li key={idx} className="flex items-center gap-3 text-white/80 text-[10px] font-bold uppercase tracking-widest">
+                        <div className="w-1.5 h-1.5 rounded-full bg-red-600 shadow-[0_0_8px_rgba(220,38,38,0.8)]"></div>
+                        {client}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* High-Octane CTA - Redesigned for Premium Impact */}
+      <section className="py-20 px-4 relative">
+        <div className="max-w-7xl mx-auto rounded-[3.5rem] bg-gradient-to-br from-[#0c2b1b] via-[#081a12] to-black relative overflow-hidden p-10 md:p-20 border border-white/5 shadow-[0_50px_100px_rgba(0,0,0,0.7)]">
+          {/* Animated Ambient Glows */}
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-energy-yellow/5 blur-[120px] rounded-full pointer-events-none"></div>
+          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-red-600/5 blur-[120px] rounded-full pointer-events-none"></div>
+          <div className="absolute inset-0 industrial-mesh opacity-20"></div>
+
+          <div className="relative z-10 text-center max-w-5xl mx-auto">
             <motion.h2
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              className="text-2xl md:text-4xl font-black text-white mb-6 tracking-tighter leading-[1.1]"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-8 tracking-tighter leading-none uppercase"
             >
               READY TO POWER YOUR <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-energy-yellow to-yellow-100">BIGGEST AMBITIONS?</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-energy-yellow via-yellow-100 to-energy-yellow">BIGGEST AMBITIONS?</span>
             </motion.h2>
-            <p className="text-lg text-slate-300 mb-8 font-medium uppercase tracking-[0.3em] opacity-80">
+            
+            <p className="text-xs md:text-sm text-[#b6dfcb] mb-12 font-black uppercase tracking-[0.5em] opacity-60">
               Immediate Consultation for Installations & AMCs.
             </p>
-            <div className="flex flex-col xl:flex-row items-center justify-center gap-6 xl:gap-12">
+
+            <div className="flex flex-col xl:flex-row items-center justify-center gap-10 xl:gap-16">
               <Link
                 href="/contact"
-                className="px-12 py-5 bg-white text-industrial-blue rounded-[2rem] font-black text-lg hover:bg-energy-yellow transition-all shadow-2xl active:scale-95 uppercase"
+                className="group relative px-14 py-6 bg-energy-yellow text-[#0c2b1b] rounded-full font-black text-xl hover:scale-105 transition-all shadow-[0_25px_50px_rgba(74,125,101,0.4)] active:scale-95 uppercase overflow-hidden"
               >
-                Get a Quote
+                <span className="relative z-10">Get a Quote</span>
+                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
               </Link>
-              <div className="flex flex-col sm:flex-row items-center gap-6 sm:gap-10">
-                <a
-                  href={`tel:${COMPANY_INFO.phone[0]}`}
-                  className="flex items-center gap-4 text-white text-xl md:text-2xl font-black tracking-tighter hover:text-energy-yellow transition-colors"
-                >
-                  <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center">
-                    <Phone size={16} className="text-energy-yellow fill-energy-yellow" />
-                  </div>
-                  {COMPANY_INFO.phone[0]}
-                </a>
-                <a
-                  href={`tel:${COMPANY_INFO.phone[1]}`}
-                  className="flex items-center gap-4 text-white text-xl md:text-2xl font-black tracking-tighter hover:text-energy-yellow transition-colors"
-                >
-                  <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center">
-                    <Phone size={16} className="text-energy-yellow fill-energy-yellow" />
-                  </div>
-                  {COMPANY_INFO.phone[1]}
-                </a>
+
+              <div className="flex flex-col sm:flex-row items-center gap-10">
+                {[COMPANY_INFO.phone[0], COMPANY_INFO.phone[1]].map((phone, i) => (
+                  <a
+                    key={i}
+                    href={`tel:${phone}`}
+                    className="flex items-center gap-5 text-white text-xl md:text-2xl lg:text-4xl font-black tracking-tighter hover:text-energy-yellow transition-all group whitespace-nowrap"
+                  >
+                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-energy-yellow/20 group-hover:border-energy-yellow/40 transition-all duration-300">
+                      <Phone size={24} className="text-energy-yellow" />
+                    </div>
+                    {phone}
+                  </a>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* High-Impact Infinite Marquee with Blueprint Background */}
-      <section className="py-16 relative overflow-hidden bg-industrial-dark">
-        {/* Blueprint Grid and Radial Glow */}
-        <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: `radial-gradient(circle at 2px 2px, #F9A825 1px, transparent 0)`, backgroundSize: "40px 40px" }}></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-energy-yellow/5 blur-[120px] rounded-full pointer-events-none"></div>
-
-        <div className="max-w-screen-2xl mx-auto px-4 relative z-10">
-          <div className="text-center mb-10">
-            <motion.span
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              className="px-4 py-2 rounded-lg bg-energy-yellow/10 text-energy-yellow text-[8px] font-black uppercase tracking-[0.3em] mb-6 inline-block border border-energy-yellow/20"
-            >
-              Our Engineering Network
-            </motion.span>
-            <h2 className="text-2xl md:text-4xl font-black text-white tracking-tighter uppercase mb-4">
-              Our Valued <span className="text-energy-yellow">Customers</span>
-            </h2>
-            <div className="h-1 w-20 bg-gradient-to-r from-energy-yellow to-yellow-200 mx-auto rounded-full shadow-[0_0_20px_#F9A825]"></div>
-          </div>
-          
-          <div className="flex flex-col gap-12 relative">
-            {/* Row 1 - Right to Left */}
-            <div className="relative w-full overflow-hidden">
-              <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-industrial-dark to-transparent z-20 pointer-events-none"></div>
-              <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-industrial-dark to-transparent z-20 pointer-events-none"></div>
-              
+      {/* Quick Stats Section - Simple yet Creative */}
+      <section className="py-24 bg-[#04100b] border-y border-white/5 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-0 md:divide-x md:divide-white/10">
+            {[
+              { label: "Reliability Rate", value: "99.9%" },
+              { label: "Expert Support", value: "24/7" },
+              { label: "Installed Capacity", value: "500+ MW" },
+              { label: "Response Time", value: "15M" },
+            ].map((stat, i) => (
               <motion.div
-                animate={{ x: [0, "-50%"] }}
-                transition={{ x: { repeat: Infinity, repeatType: "loop", duration: 15, ease: "linear" } }}
-                className="flex whitespace-nowrap"
+                key={i}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="w-full md:w-1/4 flex flex-col items-center group px-8"
               >
-                {[...CLIENTS, ...CLIENTS].map((client, idx) => (
-                  <span
-                    key={`r1-${idx}`}
-                    className="inline-block mx-12 text-2xl md:text-4xl font-black text-white/30 tracking-tighter hover:text-energy-yellow transition-all cursor-default uppercase italic hover:scale-105"
-                  >
-                    {client}
+                <div className="text-4xl md:text-5xl xl:text-6xl font-bold text-red-600 mb-2 whitespace-nowrap">
+                  {stat.value}
+                </div>
+                <div className="relative">
+                  <span className="text-[10px] md:text-xs font-semibold text-[#b6dfcb] uppercase tracking-[0.2em] opacity-60">
+                    {stat.label}
                   </span>
-                ))}
+                  <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-[1px] bg-red-600 transition-all duration-300 group-hover:w-full"></div>
+                </div>
               </motion.div>
-            </div>
-
-            {/* Row 2 - Left to Right */}
-            <div className="relative w-full overflow-hidden">
-              <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-industrial-dark to-transparent z-20 pointer-events-none"></div>
-              <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-industrial-dark to-transparent z-20 pointer-events-none"></div>
-              
-              <motion.div
-                animate={{ x: ["-50%", 0] }}
-                transition={{ x: { repeat: Infinity, repeatType: "loop", duration: 25, ease: "linear" } }}
-                className="flex whitespace-nowrap"
-              >
-                {[...CLIENTS, ...CLIENTS].reverse().map((client, idx) => (
-                  <span
-                    key={`r2-${idx}`}
-                    className="inline-block mx-12 text-2xl md:text-3xl font-black text-white/20 tracking-tighter hover:text-energy-yellow transition-all cursor-default uppercase italic hover:scale-105"
-                  >
-                    {client}
-                  </span>
-                ))}
-              </motion.div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
