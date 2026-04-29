@@ -35,21 +35,21 @@ const Navbar = () => {
                     : "bg-black border-white/5 py-2"
             )}
         >
-            <div className="px-6 lg:px-10">
+            <div className="px-4 lg:px-10">
                 <div className="flex justify-between items-center h-16">
                     <div className="flex items-center">
-                        <Link href="/" className="flex items-center gap-2 md:gap-3 active:scale-95 transition-transform">
-                            <div className="relative shrink-0">
+                        <Link href="/" className="flex items-center gap-2 sm:gap-3 active:scale-95 transition-transform">
+                            <div className="relative">
                                 <div className="absolute inset-0 bg-energy-yellow blur-lg opacity-20 group-hover:opacity-40 transition-opacity"></div>
-                                <div className="bg-white p-1 rounded-none relative z-10 border border-white/10 flex items-center justify-center">
-                                    <img src="/images/logo.jpeg" alt="APIS Logo" className="h-6 md:h-8 w-auto" />
+                                <div className="bg-white p-1 rounded-none relative z-10 border border-white/10 shrink-0">
+                                    <img src="/images/logo.jpeg" alt="APIS Logo" className="h-8 w-auto" />
                                 </div>
                             </div>
-                            <div className="flex flex-col justify-center">
-                                <span className="text-[14px] md:text-lg font-black tracking-tight leading-tight transition-colors text-white uppercase">
+                            <div className="flex flex-col">
+                                <span className="text-sm sm:text-lg font-black tracking-tight leading-none transition-colors text-white">
                                     ADVANCED POWER
                                 </span>
-                                <span className="text-[7px] md:text-[10px] font-bold tracking-[0.2em] transition-colors text-energy-yellow uppercase">
+                                <span className="text-[8px] sm:text-[10px] font-bold tracking-[0.2em] transition-colors text-energy-yellow">
                                     & INFRA SOLUTIONS
                                 </span>
                             </div>
@@ -84,16 +84,19 @@ const Navbar = () => {
                     </div>
 
                     {/* Mobile menu button */}
-                    <div className="md:hidden flex items-center gap-2">
+                    <div className="md:hidden flex items-center gap-2 sm:gap-4 shrink-0">
                         <a
                             href={`tel:${COMPANY_INFO.phone[0]}`}
-                            className="w-10 h-10 flex items-center justify-center bg-energy-yellow rounded-none text-black hover:bg-yellow-400 transition-colors"
+                            className="p-2 bg-energy-yellow rounded-none text-industrial-blue"
                         >
-                            <Phone className="h-5 w-5 fill-black" />
+                            <Phone className="h-5 w-5" />
                         </a>
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="w-10 h-10 flex items-center justify-center text-white focus:outline-none transition-colors"
+                            className={cn(
+                                "inline-flex items-center justify-center p-2 rounded-md transition-colors focus:outline-none",
+                                scrolled ? "text-white" : "text-white"
+                            )}
                         >
                             <span className="sr-only">Open main menu</span>
                             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}

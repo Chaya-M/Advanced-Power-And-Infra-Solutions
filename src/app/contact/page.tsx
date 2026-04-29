@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function Contact() {
     return (
-        <div className="pt-24 md:pt-32 min-h-screen bg-transparent">
+        <div className="pt-32 min-h-screen bg-transparent">
             {/* Page Header */}
             <section className="bg-black py-8 text-white relative overflow-hidden border-b border-white/5">
                 <div className="absolute inset-0 opacity-10">
@@ -17,7 +17,7 @@ export default function Contact() {
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-xl md:text-4xl font-black mb-4 tracking-tighter uppercase text-white"
+                        className="text-2xl md:text-4xl font-black mb-4 tracking-tighter uppercase text-white"
                     >
                         GET IN TOUCH
                     </motion.h1>
@@ -90,9 +90,9 @@ export default function Contact() {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 href={`https://wa.me/${COMPANY_INFO.whatsapp.replace('+', '')}`}
-                                className="inline-flex items-center gap-4 bg-[#25D366] text-white px-6 md:px-8 py-3.5 md:py-4 rounded-[1.2rem] md:rounded-[1.5rem] font-black text-base md:text-lg hover:bg-[#128C7E] transition-all transform hover:scale-105 shadow-2xl shadow-green-500/20 italic tracking-tighter leading-none"
+                                className="inline-flex items-center gap-4 bg-[#25D366] text-white px-8 py-4 rounded-[1.5rem] font-black text-lg hover:bg-[#128C7E] transition-all transform hover:scale-105 shadow-2xl shadow-green-500/20 italic tracking-tighter leading-none"
                             >
-                                <MessageCircle className="w-5 h-5 md:w-6 md:h-6 fill-white" />
+                                <MessageCircle className="w-6 h-6 fill-white" />
                                 QUICK ENQUIRY ON WHATSAPP
                             </motion.a>
                         </div>
@@ -102,7 +102,7 @@ export default function Contact() {
                     <motion.div 
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        className="glass-panel p-6 md:p-10 rounded-[2rem] md:rounded-[3.5rem] border-white/5 relative overflow-hidden"
+                        className="glass-panel p-8 md:p-10 rounded-[3.5rem] border-white/5 relative overflow-hidden"
                     >
                         <div className="absolute top-0 right-0 w-32 h-32 bg-energy-yellow/5 rounded-bl-[4rem]"></div>
                         <h3 className="text-xl md:text-2xl font-black text-white mb-8 tracking-tighter uppercase italic">
@@ -162,7 +162,7 @@ export default function Contact() {
                     <motion.div 
                         initial={{ y: 50, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
-                        className="glass-panel px-6 py-5 md:px-8 md:py-6 rounded-[1.5rem] md:rounded-[2.5rem] border-white/10 text-center shadow-2xl backdrop-blur-2xl mx-4"
+                        className="glass-panel px-8 py-6 rounded-[2.5rem] border-white/10 text-center shadow-2xl backdrop-blur-2xl"
                     >
                         <div className="w-10 h-10 bg-energy-yellow rounded-full flex items-center justify-center mx-auto mb-4 shadow-[0_0_20px_rgba(249,168,37,0.5)]">
                             <MapPin className="w-5 h-5 text-industrial-blue" />
