@@ -116,42 +116,51 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen bg-industrial-dark">
-      {/* High-Impact Visual Hero */}
-      <section className="relative min-h-0 flex items-start industrial-mesh overflow-hidden rounded-none">
-        {/* Dark Gradient Overlay for Clarity */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-transparent z-0"></div>
+      <section className="relative min-h-0 flex items-start overflow-hidden rounded-none bg-black">
+        {/* Background Image Layer */}
+        <div className="absolute inset-0 z-0">
+           <Image 
+             src="/images/one-stop-hero.png" 
+             alt="Industrial Power Background" 
+             fill 
+             className="object-cover opacity-40"
+             priority
+           />
+           {/* Sophisticated Dark Overlay */}
+           <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/20 to-black/80 z-10"></div>
+        </div>
 
-        {/* Animated Background Orbs */}
-        <div className="absolute top-1/4 -left-20 w-80 h-80 bg-industrial-blue blur-[120px] opacity-40 animate-pulse"></div>
-        <div className="absolute top-1/3 -right-20 w-96 h-96 bg-energy-yellow blur-[150px] opacity-10 animate-pulse"></div>
+        {/* Animated Background Orbs for depth */}
+        <div className="absolute top-1/4 -left-20 w-80 h-80 bg-[#00df82]/10 blur-[120px] opacity-40 animate-pulse z-20"></div>
+        <div className="absolute top-1/3 -right-20 w-96 h-96 bg-red-600/5 blur-[150px] opacity-10 animate-pulse z-20"></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-28 md:pt-32 lg:pt-20 pb-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30 w-full pt-28 md:pt-32 lg:pt-20 pb-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             <div className="lg:col-span-7">
               <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-red-500/10 border border-red-500/30 backdrop-blur-md text-red-400 text-[10px] font-black uppercase tracking-[0.3em] mb-4"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#00df82]/10 border border-[#00df82]/30 backdrop-blur-md text-[#00df82] text-[10px] font-black uppercase tracking-[0.3em] mb-6"
               >
-                <div className="w-2 h-2 rounded-full bg-red-500 animate-ping"></div>
-                Industrial Power Solutions
+                <div className="w-2 h-2 rounded-full bg-[#00df82] shadow-[0_0_8px_#00df82]"></div>
+                Complete Lifecycle Management
               </motion.div>
 
               <motion.h1
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-[1.75rem] md:text-[2.8rem] lg:text-[3.8rem] font-black text-white leading-[0.9] tracking-tighter mb-4 drop-shadow-2xl uppercase"
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="text-[1.75rem] md:text-[3.2rem] lg:text-[4.2rem] font-black text-white leading-[0.95] tracking-tighter mb-6 uppercase"
               >
-                <span className="text-[#67f3b2]">ADVANCED POWER</span> <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#67f3b2] to-[#c5ffe0]">& INFRA SOLUTIONS</span>
+                ADVANCED POWER <br />
+                & INFRA <span className="text-[#00df82]">SOLUTIONS</span>
               </motion.h1>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-base md:text-lg text-[#b6dfcb] max-w-2xl mb-6 font-medium leading-relaxed"
+                className="text-base md:text-lg text-slate-300 max-w-2xl mb-8 font-medium leading-relaxed"
               >
                 Engineered for zero-failure environments. We provide industrial-grade power infrastructure that guarantees continuity for mission-critical operations worldwide.
               </motion.p>
@@ -164,7 +173,7 @@ export default function Home() {
               >
                 <Link
                   href="/contact"
-                  className="group relative px-4 md:px-8 py-3 md:py-4 bg-red-600 text-white rounded-none font-black text-[10px] md:text-xs hover:scale-105 transition-all shadow-2xl active:scale-95 uppercase overflow-hidden"
+                  className="group relative px-6 md:px-10 py-3.5 bg-[#00df82] text-black rounded-none font-black text-[10px] md:text-xs hover:scale-105 transition-all shadow-2xl active:scale-95 uppercase overflow-hidden"
                 >
                   <span className="relative z-10 flex items-center gap-2 uppercase tracking-wider">
                     Explore Systems <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -172,23 +181,24 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/services"
-                  className="px-4 md:px-8 py-3 md:py-4 bg-transparent border border-[#67f3b2]/60 text-[#67f3b2] rounded-none font-black text-[10px] md:text-base transition-all hover:bg-[#67f3b2]/10 flex items-center gap-2 md:gap-3"
+                  className="px-6 md:px-10 py-3.5 bg-transparent border border-[#00df82]/60 text-[#00df82] rounded-none font-black text-[10px] md:text-xs transition-all hover:bg-[#00df82]/10 flex items-center gap-2 md:gap-3 uppercase tracking-widest"
                 >
-                  VIEW SPECIFICATIONS
+                  View Specifications
                 </Link>
               </motion.div>
             </div>
 
-            <div className="lg:col-span-5 relative hidden lg:block">
+            <div className="lg:col-span-5 relative mt-12 lg:mt-0">
               <motion.div
-                initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
-                animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
                 transition={{ delay: 0.4, duration: 1 }}
                 className="relative z-10"
               >
                 {/* Rotating generator visual */}
-                <div className="aspect-square relative overflow-hidden">
-                  <div className="absolute inset-0 overflow-hidden">
+                <div className="aspect-square relative overflow-hidden glass-panel p-6 md:p-8 border-[#00df82]/20 shadow-[0_0_50px_rgba(0,0,0,0.5)] max-w-[400px] mx-auto lg:max-w-none">
+                  <div className="absolute inset-0 overflow-hidden p-6">
                     {heroGenerators.map((generator, index) => (
                       <Image
                         key={generator.src}
@@ -198,13 +208,13 @@ export default function Home() {
                         priority={index === 0}
                         sizes="(min-width: 1024px) 36vw, 90vw"
                         className={cn(
-                          "object-contain object-center p-3 transition-opacity duration-700",
+                          "object-contain object-center transition-opacity duration-700 p-4",
                           index === activeGenerator ? "opacity-100" : "opacity-0"
                         )}
                       />
                     ))}
                   </div>
-                  <div className="absolute inset-x-10 top-10 flex items-center justify-end">
+                  <div className="absolute inset-x-10 bottom-6 flex items-center justify-center">
                     <div className="flex gap-2">
                       {heroGenerators.map((generator, index) => (
                         <button
@@ -213,15 +223,14 @@ export default function Home() {
                           aria-label={`Show ${generator.label}`}
                           onClick={() => setActiveGenerator(index)}
                           className={cn(
-                            "h-2.5 rounded-none transition-all",
-                            index === activeGenerator ? "w-8 bg-energy-yellow" : "w-2.5 bg-white/30"
+                            "h-1.5 transition-all",
+                            index === activeGenerator ? "w-8 bg-[#00df82]" : "w-1.5 bg-white/30"
                           )}
                         />
                       ))}
                     </div>
                   </div>
                 </div>
-                {/* Floating Badges */}
               </motion.div>
             </div>
           </div>

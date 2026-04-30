@@ -254,18 +254,20 @@ export default function ServicesPage() {
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                        <div className="grid grid-cols-2 gap-3 md:gap-4 lg:grid-cols-3 xl:grid-cols-4">
                             {SERVICES.map((service) => (
                                 <div
                                     key={service.slug}
                                     id={service.slug}
-                                    className="rounded-none border-2 border-[#1B4332]/10 bg-white p-3 hover:shadow-xl transition-all duration-300 group"
+                                    className="rounded-none border-2 border-[#1B4332]/10 bg-white p-2 pl-1.5 hover:shadow-xl transition-all duration-300 group flex items-start gap-2"
                                 >
-                                    <div className="mb-1.5 flex h-8 w-8 items-center justify-center rounded-none bg-[#1B4332] text-white">
+                                    <div className="flex-shrink-0 flex h-8 w-8 items-center justify-center rounded-none bg-[#1B4332] text-white">
                                         <service.icon className="h-4 w-4" />
                                     </div>
-                                    <h3 className="mb-1 text-sm font-black uppercase tracking-tight text-slate-900">{service.title}</h3>
-                                    <p className="text-[10px] leading-relaxed text-slate-600 font-bold">{service.description}</p>
+                                    <div className="flex flex-col pt-0.5">
+                                        <h3 className="text-[10px] font-black uppercase tracking-tight text-slate-900 leading-none mb-1">{service.title}</h3>
+                                        <p className="text-[9px] leading-tight text-slate-600 font-bold">{service.description}</p>
+                                    </div>
                                 </div>
                             ))}
                         </div>
