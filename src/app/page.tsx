@@ -152,8 +152,8 @@ export default function Home() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="text-[1.75rem] md:text-[3.2rem] lg:text-[4.2rem] font-black text-white leading-[0.95] tracking-tighter mb-6 uppercase"
               >
-                ADVANCED POWER <br />
-                & INFRA <span className="text-[#00df82]">SOLUTIONS</span>
+                ONE STOP SOLUTION <br />
+                FOR <span className="text-[#00df82]">DIESEL GENERATOR</span>
               </motion.h1>
 
               <motion.p
@@ -172,7 +172,7 @@ export default function Home() {
                 className="flex items-center gap-4"
               >
                 <Link
-                  href="/contact"
+                  href="/services"
                   className="group relative px-6 md:px-10 py-3.5 bg-[#00df82] text-black rounded-none font-black text-[10px] md:text-xs hover:scale-105 transition-all shadow-2xl active:scale-95 uppercase overflow-hidden"
                 >
                   <span className="relative z-10 flex items-center gap-2 uppercase tracking-wider">
@@ -180,10 +180,10 @@ export default function Home() {
                   </span>
                 </Link>
                 <Link
-                  href="/services"
+                  href="/contact"
                   className="px-6 md:px-10 py-3.5 bg-transparent border border-[#00df82]/60 text-[#00df82] rounded-none font-black text-[10px] md:text-xs transition-all hover:bg-[#00df82]/10 flex items-center gap-2 md:gap-3 uppercase tracking-widest"
                 >
-                  View Specifications
+                  Contact Now
                 </Link>
               </motion.div>
             </div>
