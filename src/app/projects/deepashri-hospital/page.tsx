@@ -19,6 +19,19 @@ import {
 } from "lucide-react";
 
 export default function DeepashriHospitalCaseStudy() {
+    const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
+    const solutionImages = [
+        "/images/projects/deepashri-hospital/solution.png",
+        "/images/projects/deepashri-hospital/hero.png"
+    ];
+
+    React.useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentImageIndex((prev) => (prev + 1) % solutionImages.length);
+        }, 3000);
+        return () => clearInterval(timer);
+    }, []);
+
     return (
         <div className="min-h-screen bg-black">
             {/* Case Study Hero */}
@@ -80,7 +93,7 @@ export default function DeepashriHospitalCaseStudy() {
                             className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-2xl"
                         >
                             <Image 
-                                src="/healthcare_project_bg.png"
+                                src="/images/projects/deepashri-hospital/hero.png"
                                 alt="Deepashri Hospital Facility"
                                 fill
                                 className="object-cover"
@@ -148,8 +161,31 @@ export default function DeepashriHospitalCaseStudy() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div className="relative order-2 lg:order-1">
                             <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl bg-slate-50 flex items-center justify-center">
-                                <Hospital size={120} className="text-[#2D6A4F]/20" />
+                                <motion.div
+                                    key={currentImageIndex}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ duration: 1 }}
+                                    className="absolute inset-0"
+                                >
+                                    <Image 
+                                        src={solutionImages[currentImageIndex]}
+                                        alt="Deepashri Hospital Solution"
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </motion.div>
                                 <div className="absolute inset-0 bg-gradient-to-br from-[#2D6A4F]/10 to-transparent"></div>
+                                
+                                {/* Image indicators */}
+                                <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                                    {solutionImages.map((_, i) => (
+                                        <div 
+                                            key={i}
+                                            className={`h-1.5 rounded-full transition-all duration-500 ${i === currentImageIndex ? 'w-8 bg-white' : 'w-2 bg-white/40'}`}
+                                        />
+                                    ))}
+                                </div>
                             </div>
                             <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-[#2D6A4F]/10 blur-[100px] rounded-full -z-10"></div>
                         </div>

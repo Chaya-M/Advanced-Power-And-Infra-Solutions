@@ -19,6 +19,19 @@ import {
 } from "lucide-react";
 
 export default function ResidentialCaseStudy() {
+    const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
+    const solutionImages = [
+        "/images/projects/dr-venu-residential/solution.png",
+        "/images/projects/dr-venu-residential/hero.png"
+    ];
+
+    React.useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentImageIndex((prev) => (prev + 1) % solutionImages.length);
+        }, 3000);
+        return () => clearInterval(timer);
+    }, []);
+
     return (
         <div className="pt-24 min-h-screen bg-[#FDFDFB]">
             {/* Case Study Hero */}
@@ -69,7 +82,7 @@ export default function ResidentialCaseStudy() {
                         >
                             <div className="aspect-[4/5] relative rounded-sm overflow-hidden shadow-2xl">
                                 <Image 
-                                    src="/residential_project_bg.png"
+                                    src="/images/projects/dr-venu-residential/hero.png"
                                     alt="Residential Infrastructure"
                                     fill
                                     className="object-cover"
@@ -161,22 +174,31 @@ export default function ResidentialCaseStudy() {
                 </div>
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className="relative aspect-[16/10] overflow-hidden rounded-sm group shadow-xl">
+                    <div className="relative max-w-4xl mx-auto aspect-[16/10] overflow-hidden rounded-sm shadow-2xl bg-slate-50 flex items-center justify-center">
+                        <motion.div
+                            key={currentImageIndex}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 1 }}
+                            className="absolute inset-0"
+                        >
                             <Image 
-                                src="/images/cummins.png"
-                                alt="Technical Installation"
+                                src={solutionImages[currentImageIndex]}
+                                alt="Technical Documentation"
                                 fill
-                                className="object-contain p-8 bg-slate-50 transition-transform duration-700 group-hover:scale-105"
+                                className="object-cover"
                             />
-                        </div>
-                        <div className="relative aspect-[16/10] overflow-hidden rounded-sm group shadow-xl">
-                            <Image 
-                                src="/residential_project_bg.png"
-                                alt="Structural Integration"
-                                fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                            />
+                        </motion.div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                        
+                        {/* Image indicators */}
+                        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                            {solutionImages.map((_, i) => (
+                                <div 
+                                    key={i}
+                                    className={`h-1.5 rounded-full transition-all duration-500 ${i === currentImageIndex ? 'w-8 bg-white' : 'w-2 bg-white/40'}`}
+                                />
+                            ))}
                         </div>
                     </div>
                 </div>
