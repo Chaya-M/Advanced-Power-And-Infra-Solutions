@@ -9,6 +9,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/projects',
         '/team',
         '/contact',
+        '/sales',
+        '/rental',
+        '/privacy',
+        '/terms',
     ]
 
     return pages.map((page) => ({

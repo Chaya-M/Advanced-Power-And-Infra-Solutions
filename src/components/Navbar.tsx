@@ -126,7 +126,7 @@ const Navbar = () => {
                             className="w-full inline-flex items-center justify-center px-4 py-3 border border-transparent rounded-none shadow-sm text-base font-bold text-black bg-energy-yellow hover:bg-yellow-500"
                         >
                             <Phone className="mr-2 h-5 w-5 fill-black" />
-                            Call +91 9686098702
+                            Call {COMPANY_INFO.phone[0]}
                         </a>
                     </div>
                 </div>
