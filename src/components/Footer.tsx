@@ -12,7 +12,7 @@ const Footer = () => {
                     <div className="space-y-6">
                         <Link href="/" className="flex items-center gap-2">
                             <div className="bg-white p-1 rounded-lg border border-white/10">
-                                <img src="/images/logo.jpeg" alt="APIS Logo" className="h-8 w-auto" />
+                                <img src="/icon.png" alt="APIS Logo" className="h-8 w-auto" />
                             </div>
                             <span className="text-xl font-bold text-white tracking-tight">
                                 APIS SOLUTIONS

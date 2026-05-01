@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     description: "Expert diesel generator solutions, sales, and rental for all your power needs.",
   },
   icons: {
-    icon: '/icon.jpeg',
+    icon: "/icon.png",
   },
 };
 

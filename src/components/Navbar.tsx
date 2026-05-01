@@ -42,7 +42,7 @@ const Navbar = () => {
                             <div className="relative shrink-0">
                                 <div className="absolute inset-0 bg-energy-yellow blur-lg opacity-20 group-hover:opacity-40 transition-opacity"></div>
                                 <div className="bg-white p-1 rounded-none relative z-10 border border-white/10 flex items-center justify-center">
-                                    <img src="/images/logo.jpeg" alt="APIS Logo" className="h-6 md:h-8 w-auto" />
+                                    <img src="/icon.png" alt="APIS Logo" className="h-6 md:h-8 w-auto" />
                                 </div>
                             </div>
                             <div className="flex flex-col justify-center">
